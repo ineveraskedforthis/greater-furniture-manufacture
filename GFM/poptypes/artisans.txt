@@ -85,7 +85,7 @@ country_migration_target = {
         unemployment = 0.5
 		NOT = { unemployment = 1 }
     }
-	
+
     modifier = {
         factor = 0.5
         country = {
@@ -96,9 +96,9 @@ country_migration_target = {
 			}
         }
     }
-	
+
     modifier = {
-        factor = 10
+        factor = -10
         country = {
 			has_country_flag = new_world_nation
 			NOT = {
@@ -1068,7 +1068,7 @@ ideologies = {
 
         modifier = {
             factor = 1.5
-            
+
             location = {
                 OR = {
                     continent = central_africa
@@ -1246,7 +1246,7 @@ ideologies = {
 
         modifier = {
             factor = 0.5
-            
+
             location = {
                 OR = {
                     continent = central_africa
@@ -1536,7 +1536,7 @@ ideologies = {
             }
         }
     }
-    
+
     radical = {
         factor = 1.15
         modifier = {

@@ -1,5 +1,5 @@
-name = "Greater Flavor Mod"
-path = "mod/GFM"
+name = "Greater Furniture Manufacture"
+path = "mod/Greater-Furniture-Manufacture/GFM"
 user_dir = "GFM"
 replace_path = "history"
 replace_path = "events"

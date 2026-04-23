@@ -90,9 +90,9 @@ country_migration_target = {
 			}
         }
     }
-	
+
     modifier = {
-        factor = 10
+        factor = -10
         country = {
 			has_country_flag = new_world_nation
 			NOT = {
@@ -1136,7 +1136,7 @@ ideologies = {
 
         modifier = {
             factor = 1.5
-            
+
             location = {
                 OR = {
                     continent = central_africa
@@ -1304,7 +1304,7 @@ ideologies = {
 
         modifier = {
             factor = 0.5
-            
+
             location = {
                 OR = {
                     continent = central_africa
