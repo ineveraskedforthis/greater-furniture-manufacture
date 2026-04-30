@@ -491,7 +491,7 @@ political_decisions = {
 					secede_province = THIS
 				}
             }
-			
+
 
             release_vassal = NEJ
             relation = { who = NEJ value = 50 }
@@ -956,7 +956,7 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
-	
+
 	organize_arabia_ENG = {
 		picture = form_arabia
 		potential = {
@@ -981,7 +981,7 @@ political_decisions = {
 				has_country_flag = british_arabia
             }
         }
-			
+
 		allow = {
 			revolution_n_counterrevolution = 1
 			owns = 1755
@@ -1180,7 +1180,7 @@ political_decisions = {
 				}
 			}
 		}
-		
+
 		effect = {
 			badboy = 5
 			prestige = 5
@@ -1197,17 +1197,17 @@ political_decisions = {
 				NYE = { clr_country_flag = colony_exemption }
 			}
 		}
-		
-		ai_will_do = { 
+
+		ai_will_do = {
 			factor = 1
 			modifier = {
 				factor = 0
 				badboy = 0.8
 			}
 		}
-	
+
 	}
-	
+
 	organize_arabia_PER = {
 		picture = form_arabia
 		potential = {
@@ -1234,7 +1234,7 @@ political_decisions = {
 				has_country_flag = persian_arabia
             }
         }
-			
+
 		allow = {
 			revolution_n_counterrevolution = 1
             war = no
@@ -1258,17 +1258,17 @@ political_decisions = {
 					OR = {
 						owned_by = THIS
 						empty = yes
-						AND = {
-							in_sphere = THIS
-							OR = {
-								owner = {
-									is_vassal = no
-									vassal_of = THIS
-									AND = {
-										is_vassal = yes
-										overlord = { in_sphere = THIS }
-									}
-								}
+                        owner = {
+						    AND = {
+                                in_sphere = THIS
+                                OR = {
+                                    is_vassal = no
+                                    vassal_of = THIS
+                                    AND = {
+                                        is_vassal = yes
+                                        overlord = { in_sphere = THIS }
+                                    }
+                                }
 							}
 						}
 					}
@@ -1279,17 +1279,17 @@ political_decisions = {
 					OR = {
 						owned_by = THIS
 						empty = yes
-						AND = {
-							in_sphere = THIS
-							OR = {
-								owner = {
-									is_vassal = no
-									vassal_of = THIS
-									AND = {
-										is_vassal = yes
-										overlord = { in_sphere = THIS }
-									}
-								}
+                        owner = {
+                            AND = {
+                                in_sphere = THIS
+                                OR = {
+                                    is_vassal = no
+                                    vassal_of = THIS
+                                    AND = {
+                                        is_vassal = yes
+                                        overlord = { in_sphere = THIS }
+                                    }
+                                }
 							}
 						}
 					}
@@ -1300,10 +1300,10 @@ political_decisions = {
 					OR = {
 						owned_by = THIS
 						empty = yes
-						AND = {
-							in_sphere = THIS
-							OR = {
-								owner = {
+                        owner = {
+						    AND = {
+							    in_sphere = THIS
+							    OR = {
 									is_vassal = no
 									vassal_of = THIS
 									AND = {
@@ -1442,7 +1442,7 @@ political_decisions = {
 				}
 			}
 		}
-		
+
 		effect = {
 			badboy = 10
 			prestige = 5
@@ -1457,8 +1457,8 @@ political_decisions = {
 				YEM = { clr_country_flag = colony_exemption }
 				NYE = { clr_country_flag = colony_exemption }
 			}
-			any_land_province = { 
-			remove_core = NEJ 
+			any_land_province = {
+			remove_core = NEJ
 			remove_core = HAL
 			remove_core = HDJ
 			remove_core = OMA
@@ -1487,7 +1487,7 @@ political_decisions = {
 				limit = {
 					in_sphere = THIS
 					OR = {
-						tag = NEJ 
+						tag = NEJ
 						tag = HAL
 						tag = HDJ
 						tag = ABU
@@ -1534,12 +1534,12 @@ political_decisions = {
 			create_vassal = HDJ
 			create_alliance = HDJ
 			diplomatic_influence = { who = HDJ value = 400 }
-			HDJ = { 
-				government = colonial_company_4 
-				religion = shiite 
-				clr_country_flag = sunni_country 
-				set_country_flag = shiite_country 
-				add_accepted_culture = PER 
+			HDJ = {
+				government = colonial_company_4
+				religion = shiite
+				clr_country_flag = sunni_country
+				set_country_flag = shiite_country
+				add_accepted_culture = persian
 				set_country_flag = persian_accepted
 				any_owned = {
 					limit = { is_core = PER }
@@ -1547,15 +1547,15 @@ political_decisions = {
 				}
 			}
 		}
-		
-		ai_will_do = { 
+
+		ai_will_do = {
 			factor = 1
 			modifier = {
 				factor = 0
 				badboy = 0.6
 			}
 		}
-	
+
 	}
 
     form_maghreb = {
@@ -1686,7 +1686,7 @@ political_decisions = {
                 country_event = 98650
             }
             random_owned = {
-                limit = { owner = { 
+                limit = { owner = {
 					government = absolute_empire
 				} }
                 owner = {
@@ -1694,7 +1694,7 @@ political_decisions = {
 				}
             }
             random_owned = {
-                limit = { owner = { 
+                limit = { owner = {
 					government = constitutional_empire
 				} }
                 owner = {
@@ -1702,7 +1702,7 @@ political_decisions = {
 				}
             }
             random_owned = {
-                limit = { owner = { 
+                limit = { owner = {
 					government = semi_constitutional_empire
 				} }
                 owner = {

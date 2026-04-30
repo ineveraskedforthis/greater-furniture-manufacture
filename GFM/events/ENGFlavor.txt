@@ -5,12 +5,12 @@ country_event = {
     desc = "EVTDESC36898"
     picture = "queenvictoria_coronation"
     major = yes
-	
+
     news = yes
     news_desc_long = "EVTDESC36898_NEWS_LONG"
     news_desc_medium = "EVTDESC36898_NEWS_MEDIUM"
     news_desc_short = "EVTDESC36898_NEWS_SHORT"
-	
+
     fire_only_once = yes
 
 
@@ -85,7 +85,7 @@ country_event = {
     title = "EVTNAME36901"
     desc = "EVTDESC36901"
     picture = "Olivertwist"
-	
+
     news = yes
     news_desc_long = "EVTDESC36901_NEWS_LONG"
     news_desc_medium = "EVTDESC36901_NEWS_MEDIUM"
@@ -194,7 +194,7 @@ country_event = {
     title = "EVTNAME36903"
     desc = "EVTDESC36903"
     picture = "VictoriaWedding"
-	
+
     news = yes
     news_desc_long = "EVTDESC36903_NEWS_LONG"
     news_desc_medium = "EVTDESC36903_NEWS_MEDIUM"
@@ -504,7 +504,7 @@ country_event = {
     title = "EVTNAME36911"
     desc = "EVTDESC36911"
     picture = "Yeats"
-	
+
     news = yes
     news_desc_long = "EVTDESC36911_NEWS_LONG"
     news_desc_medium = "EVTDESC36911_NEWS_MEDIUM"
@@ -551,7 +551,7 @@ country_event = {
     title = "EVTNAME36912"
     desc = "EVTDESC36912"
     picture = "Hopkins"
-	
+
     news = yes
     news_desc_long = "EVTDESC36912_NEWS_LONG"
     news_desc_medium = "EVTDESC36912_NEWS_MEDIUM"
@@ -814,7 +814,7 @@ country_event = {
     title = "EVTNAME36919"
     desc = "EVTDESC36919"
     picture = "Nightingale"
-	
+
     news = yes
     news_desc_long = "EVTDESC36919_NEWS_LONG"
     news_desc_medium = "EVTDESC36919_NEWS_MEDIUM"
@@ -903,7 +903,7 @@ country_event = {
     title = "EVTNAME36922"
     desc = "EVTDESC36922"
     picture = "ashes"
-	
+
     news = yes
     news_desc_long = "EVTDESC36922_NEWS_LONG"
     news_desc_medium = "EVTDESC36922_NEWS_MEDIUM"
@@ -957,7 +957,7 @@ country_event = {
     title = "EVTNAME36923"
     desc = "EVTDESC36923"
     picture = "darwin"
-	
+
     news = yes
     news_desc_long = "EVTDESC36923_NEWS_LONG"
     news_desc_medium = "EVTDESC36923_NEWS_MEDIUM"
@@ -1054,7 +1054,7 @@ country_event = {
     picture = "jacktheripper"
 
     fire_only_once = yes
-	
+
     news = yes
     news_desc_long = "EVTDESC36925_NEWS_LONG"
     news_desc_medium = "EVTDESC36925_NEWS_MEDIUM"
@@ -1379,7 +1379,7 @@ country_event = {
     title = "EVTNAME36939"
     desc = "EVTDESC36939"
     picture = "LordDalhousie"
-	
+
     news = yes
     news_desc_long = "EVTDESC36939_NEWS_LONG"
     news_desc_medium = "EVTDESC36939_NEWS_MEDIUM"
@@ -1469,7 +1469,7 @@ country_event = {
     desc = "EVTDESC36940"
     picture = "Waitangi"
 	major = yes
-	
+
     news = yes
     news_desc_long = "EVTDESC36940_NEWS_LONG"
     news_desc_medium = "EVTDESC36940_NEWS_MEDIUM"
@@ -1525,7 +1525,7 @@ country_event = {
     desc = "EVTDESC36941"
 	major = yes
     picture = "flagstaffwar"
-	
+
     news = yes
     news_desc_long = "EVTDESC36941_NEWS_LONG"
     news_desc_medium = "EVTDESC36941_NEWS_MEDIUM"
@@ -1674,13 +1674,13 @@ country_event = {
     title = "EVTNAME36955" #Conflict with Burma
     desc = "EVTDESC36955"
     picture = "Opiumwar"
-	
+
     news = yes
     news_title = "EVTNAME36955_NEWS_TITLE"
     news_desc_long = "EVTDESC36955_NEWS_LONG"
     news_desc_medium = "EVTDESC36955_NEWS_MEDIUM"
     news_desc_short = "EVTDESC36955_NEWS_SHORT"
-	
+
 	fire_only_once = yes
 
     trigger = {
@@ -1831,7 +1831,7 @@ country_event = {
     title = "EVTNAME36961"
     desc = "EVTDESC36961"
     picture = "treaty"
-	
+
     news = yes
     news_title = "EVTNAME36961_NEWS_TITLE"
     news_desc_long = "EVTDESC36961_NEWS_LONG"
@@ -1961,7 +1961,7 @@ country_event = {
     id = 36963
     title = "EVTNAME36963"
     desc = "EVTDESC36963"
-	
+
     fire_only_once = yes
 
     trigger = {
@@ -2057,7 +2057,7 @@ country_event = {
     title = "EVTNAME36966" #United Kingdom Seizes Lagos!
     desc = "EVTDESC36966"
     picture = "uk_seizes_lagos"
-	
+
     news = yes
     news_desc_long = "EVTDESC36966_NEWS_LONG"
     news_desc_medium = "EVTDESC36966_NEWS_MEDIUM"
@@ -2775,7 +2775,7 @@ country_event = {
 			}
 		}
     }
-	
+
     mean_time_to_happen = { days = 1 }
 
     option = {
@@ -3022,7 +3022,7 @@ country_event = {
     desc = "EVTDESC315004"
     picture = "dr_livingstone"
 	major = yes
-	
+
     news = yes
     news_desc_long = "EVTDESC315004_NEWS_LONG"
     news_desc_medium = "EVTDESC315004_NEWS_MEDIUM"
@@ -3037,7 +3037,7 @@ country_event = {
         exists = yes
         war = no
     }
-	
+
     mean_time_to_happen = {
         months = 12
         modifier = { factor = 0.25 month = 10 }
@@ -3058,7 +3058,7 @@ country_event = {
     title = "EVTNAME315004"
     desc = "EVTDESC315004"
     picture = "dr_livingstone"
-	
+
 	is_triggered_only = yes
     fire_only_once = yes
 
@@ -3075,7 +3075,7 @@ country_event = {
     title = "EVTNAME110081" #Paulet Affair
     desc = "EVTDESC110081"
     picture = "ENG_paulet_affair"
-	
+
     fire_only_once = yes
 
     trigger = {
@@ -3160,13 +3160,13 @@ country_event = {
     title = "EVTNAME110078"
     desc = "EVTDESC110078"
     picture = "ENG_from_hell"
-	
+
     news = yes
     news_title = "EVTNAME110078_NEWS_TITLE"
     news_desc_long = "EVTDESC110078_NEWS_LONG"
     news_desc_medium = "EVTDESC110078_NEWS_MEDIUM"
     news_desc_short = "EVTDESC110078_NEWS_SHORT"
-	
+
     fire_only_once = yes
 
     trigger = {
@@ -3557,7 +3557,7 @@ country_event = {
     title = "EVTNAME99105"
     desc = "EVTDESC99105"
     picture = "anglo_bhutan_war"
-	
+
     fire_only_once = yes
 
     trigger = {
@@ -3633,7 +3633,7 @@ country_event = {
     title = "EVTNAME99106"
     desc = "EVTDESC99106"
     picture = "anglo_manipur_war"
-	
+
     fire_only_once = yes
 
     trigger = {
@@ -3699,7 +3699,7 @@ country_event = {
     title = "EVTNAME99991"
     desc = "EVTDESC99991"
     picture = "third_burma_war"
-	
+
 	fire_only_once = yes
 
     trigger = {
@@ -3785,7 +3785,7 @@ country_event = {
     title = "EVTNAME99809"
     desc = "EVTDESC99809"
     picture = "rorkes_drift"
-	
+
     #news = yes
     #news_desc_long = "EVTDESC99101_NEWS_LONG"
     #news_desc_medium = "EVTDESC99101_NEWS_MEDIUM"
@@ -3798,7 +3798,7 @@ country_event = {
         war_with = ZUL
         2113 = { country_units_in_province = ENG }
     }
-	
+
     mean_time_to_happen = { days = 1 }
 
     option = {
@@ -3823,7 +3823,7 @@ province_event = {
     id = 99107
     title = "EVTNAME99107"
     desc = "EVTDESC99107"
-	
+
     fire_only_once = yes
 
     trigger = {
@@ -3875,7 +3875,7 @@ country_event = {
     title = "EVTNAME99108"
     desc = "EVTDESC99108"
 	picture = "sette_uigno"
-	
+
     fire_only_once = yes
 
     trigger = {
@@ -3908,12 +3908,12 @@ country_event = {
     desc = "EVTDESC99934"
     picture = "victoria_death"
     major = yes
-	
+
     news = yes
     news_desc_long = "EVTDESC99934"
     news_desc_medium = "EVTDESC99934"
     news_desc_short = "EVTDESC99934"
-	
+
     fire_only_once = yes
 
     trigger = {
@@ -4321,7 +4321,7 @@ country_event = {
     desc = "EVTDESC999101"
     picture = "imperial_conference_nineteenseven_two"
     major = yes
-	
+
     fire_only_once = yes
 
     trigger = {
@@ -4717,10 +4717,10 @@ country_event = {
 	title = "Freedom at Last!"
 	desc = "ENGFREDESC"
 	picture = "merry_england"
-	
+
 	mean_time_to_happen = { days = 1 }
-	
-	trigger = { 
+
+	trigger = {
 		OR = {
 			tag = SCO
 			tag = WHA
@@ -4729,32 +4729,32 @@ country_event = {
 		NOT = { has_country_flag = free_at_last }
 		is_vassal = no
 	}
-	
+
 	option = {
 		name = "The Crown, of course."
 		set_country_flag = free_at_last
 		random_owned = {
-			limit = { owner = { vote_franchise = none_voting } }
+			limit = { owner = { vote_franschise = none_voting } }
 			owner = { government = absolute_monarchy }
 		}
 		random_owned = {
-			limit = { 
-				owner = { 
-					NOT = { 
-						vote_franchise = none_voting 
-						vote_franchise = universal_weighted_voting
-						vote_franchise = universal_voting 
+			limit = {
+				owner = {
+					NOT = {
+						vote_franschise = none_voting
+						vote_franschise = universal_weighted_voting
+						vote_franschise = universal_voting
 					}
 				}
 			}
 			owner = { government = prussian_constitutionalism }
 		}
 		random_owned = {
-			limit = { 
-				owner = { 
+			limit = {
+				owner = {
 					OR = {
-						vote_franchise = universal_weighted_voting
-						vote_franchise = universal_voting 
+						vote_franschise = universal_weighted_voting
+						vote_franschise = universal_voting
 					}
 				}
 			}
@@ -4762,18 +4762,18 @@ country_event = {
 		}
 		ai_chance = { factor = 1 }
 	}
-	
+
 	option = {
 		name = "The People, of course."
 		set_country_flag = free_at_last
 		government = democracy
 		random_owned = {
-			limit = { owner = { vote_franchise = none_voting } }
+			limit = { owner = { vote_franschise = none_voting } }
 			owner = { political_reform = landed_voting }
 		}
 		ai_chance = { factor = 1 }
 	}
-	
+
 	option = {
 		name = "The Church, of course."
 		set_country_flag = free_at_last
@@ -4788,13 +4788,13 @@ country_event = {
 	title = "Lines in the Sand"
 	desc = "EVTDESC800883"
 	picture = "treaty"
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "No need to further divide Arabia..."
-		any_land_province = { 
-			remove_core = NEJ 
+		any_land_province = {
+			remove_core = NEJ
 			remove_core = HAL
 			remove_core = HDJ
 			remove_core = OMA
@@ -4838,7 +4838,7 @@ country_event = {
 		any_country = {
 			limit = {
 				OR = {
-					tag = NEJ 
+					tag = NEJ
 					tag = HAL
 					tag = HDJ
 					tag = OMA
@@ -4855,7 +4855,7 @@ country_event = {
 			limit = {
 				any_owned_province = {
 					OR = {
-						is_core = NEJ 
+						is_core = NEJ
 						is_core = HAL
 						is_core = HDJ
 						is_core = OMA
@@ -4870,7 +4870,7 @@ country_event = {
 			any_owned = {
 				limit = {
 					OR = {
-						is_core = NEJ 
+						is_core = NEJ
 						is_core = HAL
 						is_core = HDJ
 						is_core = OMA
@@ -4932,11 +4932,11 @@ country_event = {
 		diplomatic_influence = { who = KWT value = 400 }
 		ai_chance = { factor = 1 }
 	}
-	
+
 	option = {
 		name = "The Sharif deserves some extra autonomy..."
-		any_land_province = { 
-			remove_core = NEJ 
+		any_land_province = {
+			remove_core = NEJ
 			remove_core = HAL
 			remove_core = HDJ
 			remove_core = OMA
@@ -4981,7 +4981,7 @@ country_event = {
 		any_country = {
 			limit = {
 				OR = {
-					tag = NEJ 
+					tag = NEJ
 					tag = HAL
 					tag = HDJ
 					tag = OMA
@@ -4998,7 +4998,7 @@ country_event = {
 			limit = {
 				any_owned_province = {
 					OR = {
-						is_core = NEJ 
+						is_core = NEJ
 						is_core = HAL
 						is_core = HDJ
 						is_core = OMA
@@ -5013,7 +5013,7 @@ country_event = {
 			any_owned = {
 				limit = {
 					OR = {
-						is_core = NEJ 
+						is_core = NEJ
 						is_core = HAL
 						is_core = HDJ
 						is_core = OMA
@@ -5092,15 +5092,15 @@ country_event = {
 	title = "The Plea of the Tswana"
 	desc = "EVTDESC800888"
 	picture = "Expansion"
-	
+
 	fire_only_once = yes
-	
+
 	mean_time_to_happen = { months = 6 }
-	
+
 	trigger = {
 		tag = ENG
 		year = 1895
-		TSW = { 
+		TSW = {
 			OR = {
 				all_core = { owned_by = THIS }
 				vassal_of = THIS
@@ -5108,17 +5108,17 @@ country_event = {
 		}
 		has_global_flag = botswana_organized
 	}
-	
+
 	option = {
-		name = "Kheme's people shouldn't be threatened by a scoundrel like Rhodes! §GLose 3 infamy§W"
+		name = "Kheme's people shouldn't be threatened by a scoundrel like Rhodes! ï¿½GLose 3 infamyï¿½W"
 		badboy = -3
 		any_pop = {
 			limit = { has_pop_culture = tswana }
 			militancy = -2
 		}
-		ai_chance = { factor = 1 }	
+		ai_chance = { factor = 1 }
 	}
-	
+
 	option = {
 		name = "Rhodes is right, Bechuanaland is ripe for the taking!"
 		TSW = { all_core = { add_core = SAF } annex_to = THIS }
@@ -5135,7 +5135,6 @@ country_event = {
 		}
 	}
 }
-		
 
-	
-	
+
+

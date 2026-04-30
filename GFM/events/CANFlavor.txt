@@ -284,7 +284,7 @@ country_event = {
     mean_time_to_happen = { days = 1 }
 
     option = {
-        name = "This can only be good for the empire. §GLose 5 infamy§W"
+        name = "This can only be good for the empire. ï¿½GLose 5 infamyï¿½W"
         prestige = -25
         badboy = -5
         any_pop = {
@@ -417,30 +417,30 @@ country_event = {
 	title = "For King and Country?"
 	desc = "EVTDESC800880"
 	picture = "quebec_patriots"
-	
+
 	fire_only_once = yes
-	
+
 	mean_time_to_happen = { months = 6 }
-	
-	trigger = { 
+
+	trigger = {
 		tag = QUE
 		is_vassal = no
 		war = no
 		has_country_flag = monarchy_government
 	}
-	
+
 	option = {
 		name = "Quebec deserves a crown to call its own!"
 		prestige = 5
 		ai_chance = { factor = 1 }
 	}
-	
+
 	option = {
 		name = "Quebec's destiny calls for a republic!"
 		prestige = 5
 		government = republic
 		random_owned = {
-			limit = { owner = { vote_franchise = none_voting } }
+			limit = { owner = { vote_franschise = none_voting } }
 			owner = { political_reform = landed_voting }
 		}
 		ai_chance = { factor = 9 }
@@ -506,7 +506,7 @@ country_event = {
 		9 = { add_core = QUE remove_core = RPL }
 		59 = { add_core = QUE remove_core = RPL }
 		2593 = { add_core = QUE remove_core = RPL }
-		2626 = { add_core = QUE remove_core = RPL } 
+		2626 = { add_core = QUE remove_core = RPL }
 		2592 = { add_core = QUE remove_core = RPL }
         QUE = {
             all_core = {
@@ -646,7 +646,7 @@ country_event = {
 		9 = { add_core = QUE remove_core = RPL }
 		59 = { add_core = QUE remove_core = RPL }
 		2593 = { add_core = QUE remove_core = RPL }
-		2626 = { add_core = QUE remove_core = RPL } 
+		2626 = { add_core = QUE remove_core = RPL }
 		2592 = { add_core = QUE remove_core = RPL }
         QUE = {
             all_core = {
@@ -1241,7 +1241,7 @@ country_event = {
 		9 = { remove_core = THIS }
 		59 = { remove_core = THIS }
 		2593 = { remove_core = THIS }
-		2626 = { remove_core = THIS } 
+		2626 = { remove_core = THIS }
 		2592 = { remove_core = THIS }
         random_owned = {
             limit = { region = USA_1 }
@@ -1285,7 +1285,7 @@ country_event = {
 		9 = { remove_core = THIS }
 		59 = { remove_core = THIS }
 		2593 = { remove_core = THIS }
-		2626 = { remove_core = THIS } 
+		2626 = { remove_core = THIS }
 		2592 = { remove_core = THIS }
         random_owned = {
             limit = { region = USA_1 }
@@ -1369,7 +1369,7 @@ country_event = {
 			9 = { add_core = CAN remove_core = RPL }
 			59 = { add_core = CAN remove_core = RPL }
 			2593 = { add_core = CAN remove_core = RPL }
-			2626 = { add_core = CAN remove_core = RPL } 
+			2626 = { add_core = CAN remove_core = RPL }
 			2592 = { add_core = CAN remove_core = RPL }
         }
         RPL = {
@@ -1511,7 +1511,7 @@ country_event = {
 			9 = { add_core = CAN }
 			59 = { add_core = CAN }
 			2593 = { add_core = CAN }
-			2626 = { add_core = CAN } 
+			2626 = { add_core = CAN }
 			2592 = { add_core = CAN }
         }
         FROM = {
@@ -1566,7 +1566,7 @@ country_event = {
 			9 = { add_core = CAN }
 			59 = { add_core = CAN }
 			2593 = { add_core = CAN }
-			2626 = { add_core = CAN } 
+			2626 = { add_core = CAN }
 			2592 = { add_core = CAN }
         }
         FROM = {

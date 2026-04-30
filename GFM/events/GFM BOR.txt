@@ -178,7 +178,7 @@ country_event = {
 			tag = FRA
 		}
 		has_country_flag = monarchy_government
-		NOT = { government = absolute_empire government = semi_constitutiona_empire government = constitutional_empire }
+		NOT = { government = absolute_empire government = semi_constitutional_empire government = constitutional_empire }
 		has_country_flag = philippe_viii
 		year = 1940
 		month = 8
@@ -207,7 +207,7 @@ country_event = {
 	trigger = {
 		tag = FRA
 		has_country_flag = monarchy_government
-		NOT = { government = absolute_empire government = semi_constitutiona_empire government = constitutional_empire }
+		NOT = { government = absolute_empire government = semi_constitutional_empire government = constitutional_empire }
 		year = 1850
 		month = 8
 		NOT = { year = 1851 }
@@ -236,7 +236,7 @@ country_event = {
 		tag = FRA
 		has_country_flag = monarchy_government
 		has_country_flag = louis_philippe_ii
-		NOT = { government = absolute_empire government = semi_constitutiona_empire government = constitutional_empire }
+		NOT = { government = absolute_empire government = semi_constitutional_empire government = constitutional_empire }
 		NOT = { has_country_modifier = regency_government }
 	}
 
@@ -267,7 +267,7 @@ country_event = {
 		tag = FRA
 		has_country_flag = monarchy_government
 		has_country_flag = louis_philippe_ii
-		NOT = { government = absolute_empire government = semi_constitutiona_empire government = constitutional_empire }
+		NOT = { government = absolute_empire government = semi_constitutional_empire government = constitutional_empire }
 		year = 1894
 		month = 9
 		NOT = { year = 1895 }
@@ -296,7 +296,7 @@ country_event = {
 		tag = FRA
 		has_country_flag = monarchy_government
 		has_country_flag = louis_philippe_iii
-		NOT = { government = absolute_empire government = semi_constitutiona_empire government = constitutional_empire }
+		NOT = { government = absolute_empire government = semi_constitutional_empire government = constitutional_empire }
 		year = 1926
 		month = 3
 		NOT = { year = 1927 }
@@ -323,7 +323,7 @@ country_event = {
 	trigger = {
 		tag = FRA
 		has_country_flag = monarchy_government
-		NOT = { government = absolute_empire government = semi_constitutiona_empire government = constitutional_empire }
+		NOT = { government = absolute_empire government = semi_constitutional_empire government = constitutional_empire }
 		year = 1842
 		month = 7
 		NOT = { year = 1843 }
@@ -435,7 +435,7 @@ country_event = {
 }
 
 country_event = {
-	id = 80432068	
+	id = 80432068
 	title = "EVTNAME00068"
 	desc = "EVTDESC00068"
 	picture = "two_sicilies"
@@ -508,7 +508,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTB00071"
-		war = { 
+		war = {
 			target = SIC
 			attacker_goal = { casus_belli = make_puppet_no_infamy }
 			defender_goal = { casus_belli = humiliate_no_infamy }
@@ -534,7 +534,7 @@ country_event = {
 	mean_time_to_happen = { days = 1 }
 
 	option = {
-		name = "We claim India as our own! The Princely States shall go free. §RGain 25 infamy§W"
+		name = "We claim India as our own! The Princely States shall go free. ï¿½RGain 25 infamyï¿½W"
 		clr_global_flag = bourbon_england_war
 		prestige = 50
 		badboy = 25
@@ -568,7 +568,7 @@ country_event = {
 	}
 
 	option = {
-		name = "We claim India as our own! We shall control the Princely States. §RGain 30 infamy§W"
+		name = "We claim India as our own! We shall control the Princely States. ï¿½RGain 30 infamyï¿½W"
 		clr_global_flag = bourbon_england_war
 		prestige = 50
 		badboy = 30
@@ -602,7 +602,7 @@ country_event = {
 	}
 
 	option = {
-		name = "We claim India as our own! We shall annex the Princely States. §RGain 35 infamy§W"
+		name = "We claim India as our own! We shall annex the Princely States. ï¿½RGain 35 infamyï¿½W"
 		clr_global_flag = bourbon_england_war
 		prestige = 50
 		badboy = 35
@@ -643,7 +643,7 @@ country_event = {
 			release = SCO
 			release = IRE
 			release = WHA
-			any_owned = { limit = { is_core = SCO } secede_province = SCO } 
+			any_owned = { limit = { is_core = SCO } secede_province = SCO }
 			any_owned = { limit = { is_core = IRE } secede_province = IRE }
 			any_owned = { limit = { is_core = WHA } secede_province = WHA }
 		}
@@ -701,7 +701,7 @@ country_event = {
 		prestige = 50
 		badboy = 5
 		BOR = {
-			any_owned = { limit = { OR = { is_core = HND is_core = AST is_core = CAN is_core = NZL } } secede_province = ENG } 
+			any_owned = { limit = { OR = { is_core = HND is_core = AST is_core = CAN is_core = NZL } } secede_province = ENG }
 			release = BRT
 		}
 		create_vassal = BRT
@@ -739,7 +739,7 @@ country_event = {
 		name = "EVTOPTA00202"
 		add_country_modifier = { name = versailles_court_culture duration = -1 }
 		set_country_flag = versailles_restored
-		any_owned = { limit = { province_id = 3399 } trade_goods = precious_goods add_province_modifier = { name = recently_built_city duration = 1645 } } 
+		any_owned = { limit = { province_id = 3399 } trade_goods = precious_goods add_province_modifier = { name = recently_built_city duration = 1645 } }
 	}
 }
 

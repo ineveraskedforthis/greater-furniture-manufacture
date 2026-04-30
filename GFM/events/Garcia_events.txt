@@ -117,84 +117,6 @@ country_event = {
 #	}
 #}
 
-country_event = {
-	id = 4207008
-	title = "Renaming"
-	desc = "EVTDESC4207008"
-	picture = "renaming_explained"
-	
-	is_triggered_only = yes
-
-	option = {
-		name = "Rename every 12 months (standard)."
-        random_owned = { limit = { owner = { tag = FRA } } owner = { country_event = 60168150 } }
-        random_owned = { limit = { owner = { tag = BOR } } owner = { country_event = 60178150 } }
-        random_owned = { limit = { owner = { OR = { tag = SOK tag = ILO AND = { year = 1845 tag = ADW } AND = { year = 1831 tag = KEB } } } } owner = { country_event = 184824329 } }
-        random_owned = { limit = { owner = { tech_school = confederation_tech_school } } owner = { country_event = 341534553 } }
-        random_owned = { limit = { owner = { OR = { tag = KBO tag = CMR } } } owner = { country_event = 184824349 } }
-        random_owned = { limit = { owner = { tag = BRZ } } owner = { country_event = 60168152 } }
-            CLN = {
-                country_event = 566777743
-            }
-			set_global_flag = renaming_setup
-	}
-	option = {
-		name = "Rename every 6 months."
-		set_global_flag = rename_six_months
-        random_owned = { limit = { owner = { tag = FRA } } owner = { country_event = 60168150 } }
-        random_owned = { limit = { owner = { tag = BOR } } owner = { country_event = 60178150 } }
-        random_owned = { limit = { owner = { OR = { tag = SOK tag = ILO AND = { year = 1845 tag = ADW } AND = { year = 1831 tag = KEB } } } } owner = { country_event = 184824329 } }
-        random_owned = { limit = { owner = { tech_school = confederation_tech_school } } owner = { country_event = 341534553 } }
-        random_owned = { limit = { owner = { OR = { tag = KBO tag = CMR } } } owner = { country_event = 184824349 } }
-        random_owned = { limit = { owner = { tag = BRZ } } owner = { country_event = 60168152 } }
-            CLN = {
-                country_event = 566777743
-            }
-			set_global_flag = renaming_setup
-	}
-	option = {
-		name = "Rename every 4 months."
-		set_global_flag = rename_four_months
-        random_owned = { limit = { owner = { tag = FRA } } owner = { country_event = 60168150 } }
-        random_owned = { limit = { owner = { tag = BOR } } owner = { country_event = 60178150 } }
-        random_owned = { limit = { owner = { OR = { tag = SOK tag = ILO AND = { year = 1845 tag = ADW } AND = { year = 1831 tag = KEB } } } } owner = { country_event = 184824329 } }
-        random_owned = { limit = { owner = { tech_school = confederation_tech_school } } owner = { country_event = 341534553 } }
-        random_owned = { limit = { owner = { OR = { tag = KBO tag = CMR } } } owner = { country_event = 184824349 } }
-        random_owned = { limit = { owner = { tag = BRZ } } owner = { country_event = 60168152 } }
-            CLN = {
-                country_event = 566777743
-            }
-			set_global_flag = renaming_setup
-	}
-	option = {
-		name = "Rename every 2 months."
-		set_global_flag = rename_two_months
-        random_owned = { limit = { owner = { tag = FRA } } owner = { country_event = 60168150 } }
-        random_owned = { limit = { owner = { tag = BOR } } owner = { country_event = 60178150 } }
-        random_owned = { limit = { owner = { OR = { tag = SOK tag = ILO AND = { year = 1845 tag = ADW } AND = { year = 1831 tag = KEB } } } } owner = { country_event = 184824329 } }
-        random_owned = { limit = { owner = { tech_school = confederation_tech_school } } owner = { country_event = 341534553 } }
-        random_owned = { limit = { owner = { OR = { tag = KBO tag = CMR } } } owner = { country_event = 184824349 } }
-        random_owned = { limit = { owner = { tag = BRZ } } owner = { country_event = 60168152 } }
-            CLN = {
-                country_event = 566777743
-            }
-			set_global_flag = renaming_setup
-	}
-	option = {
-		name = "Rename every 30 days."
-		set_global_flag = rename_thirty_days
-        random_owned = { limit = { owner = { tag = FRA } } owner = { country_event = 60168150 } }
-        random_owned = { limit = { owner = { tag = BOR } } owner = { country_event = 60178150 } }
-        random_owned = { limit = { owner = { OR = { tag = SOK tag = ILO AND = { year = 1845 tag = ADW } AND = { year = 1831 tag = KEB } } } } owner = { country_event = 184824329 } }
-        random_owned = { limit = { owner = { tech_school = confederation_tech_school } } owner = { country_event = 341534553 } }
-        random_owned = { limit = { owner = { OR = { tag = KBO tag = CMR } } } owner = { country_event = 184824349 } }
-        random_owned = { limit = { owner = { tag = BRZ } } owner = { country_event = 60168152 } }
-            CLN = {
-                country_event = 566777743
-            }
-			set_global_flag = renaming_setup
-	}
-}
 
 #4207010, 4207011, 4207012 and 4207013 used in 1830 submod
 
@@ -203,7 +125,7 @@ country_event = {
     title = "More Land for Colonization"
     desc = "EVTDESC4207018"
 	picture = "ranchos"
-	
+
 	allow_multiple_instances = no
 
     trigger = {
@@ -296,7 +218,7 @@ country_event = {
 	title = "The Mier Expedition"
 	desc = "EVTDESC4207019"
 	picture = "mier_expedition"
-	
+
 	fire_only_once = yes
 
 	trigger = {
@@ -328,7 +250,7 @@ country_event = {
 	title = "The Mier Expedition"
 	desc = "EVTDESC4207020"
 	picture = "mier_expedition"
-	
+
 	is_triggered_only = yes
 
 	option = {
@@ -361,7 +283,7 @@ country_event = {
 	title = "Texas, oh Texas..."
 	desc = "EVTDESC4207055"
 	picture = "1854_Alamo"
-	
+
 	fire_only_once = yes
 
 	trigger = {
@@ -415,7 +337,7 @@ country_event = {
 	title = "Napoleon's Repatriation"
 	desc = "EVTDESC4207058"
 	picture = "napoleon_transport"
-	
+
 	is_triggered_only = yes
 
 	option = {
@@ -459,12 +381,12 @@ country_event = {
 	title = "Napoleon's Repatriation"
 	desc = "EVTDESC4207059"
 	picture = "napoleon_returned"
-	
+
     news = yes
     news_desc_long = "EVTDESC37204_NEWS_LONG"
     news_desc_medium = "EVTDESC37204_NEWS_MEDIUM"
     news_desc_short = "EVTDESC37204_NEWS_SHORT"
-	
+
 	is_triggered_only = yes
 
 	option = {
@@ -479,7 +401,7 @@ country_event = {
 	title = "Britain refuses"
 	desc = "EVTDESC4207060"
 	picture = "uk_response"
-	
+
 	is_triggered_only = yes
 
 	option = {
@@ -540,7 +462,7 @@ country_event = {
  	}
 
  	option = {
- 		name = "Tunis is rightfully Italian! Send an ultimatum to the French! §RGain 3 infamy§W"
+ 		name = "Tunis is rightfully Italian! Send an ultimatum to the French! ï¿½RGain 3 infamyï¿½W"
  		badboy = 3
  		random_owned = { limit = { owner = { exists = FRA FRA = { owns = 425 } } } owner = { FRA = { country_event = 4207065 } } }
  		random_owned = { limit = { owner = { exists = BOR BOR = { owns = 425 } } } owner = { BOR = { country_event = 4207065 } } }
@@ -635,7 +557,7 @@ country_event = {
 		  limit = {
 		    is_core = TEX
 		  }
-		    remove_core = MEX	  
+		    remove_core = MEX
 		    add_core = USA
 		    secede_province = USA
 		}
@@ -679,7 +601,7 @@ country_event = {
 		USA = { inherit = UTI country_event = 42070712 } #MEX accepts
 		ai_chance = { factor = 3 }
 	}
-	
+
 	option = {
 		name = "Reject the offer."
 		prestige = 5
@@ -830,108 +752,7 @@ country_event = {
 	}
 
 	option = {
-		name = "Seize Upper Canada! §RGain 5 infamy§W"
-		badboy = 5
-		ENG = { country_event = 4207080 }
-		158 = { add_core = THIS secede_province = THIS }
-		3616 = { add_core = THIS }
-		50 = { add_core = THIS }
-		51 = { add_core = THIS }
-		52 = { add_core = THIS }
-		56 = { add_core = THIS }
-		57 = { add_core = THIS }
-		46 = { add_core = THIS }
-		53 = { add_core = THIS }
-		54 = { add_core = THIS }
-		55 = { add_core = THIS }
-		set_global_flag = us_ontario
-		war = {
-            target = ENG
-            attacker_goal = {
-				casus_belli = acquire_core_state 
-				state_province_id = 57
-            }
-			defender_goal = {
-				casus_belli = humiliate_no_infamy
-			}
-            call_ally = no
-        }
-		ai_chance = { factor = 0 }
-	}
-}
-
-country_event = { 
-	id = 4207075
-	title = "The Caroline Affair"
-	desc = "EVTDESC4207075"
-	picture = "caroline_affair"
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = "It's only fair to pay compensation."
-		prestige = -10
-		treasury = -14000
-		USA = { country_event = 4207076 }
-		ai_chance = {
-			factor = 80
-			modifier = {
-				factor = 0
-				NOT = { money = 14000 }
-			}
-		}
-	}
-
-	option = {
-		name = "Nonsense! We owe America nothing."
-		USA = { country_event = 4207078 }
-		ai_chance = { factor = 20 }
-	}
-}
-
-country_event = { 
-	id = 4207076
-	title = "British Reparations"
-	desc = "EVTDESC4207076"
-	picture = "caroline_affair"
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = "Perfect."
-		prestige = 10
-		treasury = 14000
-	}
-}
-
-country_event = { 
-	id = 4207078
-	title = "Britain refuses"
-	desc = "EVTDESC4207078"
-	picture = "caroline_affair"
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = "Don't risk war."
-		prestige = -10
-		ENG = { country_event = 4207079 }
-		ai_chance = { factor = 85 }
-	}
-
-	option = {
-		name = "Then it's up to us to take it!"
-		war = {
-            target = ENG
-            attacker_goal = { casus_belli = war_reparations }
-            call_ally = no
-        }
-		ENG = { country_event = 4207081 }
-		ai_chance = { factor = 15 }
-	}
-
-	option = {
-		name = "Seize Upper Canada! §RGain 5 infamy§W"
+		name = "Seize Upper Canada! ï¿½RGain 5 infamyï¿½W"
 		badboy = 5
 		ENG = { country_event = 4207080 }
 		158 = { add_core = THIS secede_province = THIS }
@@ -961,7 +782,108 @@ country_event = {
 	}
 }
 
-country_event = { 
+country_event = {
+	id = 4207075
+	title = "The Caroline Affair"
+	desc = "EVTDESC4207075"
+	picture = "caroline_affair"
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "It's only fair to pay compensation."
+		prestige = -10
+		treasury = -14000
+		USA = { country_event = 4207076 }
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0
+				NOT = { money = 14000 }
+			}
+		}
+	}
+
+	option = {
+		name = "Nonsense! We owe America nothing."
+		USA = { country_event = 4207078 }
+		ai_chance = { factor = 20 }
+	}
+}
+
+country_event = {
+	id = 4207076
+	title = "British Reparations"
+	desc = "EVTDESC4207076"
+	picture = "caroline_affair"
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Perfect."
+		prestige = 10
+		treasury = 14000
+	}
+}
+
+country_event = {
+	id = 4207078
+	title = "Britain refuses"
+	desc = "EVTDESC4207078"
+	picture = "caroline_affair"
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Don't risk war."
+		prestige = -10
+		ENG = { country_event = 4207079 }
+		ai_chance = { factor = 85 }
+	}
+
+	option = {
+		name = "Then it's up to us to take it!"
+		war = {
+            target = ENG
+            attacker_goal = { casus_belli = war_reparations }
+            call_ally = no
+        }
+		ENG = { country_event = 4207081 }
+		ai_chance = { factor = 15 }
+	}
+
+	option = {
+		name = "Seize Upper Canada! ï¿½RGain 5 infamyï¿½W"
+		badboy = 5
+		ENG = { country_event = 4207080 }
+		158 = { add_core = THIS secede_province = THIS }
+		3616 = { add_core = THIS }
+		50 = { add_core = THIS }
+		51 = { add_core = THIS }
+		52 = { add_core = THIS }
+		56 = { add_core = THIS }
+		57 = { add_core = THIS }
+		46 = { add_core = THIS }
+		53 = { add_core = THIS }
+		54 = { add_core = THIS }
+		55 = { add_core = THIS }
+		set_global_flag = us_ontario
+		war = {
+            target = ENG
+            attacker_goal = {
+				casus_belli = acquire_core_state
+				state_province_id = 57
+            }
+			defender_goal = {
+				casus_belli = humiliate_no_infamy
+			}
+            call_ally = no
+        }
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
 	id = 4207079
 	title = "America backs down"
 	desc = "EVTDESC4207079"
@@ -975,7 +897,7 @@ country_event = {
 	}
 }
 
-country_event = { 
+country_event = {
 	id = 4207081
 	title = "War with America"
 	desc = "EVTDESC4207081"
@@ -1017,7 +939,7 @@ country_event = {
 			FROM = { any_owned = { change_controller = THIS } }
 		}
 	}
-	
+
 	option = {
 		name = "We don't accept their surrender."
 	}
@@ -1029,7 +951,7 @@ country_event = {
 	desc = "EVTDESC4207097"
 	picture = "treaty"
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "Perfect!"
 		prestige = 5
@@ -1047,7 +969,7 @@ country_event = {
 	desc = "EVTDESC4207098"
 	picture = "treaty"
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "By sword it's gonna be then."
 		badboy = 2
@@ -1064,7 +986,7 @@ country_event = {
 			}
 		}
 	}
-	
+
 	option = {
 		name = "We must give up on Laredo."
 		relation = {
@@ -1103,7 +1025,7 @@ country_event = {
 		set_global_flag = gaveuplaredo
 		ai_chance = { factor = 50 }
 	}
-	
+
 	option = {
         name = "Laredo is ours!"
 		prestige = 5
@@ -1128,9 +1050,9 @@ country_event = {
 		prestige = 10
 		war = no
 	}
-	
+
     mean_time_to_happen = { months = 25 }
-	
+
 	option = {
         name = "We will stand the test of time." #More Rio Grande LARP
         prestige = 2
@@ -1172,16 +1094,16 @@ country_event = {
         138 = { owned_by = THIS }
 		war = no
 	}
-	
-    mean_time_to_happen = { 
+
+    mean_time_to_happen = {
 		months = 1
 	}
 
 	option = {
         name = "Laredo will remain Riograndese, but we're open to compensate Texas." #Texan claim removed, US cant decision-steal
         138 = { remove_core = TEX }
-		TEX = { 
-			treasury = 2000 
+		TEX = {
+			treasury = 2000
 			relation = {
 				who = RGR
 				value = -50
@@ -1195,16 +1117,16 @@ country_event = {
 	}
 	option = {
         name = "The Texans will pay for Laredo if they want it." #Texas acquires Laredo
-        138 = { 
+        138 = {
 			remove_core = RGR
-			secede_province = TEX 
+			secede_province = TEX
 		}
-		TEX = { 
+		TEX = {
 			treasury = -2000
 			relation = {
 				who = RGR
 				value = 200
-		    }		
+		    }
 		}
 		RGR = { treasury = 2000 }
         ai_chance = {

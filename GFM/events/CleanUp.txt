@@ -3751,18 +3751,15 @@ country_event = {
 	option = {
 		name = "The Emperor shall prevail!"
 		set_global_flag = railroaded_japan_empire
-		country_event = 4207008
 	}
 
 	option = {
 		name = "Let the Shogunate survive!"
 		set_global_flag = railroaded_japan_shogunate
-		country_event = 4207008
 	}
 
 	option = {
 		name = "I don't get it, is Shogun his first name or his surname?"
-		country_event = 4207008
 	}
 }
 #Credits
@@ -3771,7 +3768,7 @@ country_event = {
     title = "EVTNAME60168151"
     desc = "EVTDESC60168151"
     picture = "gettysburg_address"
-	
+
     fire_only_once = yes
 	is_triggered_only = yes
 
@@ -3789,7 +3786,7 @@ country_event = {
     title = "EVTNAME60168151"
     desc = "EVTDESC601681512"
     picture = "gettysburg_address"
-	
+
     fire_only_once = yes
 	is_triggered_only = yes
 
@@ -3799,7 +3796,9 @@ country_event = {
 
 	option = {
         name = "EVT60168151OPTA"
+
 		random_owned = { limit = { owner = { ai = no } } owner = { country_event = 6016815 } }
+
 				any_pop = {
 					limit = {
 						location = { owned_by = TUR }
@@ -4180,11 +4179,11 @@ country_event = {
 				literacy = 0.2
 				}
 
-				any_pop = { limit = { 
+				any_pop = { limit = {
 						location = { owner = { primary_culture = kurdish } } is_culture_group = arab } literacy = 0.01 }
-				any_pop = { limit = { 
+				any_pop = { limit = {
 						location = { owner = { primary_culture = kurdish } } has_pop_religion = catholic NOT = { has_pop_culture = assyrian } } literacy = 0.01 }
-				any_pop = { limit = { 
+				any_pop = { limit = {
 						location = { owner = { primary_culture = kurdish } } has_pop_culture = greek } literacy = 0.07 }
 
 				any_pop = { limit = { location = { owner = { primary_culture = russian } } has_pop_culture = ashkenazi } literacy = 0.14 }
@@ -4405,13 +4404,11 @@ country_event = {
 
     option = {
         name = "Let things happen with normal likelihoods."
-        country_event = 4207008
     }
 
     option = {
         name = "Disable colonial railroading."
         set_global_flag = colonial_railroading_disabled
-        country_event = 4207008
     }
 
     option = {
@@ -4425,7 +4422,7 @@ country_event = {
     title = "How to get Napoleon III"
     desc = "NAPOLEONEXPLAINED"
     picture = "napoleon_explanation"
-	
+
     fire_only_once = yes
 	is_triggered_only = yes
 
@@ -4439,7 +4436,7 @@ country_event = {
     title = "The State of France"
     desc = "BOURBONSEXPLAINED"
     picture = "charles_x"
-	
+
     fire_only_once = yes
 	is_triggered_only = yes
 
@@ -4453,7 +4450,7 @@ country_event = {
     title = "Green Hell"
     desc = "green_hell_explain_desc"
     picture = "green_hell"
-	
+
     fire_only_once = yes
     is_triggered_only = yes
 
@@ -4677,7 +4674,7 @@ country_event = {
 	title = "Mexican Mining Cleanup 1830"
 	desc = "Ughhh"
 	picture = "walter"
-	
+
 	trigger = {
 		tag = CLN
 		MEX = {
@@ -4703,7 +4700,7 @@ country_event = {
 			}
 		}
 	}
-	
+
 	option = {
 		name = "Waos"
 		MEX = {
@@ -4735,7 +4732,7 @@ country_event = {
 	title = "Mexican Mining Cleanup 1840"
 	desc = "Ughhh"
 	picture = "walter"
-	
+
 	trigger = {
 		tag = CLN
 		MEX = {
@@ -4761,7 +4758,7 @@ country_event = {
 			}
 		}
 	}
-	
+
 	option = {
 		name = "Waos"
 		MEX = {
@@ -4794,7 +4791,7 @@ country_event = {
 	title = "Mexican Mining Cleanup 1850"
 	desc = "Ughhh"
 	picture = "walter"
-	
+
 	trigger = {
 		tag = CLN
 		MEX = {
@@ -4820,7 +4817,7 @@ country_event = {
 			}
 		}
 	}
-	
+
 	option = {
 		name = "Waos"
 		MEX = {
@@ -4854,7 +4851,7 @@ country_event = {
 	title = "Mexican Mining Cleanup 1860"
 	desc = "Ughhh"
 	picture = "walter"
-	
+
 	trigger = {
 		tag = CLN
 		MEX = {
@@ -4880,7 +4877,7 @@ country_event = {
 			}
 		}
 	}
-	
+
 	option = {
 		name = "Waos"
 		MEX = {
@@ -4915,7 +4912,7 @@ country_event = {
 	title = "Mexican Mining Cleanup 1870"
 	desc = "Ughhh"
 	picture = "walter"
-	
+
 	trigger = {
 		tag = CLN
 		MEX = {
@@ -4941,7 +4938,7 @@ country_event = {
 			}
 		}
 	}
-	
+
 	option = {
 		name = "Waos"
 		MEX = {
@@ -4977,7 +4974,7 @@ country_event = {
 	title = "Mexican Mining Cleanup 1880"
 	desc = "Ughhh"
 	picture = "walter"
-	
+
 	trigger = {
 		tag = CLN
 		MEX = {
@@ -5010,7 +5007,7 @@ country_event = {
 			}
 		}
 	}
-	
+
 	option = {
 		name = "Waos"
 		MEX = {

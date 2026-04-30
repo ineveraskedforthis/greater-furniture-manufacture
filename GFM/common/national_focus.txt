@@ -174,7 +174,6 @@ promotion_focus = {
             }
             NOT = { state_scope = { any_owned_province = { NOT = { controlled_by = THIS } } } }
             NOT = { has_province_modifier = irish_oppression }
-            NOT = { state_scope = { bureaucrats = 0.040 } }
         }
     }
 
@@ -187,7 +186,6 @@ promotion_focus = {
             is_colonial = no
             NOT = { state_scope = { any_owned_province = { NOT = { controlled_by = THIS } } } }
             NOT = { has_province_modifier = irish_oppression }
-            NOT = { state_scope = { capitalists = 0.007 } }
         }
     }
 
@@ -202,7 +200,6 @@ promotion_focus = {
             }
             NOT = { state_scope = { any_owned_province = { NOT = { controlled_by = THIS } } } }
             NOT = { has_province_modifier = irish_oppression }
-            NOT = { state_scope = { clergymen = 0.041 } }
         }
     }
 
@@ -211,11 +208,6 @@ promotion_focus = {
         icon = 16
         outliner_show_as_percent = yes
         limit = {
-            work_available = { worker = clerks }
-            OR = {
-                NOT = { unemployment_by_type = { type = clerks value = 0.5 } }
-                owner = { ai = no }
-            }
             NOT = { state_scope = { any_owned_province = { NOT = { controlled_by = THIS } } } }
             NOT = { has_province_modifier = irish_oppression }
             NOT = { state_scope = { is_colonial = yes } }
@@ -230,7 +222,6 @@ promotion_focus = {
             work_available = { worker = craftsmen }
             NOT = { state_scope = { any_owned_province = { NOT = { controlled_by = THIS } } } }
             NOT = { state_scope = { is_colonial = yes } }
-            NOT = { state_scope = { any_owned_province = { unemployment_by_type = { type = craftsmen value = 0.5 } } } }
         }
     }
 
@@ -268,7 +259,6 @@ promotion_focus = {
             }
             NOT = { state_scope = { any_owned_province = { NOT = { controlled_by = THIS } } } }
             NOT = { has_province_modifier = irish_oppression }
-            NOT = { state_scope = { officers = 0.002 } }
         }
     }
 

@@ -1872,10 +1872,7 @@ country_event = {
 					NOT = { has_global_flag = renaming_setup }
 				}
 			}
-			owner = { set_global_flag = renaming_setup
-            CLN = {
-                country_event = 566777743
-            } }
+			owner = { set_global_flag = renaming_setup }
 		}
 		any_country = {
 			limit = {
@@ -6123,7 +6120,7 @@ country_event = {
 			add_accepted_culture = south_german
 			set_country_flag = german_accepted
 		}
-		
+
 		any_country = {
 			limit = {
 				overlord = { OR = { primary_culture = north_german primary_culture = south_german } has_country_flag = monarchy_government }
@@ -6662,11 +6659,11 @@ country_event = {
 		}
 		any_country = { #No culture section cause Ottos aren't a traditional colonizer
 			limit = {
-				overlord = { 
+				overlord = {
 					OR = {
 						is_culture_group = arab
 						primary_culture = turkish
-					} 
+					}
 				}
 				NOT = { government = colonial_company }
 				NOT = { has_country_flag = colony_exemption }
@@ -10434,7 +10431,7 @@ country_event = {
 		any_land_province = {
 			limit = {
 				# Audax Validator "." Ignore_NEXT
-				province_id = 2209 
+				province_id = 2209
 				owner = {
 					OR = { primary_culture = yankee primary_culture = dixie }
 					CUB = { exists = no }
@@ -11754,7 +11751,7 @@ country_event = {
 					set_country_flag = french_accepted
 				}
 			}
-		}		
+		}
 		# Audax Validator "." Ignore_NEXT
 		any_land_province = {
 			limit = {
@@ -20103,7 +20100,7 @@ country_event = {
 				}
 			}
 		}
-#Arab Aceh 
+#Arab Aceh
 		any_land_province = {
 			limit = {
 				# Audax Validator "." Ignore_NEXT
@@ -28450,14 +28447,14 @@ country_event = {
 						}
 					}
 					random_owned = { limit = { owner = { primary_culture = portuguese owns = 2003 } } 2003 = { change_province_name = "Lobito" } }
-					random_owned = { limit = { owner = { primary_culture = portuguese owns = 2005 } } 2005 = { change_province_name = "Cabaça" } }
+					random_owned = { limit = { owner = { primary_culture = portuguese owns = 2005 } } 2005 = { change_province_name = "Cabaï¿½a" } }
 					random_owned = { limit = { owner = { primary_culture = portuguese owns = 3733 } } 3733 = { change_province_name = "Nova Lisboa" } }
 					random_owned = { limit = { owner = { primary_culture = portuguese owns = 2008 } } 2008 = { change_province_name = "Namakunde" } }
 					random_owned = { limit = { owner = { primary_culture = portuguese owns = 3731 } } 3731 = { change_province_name = "Silva Porto" } }
 					random_owned = { limit = { owner = { primary_culture = portuguese owns = 2011 } } 2011 = { change_province_name = "Luso" } }
 					random_owned = { limit = { owner = { primary_culture = portuguese owns = 3727 } } 3727 = { change_province_name = "Casombo" } }
-					random_owned = { limit = { owner = { primary_culture = portuguese owns = 3734 } } 3734 = { change_province_name = "Uíge" } }
-					random_owned = { limit = { owner = { primary_culture = portuguese owns = 2001 } } 2001 = { change_province_name = "São Salvador" } }
+					random_owned = { limit = { owner = { primary_culture = portuguese owns = 3734 } } 3734 = { change_province_name = "Uï¿½ge" } }
+					random_owned = { limit = { owner = { primary_culture = portuguese owns = 2001 } } 2001 = { change_province_name = "Sï¿½o Salvador" } }
 					random_owned = { limit = { owner = { primary_culture = portuguese owns = 2002 } } 2002 = { change_province_name = "Malanje" } }
 					random_owned = { limit = { owner = { primary_culture = portuguese owns = 2010 } } 2010 = { change_province_name = "Henrique de Carvalho" } }
 					random_owned = { limit = { owner = { primary_culture = portuguese owns = 2007 } } 2007 = { change_province_name = "Cuangar" } }
@@ -28467,7 +28464,7 @@ country_event = {
 					random_owned = { limit = { owner = { primary_culture = portuguese owns = 3734 } } 3734 = { change_province_name = "Bolongongo" } }
 					random_owned = { limit = { owner = { primary_culture = portuguese owns = 3730 } } 3730 = { change_province_name = "Serpa Pinto" } }
 					random_owned = { limit = { owner = { primary_culture = brazilian owns = 3733 } } 3733 = { change_province_name = "Novo Rio" } }
-					random_owned = { limit = { owner = { primary_culture = brazilian owns = 2010 } } 2010 = { change_province_name = "Correia de Sá" } }
+					random_owned = { limit = { owner = { primary_culture = brazilian owns = 2010 } } 2010 = { change_province_name = "Correia de Sï¿½" } }
 					ANG = {
 						clr_country_flag = sunni_country
 						clr_country_flag = shiite_country
@@ -28565,14 +28562,14 @@ country_event = {
 					random_owned = { limit = { owner = { has_country_flag = ibadi_country } } ANG = { religion = ibadi set_country_flag = ibadi_country } }
 					random_owned = { limit = { owner = { has_country_flag = yazidi_country } } ANG = { religion = yazidi set_country_flag = yazidi_country } }
 					random_owned = { limit = { owner = { primary_culture = portuguese owns = 2003 } } 2003 = { change_province_name = "Lobito" } }
-					random_owned = { limit = { owner = { primary_culture = portuguese owns = 2005 } } 2005 = { change_province_name = "Cabaça" } }
+					random_owned = { limit = { owner = { primary_culture = portuguese owns = 2005 } } 2005 = { change_province_name = "Cabaï¿½a" } }
 					random_owned = { limit = { owner = { primary_culture = portuguese owns = 3733 } } 3733 = { change_province_name = "Nova Lisboa" } }
 					random_owned = { limit = { owner = { primary_culture = portuguese owns = 2008 } } 2008 = { change_province_name = "Namakunde" } }
 					random_owned = { limit = { owner = { primary_culture = portuguese owns = 3731 } } 3731 = { change_province_name = "Silva Porto" } }
 					random_owned = { limit = { owner = { primary_culture = portuguese owns = 2011 } } 2011 = { change_province_name = "Luso" } }
 					random_owned = { limit = { owner = { primary_culture = portuguese owns = 3727 } } 3727 = { change_province_name = "Casombo" } }
-					random_owned = { limit = { owner = { primary_culture = portuguese owns = 3734 } } 3734 = { change_province_name = "Uíge" } }
-					random_owned = { limit = { owner = { primary_culture = portuguese owns = 2001 } } 2001 = { change_province_name = "São Salvador" } }
+					random_owned = { limit = { owner = { primary_culture = portuguese owns = 3734 } } 3734 = { change_province_name = "Uï¿½ge" } }
+					random_owned = { limit = { owner = { primary_culture = portuguese owns = 2001 } } 2001 = { change_province_name = "Sï¿½o Salvador" } }
 					random_owned = { limit = { owner = { primary_culture = portuguese owns = 2002 } } 2002 = { change_province_name = "Malanje" } }
 					random_owned = { limit = { owner = { primary_culture = portuguese owns = 2010 } } 2010 = { change_province_name = "Henrique de Carvalho" } }
 					random_owned = { limit = { owner = { primary_culture = portuguese owns = 2007 } } 2007 = { change_province_name = "Cuangar" } }
@@ -28582,7 +28579,7 @@ country_event = {
 					random_owned = { limit = { owner = { primary_culture = portuguese owns = 3734 } } 3734 = { change_province_name = "Bolongongo" } }
 					random_owned = { limit = { owner = { primary_culture = portuguese owns = 3730 } } 3730 = { change_province_name = "Serpa Pinto" } }
 					random_owned = { limit = { owner = { primary_culture = brazilian owns = 3733 } } 3733 = { change_province_name = "Novo Rio" } }
-					random_owned = { limit = { owner = { primary_culture = brazilian owns = 2010 } } 2010 = { change_province_name = "Correia de Sá" } }
+					random_owned = { limit = { owner = { primary_culture = brazilian owns = 2010 } } 2010 = { change_province_name = "Correia de Sï¿½" } }
 				}
 			}
 			random_owned = {
@@ -28708,7 +28705,7 @@ country_event = {
 					}
 					random_owned = {
 						limit = { province_id = 3678 owner = { tag = POR } }
-						change_province_name = "Porto Amélia"
+						change_province_name = "Porto Amï¿½lia"
 					}
 					random_owned = {
 						limit = { province_id = 3970 owner = { tag = POR } }
@@ -28716,15 +28713,15 @@ country_event = {
 					}
 					random_owned = {
 						limit = { province_id = 2061 owner = { tag = POR } }
-						change_province_name = "António Enes"
+						change_province_name = "Antï¿½nio Enes"
 					}
 					random_owned = {
 						limit = { province_id = 2050 owner = { tag = POR } }
-						change_province_name = "João Belo"
+						change_province_name = "Joï¿½o Belo"
 					}
 					random_owned = {
 						limit = { province_id = 3650 owner = { tag = POR } }
-						change_province_name = "Malvérnia"
+						change_province_name = "Malvï¿½rnia"
 					}
 					random_owned = {
 						limit = { province_id = 3677 owner = { tag = POR } }
@@ -28748,11 +28745,11 @@ country_event = {
 					}
 					random_owned = {
 						limit = { province_id = 2049 owner = { tag = POR NOT = { has_country_flag = reconquest_of_lourenco_marques } } }
-						change_province_name = "Lourenço Marques"
+						change_province_name = "Lourenï¿½o Marques"
 					}
 					random_owned = {
 						limit = { province_id = 2049 owner = { tag = POR NOT = { has_country_flag = reconquest_of_lourenco_marques } } }
-						2051 = { state_scope = { change_region_name = "Lourenço Marques" } }
+						2051 = { state_scope = { change_region_name = "Lourenï¿½o Marques" } }
 					}
 					MOZ = {
 						clr_country_flag = sunni_country
@@ -28864,7 +28861,7 @@ country_event = {
 					}
 					random_owned = {
 						limit = { province_id = 3678 owner = { tag = POR } }
-						change_province_name = "Porto Amélia"
+						change_province_name = "Porto Amï¿½lia"
 					}
 					random_owned = {
 						limit = { province_id = 3970 owner = { tag = POR } }
@@ -28872,15 +28869,15 @@ country_event = {
 					}
 					random_owned = {
 						limit = { province_id = 2061 owner = { tag = POR } }
-						change_province_name = "António Enes"
+						change_province_name = "Antï¿½nio Enes"
 					}
 					random_owned = {
 						limit = { province_id = 2050 owner = { tag = POR } }
-						change_province_name = "João Belo"
+						change_province_name = "Joï¿½o Belo"
 					}
 					random_owned = {
 						limit = { province_id = 3650 owner = { tag = POR } }
-						change_province_name = "Malvérnia"
+						change_province_name = "Malvï¿½rnia"
 					}
 					random_owned = {
 						limit = { province_id = 3677 owner = { tag = POR } }
@@ -28904,11 +28901,11 @@ country_event = {
 					}
 					random_owned = {
 						limit = { province_id = 2049 owner = { tag = POR NOT = { has_country_flag = reconquest_of_lourenco_marques } } }
-						change_province_name = "Lourenço Marques"
+						change_province_name = "Lourenï¿½o Marques"
 					}
 					random_owned = {
 						limit = { province_id = 2049 owner = { tag = POR NOT = { has_country_flag = reconquest_of_lourenco_marques } } }
-						2051 = { state_scope = { change_region_name = "Lourenço Marques" } }
+						2051 = { state_scope = { change_region_name = "Lourenï¿½o Marques" } }
 					}
 				}
 			}
