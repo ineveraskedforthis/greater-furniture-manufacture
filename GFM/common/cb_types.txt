@@ -135,9 +135,6 @@ steal_puppet_tiny
 steal_puppet_minuscule
 great_game_cb
 make_puppet
-make_puppet_small
-make_puppet_tiny
-make_puppet_minuscule
 make_puppet_no_infamy
 end_radicals
 guillotine_cb
@@ -4098,7 +4095,7 @@ great_game_cb = {
 				OR = {
 					tag = KOK
 					tag = KHI
-					tag = BUK 
+					tag = BUK
 					tag = BDK
 					tag = KYR
 				}
@@ -4259,7 +4256,7 @@ restore_british_raj = {
             }
             war_with = THIS
         }
-        THIS = { 
+        THIS = {
             has_country_flag = monarchy_government
 		}
         NOT = { has_global_flag = eng_retreat_india }
@@ -5593,7 +5590,7 @@ sahel_jihad_cb = {
             }
             AND = { war_with = THIS ai = no }
         }
-        THIS = { 
+        THIS = {
             OR = {
 				has_country_flag = monarchy_government
                 government = theocracy
@@ -5718,7 +5715,7 @@ demand_concession_casus_belli = {
             THIS = { NOT = { has_country_modifier = punitive_effects } }
             war_with = THIS
         }
-        THIS = { 
+        THIS = {
             NOT = { nationalism_n_imperialism = 1 }
             NOT = { has_global_flag = berlin_conference }
             NOT = { has_country_modifier = neutrality_modifier }
@@ -6695,7 +6692,7 @@ annex_africa = {
 		}
         NOT = { has_country_flag = cfs_owner }
         NOT = { is_our_vassal = THIS }
-        THIS = { 
+        THIS = {
             NOT = { has_country_modifier = neutrality }
             NOT = { tag = RUS }
             NOT = { tag = TUR }
@@ -6816,7 +6813,7 @@ annex_africa_full = {
 		}
         NOT = { is_our_vassal = THIS }
         NOT = { number_of_states = 2 }
-        THIS = { 
+        THIS = {
 			NOT = { has_country_modifier = neutrality_modifier }
             NOT = { has_country_modifier = claimed_africa }
             NOT = { has_country_flag = cfs_master }
@@ -7701,7 +7698,7 @@ end_jihad = {
     good_relation_militancy_factor = 1
 
     war_name = END_JIHAD_WAR_NAME
-	
+
     po_remove_prestige = yes
     po_disarmament = yes
     po_reparations = yes
@@ -9175,7 +9172,7 @@ make_puppet_no_add_wargoal = {
 				}
 				OR = {
 					has_global_flag = eighteenthirty_startdate
-					CLN = { has_country_flag = eighteenthirty_startdate } 
+					CLN = { has_country_flag = eighteenthirty_startdate }
 				}
 				NOT = { THIS = { has_country_flag = gonesiirt } }
 			} }
@@ -9191,12 +9188,12 @@ make_puppet_no_add_wargoal = {
 				}
 				OR = {
 					has_global_flag = eighteenthirty_startdate
-					CLN = { has_country_flag = eighteenthirty_startdate } 
+					CLN = { has_country_flag = eighteenthirty_startdate }
 				}
 				NOT = { THIS = { has_country_flag = gonederik } }
 			} }
-			owner = { THIS = { set_country_flag = gonederik } 3294 = { secede_province = THIS } 
-				927 = { 
+			owner = { THIS = { set_country_flag = gonederik } 3294 = { secede_province = THIS }
+				927 = {
 					sub_unit = { type = artillery value = current }
 					sub_unit = { type = infantry value = current }
 					sub_unit = { type = infantry value = current }
@@ -9212,12 +9209,12 @@ make_puppet_no_add_wargoal = {
 				}
 				OR = {
 					has_global_flag = eighteenthirty_startdate
-					CLN = { has_country_flag = eighteenthirty_startdate } 
+					CLN = { has_country_flag = eighteenthirty_startdate }
 				}
 				NOT = { THIS = { has_country_flag = gonederik } }
 			} }
-			owner = { THIS = { set_country_flag = gonederik } 3294 = { secede_province = THIS } 
-				927 = { 
+			owner = { THIS = { set_country_flag = gonederik } 3294 = { secede_province = THIS }
+				927 = {
 					sub_unit = { type = artillery value = current }
 					sub_unit = { type = infantry value = current }
 					sub_unit = { type = infantry value = current }
@@ -9232,7 +9229,7 @@ make_puppet_no_add_wargoal = {
 				}
 				OR = {
 					has_global_flag = eighteenthirty_startdate
-					CLN = { has_country_flag = eighteenthirty_startdate } 
+					CLN = { has_country_flag = eighteenthirty_startdate }
 				}
 				NOT = { has_global_flag = cededzacho }
 				NOT = { THIS = { has_country_flag = gonezacho } }
@@ -9249,17 +9246,17 @@ make_puppet_no_add_wargoal = {
 				}
 				OR = {
 					has_global_flag = eighteenthirty_startdate
-					CLN = { has_country_flag = eighteenthirty_startdate } 
+					CLN = { has_country_flag = eighteenthirty_startdate }
 				}
 				NOT = { has_global_flag = getinwarbohtan }
 			} }
-			owner = { THIS = { set_country_flag = getinwarbohtan 
+			owner = { THIS = { set_country_flag = getinwarbohtan
 			TUR = {
 				leave_alliance = MKN
 				diplomatic_influence = {
 					who = MKN
 					value = -600
-				} 
+				}
 			}
 			SRN = {
 				create_alliance = BHT
@@ -9401,7 +9398,7 @@ make_puppet_no_add_wargoal_2 = {
 				}
 				OR = {
 					has_global_flag = eighteenthirty_startdate
-					CLN = { has_country_flag = eighteenthirty_startdate } 
+					CLN = { has_country_flag = eighteenthirty_startdate }
 				}
 				NOT = { THIS = { has_country_flag = gonesiirt } }
 			} }
@@ -9417,12 +9414,12 @@ make_puppet_no_add_wargoal_2 = {
 				}
 				OR = {
 					has_global_flag = eighteenthirty_startdate
-					CLN = { has_country_flag = eighteenthirty_startdate } 
+					CLN = { has_country_flag = eighteenthirty_startdate }
 				}
 				NOT = { THIS = { has_country_flag = gonederik } }
 			} }
-			owner = { THIS = { set_country_flag = gonederik } 3294 = { secede_province = THIS } 
-				927 = { 
+			owner = { THIS = { set_country_flag = gonederik } 3294 = { secede_province = THIS }
+				927 = {
 					sub_unit = { type = artillery value = current }
 					sub_unit = { type = infantry value = current }
 					sub_unit = { type = infantry value = current }
@@ -9438,12 +9435,12 @@ make_puppet_no_add_wargoal_2 = {
 				}
 				OR = {
 					has_global_flag = eighteenthirty_startdate
-					CLN = { has_country_flag = eighteenthirty_startdate } 
+					CLN = { has_country_flag = eighteenthirty_startdate }
 				}
 				NOT = { THIS = { has_country_flag = gonederik } }
 			} }
-			owner = { THIS = { set_country_flag = gonederik } 3294 = { secede_province = THIS } 
-				927 = { 
+			owner = { THIS = { set_country_flag = gonederik } 3294 = { secede_province = THIS }
+				927 = {
 					sub_unit = { type = artillery value = current }
 					sub_unit = { type = infantry value = current }
 					sub_unit = { type = infantry value = current }
@@ -9458,7 +9455,7 @@ make_puppet_no_add_wargoal_2 = {
 				}
 				OR = {
 					has_global_flag = eighteenthirty_startdate
-					CLN = { has_country_flag = eighteenthirty_startdate } 
+					CLN = { has_country_flag = eighteenthirty_startdate }
 				}
 				NOT = { has_global_flag = cededzacho }
 				NOT = { THIS = { has_country_flag = gonezacho } }
@@ -9475,17 +9472,17 @@ make_puppet_no_add_wargoal_2 = {
 				}
 				OR = {
 					has_global_flag = eighteenthirty_startdate
-					CLN = { has_country_flag = eighteenthirty_startdate } 
+					CLN = { has_country_flag = eighteenthirty_startdate }
 				}
 				NOT = { has_global_flag = getinwarbohtan }
 			} }
-			owner = { THIS = { set_country_flag = getinwarbohtan 
+			owner = { THIS = { set_country_flag = getinwarbohtan
 			TUR = {
 				leave_alliance = MKN
 				diplomatic_influence = {
 					who = MKN
 					value = -600
-				} 
+				}
 			}
 			SRN = {
 				create_alliance = BHT
@@ -9788,7 +9785,6 @@ make_puppet = {
                 THIS = { total_amount_of_ships = 5 }
                 any_owned_province = { port = yes }
             }
-            war_with = THIS
             any_neighbor_country = {
                 OR = {
                     vassal_of = THIS
@@ -9800,14 +9796,8 @@ make_puppet = {
         is_vassal = no
         is_greater_power = no
         OR = {
-			AND = {
-				NOT = { total_pops = 5000000 }
-				NOT = { has_global_flag = you_are_playing_mp }
-			}
-			AND = {
-				NOT = { total_pops = 2000000 }
-				has_global_flag = you_are_playing_mp
-			}
+            NOT = { total_pops = 4500000 }
+            NOT = { number_of_states = 5 }
         }
         OR = {
             NOT = { relation = { who = THIS value = 0 } }
@@ -9816,15 +9806,11 @@ make_puppet = {
             war_with = THIS
             THIS = { ai = no }
         }
-        OR = {
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-            war_with = THIS
+        THIS = {
+            NOT = { has_country_modifier = no_more_war }
         }
-        OR = {
-            THIS = {
-                total_amount_of_divisions = 1
-            }
-            war_with = THIS
+        THIS = {
+            total_amount_of_divisions = 1
         }
 		THIS = {
             NOT = { has_country_modifier = neutrality_modifier }
@@ -9833,7 +9819,6 @@ make_puppet = {
             has_country_modifier = neutrality_modifier
             is_our_vassal = THIS
 		}
-		ai = yes
     }
 
     # THIS - us
@@ -9858,277 +9843,6 @@ make_puppet = {
     }
 }
 
-# Make Puppet
-make_puppet_small = {
-    sprite_index = 18
-    is_triggered_only = yes
-    months = 12
-    crisis = no
-
-    badboy_factor = 1.1
-    prestige_factor = 1
-    peace_cost_factor = 1
-    penalty_factor = 1
-
-    break_truce_prestige_factor = 1
-    break_truce_infamy_factor = 1
-    break_truce_militancy_factor = 1
-    truce_months = 48
-
-    good_relation_prestige_factor = 1
-    good_relation_infamy_factor = 1
-    good_relation_militancy_factor = 1
-
-    can_use = {
-		total_pops = 100000
-		NOT = {
-			total_pops = 400000
-		}
-        is_vassal = no
-        is_greater_power = no
-        OR = {
-            NOT = { relation = { who = THIS value = 0 } }
-            THIS = { government = fascist_dictatorship }
-            THIS = { government = proletarian_dictatorship }
-            war_with = THIS
-            THIS = { ai = no }
-        }
-        OR = {
-			neighbour = THIS
-            AND = {
-                THIS = { total_amount_of_ships = 5 }
-                any_owned_province = { port = yes }
-            }
-            war_with = THIS
-            any_neighbor_country = {
-                OR = {
-                    vassal_of = THIS
-                    substate_of = THIS
-                    in_sphere = THIS
-                }
-            }
-        }
-        OR = {
-            THIS = {
-                total_amount_of_divisions = 1
-            }
-            war_with = THIS
-        }
-        OR = {
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-            war_with = THIS
-        }
-        THIS = {
-            NOT = { has_country_modifier = neutrality_modifier }
-        }
-        NOT = {
-            is_our_vassal = THIS
-            has_country_modifier = neutrality_modifier
-        }
-		ai = yes
-    }
-
-    # THIS - us
-    # FROM - country scope is possible match?
-    # war target country of goal is scope
-
-    po_make_puppet = yes
-
-    war_name = WAR_PUPPET_NAME
-
-    on_add = {
-        move_issue_percentage = {
-            from = jingoism
-            to = pro_military
-            value = 0.25
-        }
-    }
-
-    on_po_accepted = {
-        country_event = 19370
-		add_country_modifier = { name = recently_lost_war duration = 1825 }
-    }
-}
-
-# Make Puppet
-make_puppet_tiny = {
-    sprite_index = 18
-    is_triggered_only = yes
-    months = 12
-    crisis = no
-
-    badboy_factor = 0.4
-    prestige_factor = 1
-    peace_cost_factor = 1
-    penalty_factor = 1
-
-    break_truce_prestige_factor = 1
-    break_truce_infamy_factor = 1
-    break_truce_militancy_factor = 1
-    truce_months = 48
-
-    good_relation_prestige_factor = 1
-    good_relation_infamy_factor = 1
-    good_relation_militancy_factor = 1
-
-    can_use = {
-		NOT = {
-			total_pops = 100000
-		}
-		total_pops = 10000
-        is_vassal = no
-        is_greater_power = no
-        OR = {
-            NOT = { relation = { who = THIS value = 0 } }
-            THIS = { government = fascist_dictatorship }
-            THIS = { government = proletarian_dictatorship }
-            THIS = { ai = no }
-        }
-        OR = {
-			neighbour = THIS
-            AND = {
-                THIS = { total_amount_of_ships = 5 }
-                any_owned_province = { port = yes }
-            }
-            war_with = THIS
-            any_neighbor_country = {
-                OR = {
-                    vassal_of = THIS
-                    substate_of = THIS
-                    in_sphere = THIS
-                }
-            }
-        }
-        OR = {
-            THIS = {
-                total_amount_of_divisions = 1
-            }
-            war_with = THIS
-        }
-        THIS = {
-            NOT = { has_country_modifier = neutrality_modifier }
-            NOT = { has_country_modifier = no_more_war }
-        }
-        NOT = {
-            is_our_vassal = THIS
-            has_country_modifier = neutrality_modifier
-        }
-		ai = yes
-    }
-
-    # THIS - us
-    # FROM - country scope is possible match?
-    # war target country of goal is scope
-
-    po_make_puppet = yes
-
-    war_name = WAR_PUPPET_NAME
-
-    on_add = {
-        move_issue_percentage = {
-            from = jingoism
-            to = pro_military
-            value = 0.25
-        }
-    }
-
-    on_po_accepted = {
-        country_event = 19370
-		add_country_modifier = { name = recently_lost_war duration = 1825 }
-    }
-}
-
-# Make Puppet
-make_puppet_minuscule = {
-    sprite_index = 18
-    is_triggered_only = yes
-    months = 12
-    crisis = no
-
-    badboy_factor = 0.1
-    prestige_factor = 1
-    peace_cost_factor = 1
-    penalty_factor = 1
-
-    break_truce_prestige_factor = 1
-    break_truce_infamy_factor = 1
-    break_truce_militancy_factor = 1
-    truce_months = 48
-
-    good_relation_prestige_factor = 1
-    good_relation_infamy_factor = 1
-    good_relation_militancy_factor = 1
-
-    can_use = {
-        NOT = {
-			total_pops = 10000
-		}
-        is_vassal = no
-        is_greater_power = no
-        OR = {
-            NOT = { relation = { who = THIS value = 0 } }
-            THIS = { government = fascist_dictatorship }
-            THIS = { government = proletarian_dictatorship }
-            war_with = THIS
-            THIS = { ai = no }
-        }
-        OR = {
-			neighbour = THIS
-            AND = {
-                THIS = { total_amount_of_ships = 5 }
-                any_owned_province = { port = yes }
-            }
-            war_with = THIS
-            any_neighbor_country = {
-                OR = {
-                    vassal_of = THIS
-                    substate_of = THIS
-                    in_sphere = THIS
-                }
-            }
-        }
-        OR = {
-            THIS = {
-                total_amount_of_divisions = 1
-            }
-            war_with = THIS
-        }
-        OR = {
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-            war_with = THIS
-        }
-        THIS = {
-            NOT = { has_country_modifier = neutrality_modifier }
-        }
-        NOT = {
-			total_pops = 10000
-            is_our_vassal = THIS
-            has_country_modifier = neutrality_modifier
-        }
-		ai = yes
-    }
-
-    # THIS - us
-    # FROM - country scope is possible match?
-    # war target country of goal is scope
-
-    po_make_puppet = yes
-
-    war_name = WAR_PUPPET_NAME
-
-    on_add = {
-        move_issue_percentage = {
-            from = jingoism
-            to = pro_military
-            value = 0.25
-        }
-    }
-
-    on_po_accepted = {
-        country_event = 19370
-		add_country_modifier = { name = recently_lost_war duration = 1825 }
-    }
-}
 
 # Become Independent
 become_independent = {
@@ -10462,7 +10176,7 @@ install_democracy = {
             government = proletarian_dictatorship
             government = fascist_dictatorship
         }
-        THIS = { 
+        THIS = {
             OR = {
                 government = hms_government
                 government = constitutional_empire
@@ -11202,16 +10916,16 @@ spanish_reconquista = {
             rank = 16
 			primary_culture = spanish
         }
-		OR = { 
+		OR = {
 			is_culture_group = latin_american_cultures
-			tag = TEX 
+			tag = TEX
 			tag = YUC
-			tag = CAL 
-		} 	
-		NOT = { primary_culture = brazilian } 
-		OR = { 
-			capital_scope = { continent = north_america } 
-			capital_scope = { continent = south_america } 
+			tag = CAL
+		}
+		NOT = { primary_culture = brazilian }
+		OR = {
+			capital_scope = { continent = north_america }
+			capital_scope = { continent = south_america }
 		}
 		THIS = {
             has_country_flag = monarchy_government
@@ -11622,7 +11336,7 @@ treaty_port_casus_belli_no_infamy = {
     peace_cost_factor = 10
 	penalty_factor = 0
 	constructing_cb = no
-	
+
     break_truce_prestige_factor = 0
     break_truce_infamy_factor = 0
     break_truce_militancy_factor = 0
@@ -11926,7 +11640,7 @@ island_casus_belli = {
 		}
         #Fernando de Noronha
 		random_owned = {
-			limit = { owner = { owns = 3482 } } 
+			limit = { owner = { owns = 3482 } }
             owner = { THIS = { country_event = 8367013 } }
 		}
         #Trindade e Martim Vaz
@@ -12070,12 +11784,12 @@ island_casus_belli = {
 			owner = { THIS = { country_event = 8367041 } }
 		}
         #Islas Baleares
-        random_owned = { 
+        random_owned = {
             limit = { owner = { owns = 502 } }
             owner = { THIS = { country_event = 8367042 } }
         }
         #Corsica Island
-        random_owned = { 
+        random_owned = {
             limit = { owner = { owns = 473 } }
             owner = { THIS = { country_event = 8367043 } }
         }
@@ -14106,7 +13820,7 @@ demand_concession_capital_late = {
             war_with = THIS
         }
         NOT = { is_our_vassal = THIS }
-        THIS = { 
+        THIS = {
             NOT = {
                 has_country_flag = in_great_war
                 has_country_modifier = no_more_war
