@@ -4,7 +4,7 @@
 #                                                        #
 #########################################################
 
-#The Kanûn-i Esâsî
+#The Kanï¿½n-i Esï¿½sï¿½
 country_event = {
     id = 98625
     title = "EVTNAME98625"
@@ -1024,7 +1024,7 @@ country_event = {
 			}
 		}
 		random_owned = {
-			limit = { 
+			limit = {
 				owner = {
 					SHK = { ai = yes }
 				}
@@ -1276,7 +1276,7 @@ country_event = {
         CYR = {
             capital = 3686
         }
-		
+
         relation = { who = CYR value = -400 }
         diplomatic_influence = { who = CYR value = 300 }
 
@@ -1456,7 +1456,7 @@ country_event = {
         CYR = {
             capital = 3686
         }
-		
+
         relation = { who = CYR value = -400 }
         diplomatic_influence = { who = CYR value = 300 }
 
@@ -1831,7 +1831,7 @@ country_event = {
 					sub_unit = { type = irregular value = current }
 					sub_unit = { type = irregular value = current }
 					sub_unit = { type = irregular value = current }
-			} 
+			}
 			capital = 1827
 		}
         war = {
@@ -2083,7 +2083,7 @@ country_event = {
 				}
 			}
 		}
-		
+
         SUD = { any_owned = { remove_province_modifier = fundamentalist_sympathies }
             any_pop = { limit = { has_pop_religion = sunni }
                 militancy = -10
@@ -2385,7 +2385,7 @@ country_event = {
 					sub_unit = { type = irregular value = current }
 					sub_unit = { type = irregular value = current }
 					sub_unit = { type = irregular value = current }
-			} 
+			}
 			capital = 1827
 		}
         war = {
@@ -2645,7 +2645,7 @@ country_event = {
 					sub_unit = { type = irregular value = current }
 					sub_unit = { type = irregular value = current }
 					sub_unit = { type = irregular value = current }
-			} 
+			}
 			capital = 1827
 		}
         war = {
@@ -2760,7 +2760,7 @@ country_event = {
 					sub_unit = { type = irregular value = current }
 					sub_unit = { type = irregular value = current }
 					sub_unit = { type = irregular value = current }
-			} 
+			}
 			capital = 1827
 		}
         war = {
@@ -2881,7 +2881,7 @@ country_event = {
     picture = "bedr_khan_massacres"
 
 	fire_only_once = yes
-	
+
     trigger = {
         tag = BHT
 		owns = 2414
@@ -2891,7 +2891,7 @@ country_event = {
     }
 
     mean_time_to_happen = { months = 1 }
-	
+
     option = {
         name = "EVT986504OPTA"
 		set_country_flag = massacres_of_badr_first
@@ -2949,7 +2949,7 @@ country_event = {
 	major = yes
 
 	fire_only_once = yes
-	
+
     trigger = {
         tag = BHT
 		owns = 2414
@@ -2958,10 +2958,10 @@ country_event = {
     }
 
     mean_time_to_happen = { months = 1 }
-	
+
     option = {
         name = "EVT986504OPTA"
-		TUR = { set_country_flag = massacres_of_badr_khan } 
+		TUR = { set_country_flag = massacres_of_badr_khan }
 		set_country_flag = massacres_of_badr_khan
         badboy = 1
         any_pop = { limit = { is_state_religion = yes } militancy = -4 }
@@ -3016,7 +3016,7 @@ country_event = {
     desc = "EVTDESC986503"
     picture = "bedr_khan_massacres"
     fire_only_once = yes
-    
+
 	trigger = {
         tag = TUR
         year = 1840
@@ -3200,77 +3200,77 @@ country_event = {
 		random_owned = { limit = { owner = { MKN = { primary_culture = kurdish } } }
 			owner = {
 				MKN = { all_core = {
-					remove_core = MKN 
+					remove_core = MKN
 				} }
 			}
 		}
 		random_owned = { limit = { owner = { BTL = { primary_culture = kurdish } } }
 			owner = {
 				BTL = { all_core = {
-					remove_core = BTL 
+					remove_core = BTL
 				} }
 			}
 		}
 		random_owned = { limit = { owner = { BDN = { primary_culture = kurdish } } }
 			owner = {
 				BDN = { all_core = {
-					remove_core = BDN 
+					remove_core = BDN
 				} }
 			}
 		}
 		random_owned = { limit = { owner = { BHT = { primary_culture = kurdish } } }
 			owner = {
 				BHT = { all_core = {
-					remove_core = BHT 
+					remove_core = BHT
 				} }
 			}
 		}
 		random_owned = { limit = { owner = { BDN = { primary_culture = kurdish } } }
 			owner = {
 				BDN = { all_core = {
-					remove_core = BDN 
+					remove_core = BDN
 				} }
 			}
 		}
 		random_owned = { limit = { owner = { BNB = { primary_culture = kurdish } } }
 			owner = {
 				BNB = { all_core = {
-					remove_core = BNB 
+					remove_core = BNB
 				} }
 			}
 		}
 		random_owned = { limit = { owner = { SRN = { primary_culture = kurdish } } }
 			owner = {
 				SRN = { all_core = {
-					remove_core = SRN 
+					remove_core = SRN
 				} }
 			}
 		}
 		random_owned = { limit = { owner = { MLN = { primary_culture = kurdish } } }
 			owner = {
 				MLN = { all_core = {
-					remove_core = MLN 
+					remove_core = MLN
 				} }
 			}
 		}
 		random_owned = { limit = { owner = { TSI = { primary_culture = kurdish } } }
 			owner = {
 				TSI = { all_core = {
-					remove_core = TSI 
+					remove_core = TSI
 				} }
 			}
 		}
 		random_owned = { limit = { owner = { KHL = { primary_culture = kurdish } } }
 			owner = {
 				KHL = { all_core = {
-					remove_core = KHL 
+					remove_core = KHL
 				} }
 			}
 		}
 		random_owned = { limit = { owner = { BZD = { primary_culture = kurdish } } }
 			owner = {
 				BZD = { all_core = {
-					remove_core = BZD 
+					remove_core = BZD
 				} }
 			}
 		}
@@ -3533,7 +3533,7 @@ country_event = {
         }
         modifier = {
             factor = 0.8
-            1165 = { average_militancy = 7 }    
+            1165 = { average_militancy = 7 }
         }
     }
 
@@ -3915,7 +3915,7 @@ country_event = {
     news_desc_medium = "EVTDESC31100_NEWS_MEDIUM"
     news_desc_short = "EVTDESC31100_NEWS_SHORT"
     picture = "troy"
-	
+
     fire_only_once = yes
     allow_multiple_instances = no
 
@@ -3944,17 +3944,17 @@ country_event = {
 
         modifier = {
             factor = 0.95 #increase likelihood to happen
-            education_spending = 0.7
+            education_spending = 0.1
         }
 
         modifier = {
             factor = 0.95 #increase likelihood to happen
-            education_spending = 0.8
+            education_spending = 0.2
         }
 
         modifier = {
             factor = 0.95 #increase likelihood to happen
-            education_spending = 0.9
+            education_spending = 0.3
         }
     }
 
@@ -3972,7 +3972,7 @@ country_event = {
     picture = "bagdadrailway"
 
     fire_only_once = yes
-	
+
     trigger = {
         has_global_flag = BerlinBaghdadRail
 		OR = { tag = TUR tag = ALA }
@@ -4161,7 +4161,7 @@ country_event = {
 
 country_event = {
 	id = 4206980
-	title = "The Niš Committee"
+	title = "The Niï¿½ Committee"
 	desc = "EVTDESC4206980"
 	picture = "nis_committee"
 	fire_only_once = yes

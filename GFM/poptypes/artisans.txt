@@ -30,7 +30,7 @@ everyday_needs = {
     paper = 6
     glass = 1
     tobacco = 2
-    tea = 5
+    tea = 1
     coffee = 2
 	sugar = 2
 }

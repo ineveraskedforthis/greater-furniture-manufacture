@@ -134,7 +134,7 @@ political_decisions = {
                     is_vassal = yes
                     THIS = { ai = no }
                 }
-                GRE = { 
+                GRE = {
 					overlord = {
 						create_vassal = THIS
 						create_alliance = THIS
@@ -175,19 +175,19 @@ political_decisions = {
         }
 		ai_will_do = { factor = 1 }
     }
-	
+
 	claim_rumelia = {
 		picture = stamp_north_epirus
 		potential = {
 			tag = GRE
 			OR = {
-				invention = dark_continent
+				invention = the_dark_continent
 				has_country_flag = greece_has_got_a_brand_new_bag
 			}
 			rank = 16
 			NOT = { has_country_flag = greek_rumelia }
 		}
-		
+
 		allow = {
 			war = no
 			is_vassal = no
@@ -202,7 +202,7 @@ political_decisions = {
 			war_policy = jingoism
 			all_core = { owned_by = THIS }
 		}
-		
+
 		effect = {
 			badboy = 5
 			prestige = 5

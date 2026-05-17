@@ -3,91 +3,6 @@
 #
 # Effects are fully scriptable here.
 
-money_hoarder_1 = {
-	trigger = {
-		money = 10000000
-		NOT = { money = 20000000 }
-	}
-	tax_efficiency = -0.05
-	tariff_efficiency_modifier = -0.20
-	min_social_spending = 1
-	min_military_spending = 1
-	icon = 1
-}
-
-money_hoarder_2 = {
-	trigger = {
-		money = 20000000
-		NOT = { money = 30000000 }
-	}
-	tax_efficiency = -0.10
-	tariff_efficiency_modifier = -0.40
-	min_social_spending = 1
-	min_military_spending = 1
-	icon = 1
-}
-
-money_hoarder_3 = {
-	trigger = {
-		money = 30000000
-		NOT = { money = 40000000 }
-	}
-	tax_efficiency = -0.20
-	tariff_efficiency_modifier = -0.60
-	min_social_spending = 1
-	min_military_spending = 1
-	icon = 1
-}
-
-money_hoarder_4 = {
-	trigger = {
-		money = 40000000
-		NOT = { money = 50000000 }
-	}
-	tax_efficiency = -0.25
-	tariff_efficiency_modifier = -0.80
-	min_social_spending = 1
-	min_military_spending = 1
-	icon = 1
-}
-
-money_hoarder_5 = {
-	trigger = {
-		money = 50000000
-		NOT = { money = 60000000 }
-	}
-	tax_efficiency = -0.40
-	tariff_efficiency_modifier = -1.0
-	min_social_spending = 1
-	min_military_spending = 1
-	icon = 1
-}
-
-money_hoarder_6 = {
-	trigger = {
-		money = 60000000
-		NOT = { money = 100000000 }
-	}
-	tax_efficiency = -0.75
-	tariff_efficiency_modifier = -1.25
-	min_social_spending = 1
-	min_military_spending = 1
-	icon = 1
-}
-
-money_hoarder_7 = {
-	trigger = {
-		money = 100000000
-	}
-	max_tariff = -1
-	max_tax = -1
-	tax_efficiency = -1
-	tariff_efficiency_modifier = -1.5
-	min_social_spending = 1
-	min_military_spending = 1
-	icon = 1
-}
-
 healthcare_poorly_funded_a = {
     trigger = {
         health_care = trinket_health_care
@@ -162,80 +77,6 @@ healthcare_poorly_funded_d = {
     }
 	global_population_growth = -0.003
 	icon = 12
-}
-
-low_schools_fully_funded = {
-    trigger = {
-        school_reforms = low_schools
-        education_spending = 0.3
-        exists = yes
-    }
-    education_efficiency_modifier = 0.05
-    icon = 19
-}
-
-acceptable_schools_fully_funded = {
-    trigger = {
-        school_reforms = acceptable_schools
-        education_spending = 0.4
-        exists = yes
-    }
-    education_efficiency_modifier = 0.075
-    icon = 19
-}
-
-good_schools_fully_funded = {
-    trigger = {
-        school_reforms = good_schools
-        education_spending = 0.5
-        exists = yes
-    }
-    education_efficiency_modifier = 0.1
-    icon = 19
-}
-
-education_fully_funded = {
-    trigger = {
-        school_reforms = good_schools
-        OR = {
-            AND = {
-                ai = yes
-                education_spending = 0.5
-            }
-            AND = {
-                ai = no
-                education_spending = 0.99
-            }
-        }
-        exists = yes
-    }
-    education_efficiency_modifier = 0.1
-    icon = 19
-}
-neglected_education = {
-    trigger = {
-        ai = no
-        number_of_states = 2
-        total_pops = 1000000
-        OR = {
-            AND = {
-                literacy = 0.75
-                NOT = { education_spending = 0.3 }
-            }
-            AND = {
-                literacy = 0.5
-                NOT = { education_spending = 0.2 }
-            }
-            AND = {
-                literacy = 0.25
-                NOT = { education_spending = 0.1 }
-            }
-        }
-        civilized = yes
-        exists = yes
-    }
-    education_efficiency_modifier = -1
-    icon = 19
 }
 
 islamic_law_triggered = {
@@ -709,28 +550,6 @@ social_reformed_nation = {
 	research_points_modifier = 0.10
 	social_reform_desire = -1.6
     icon = 13
-}
-
-educational_spen = {
-	trigger = {
-		exists = yes
-		administration_spending = 0.74
-		ai = yes
-	}
-
-    education_efficiency_modifier = 0.3
-    icon = 16
-}
-
-admin_spen = {
-	trigger = {
-		exists = yes
-		administration_spending = 0.74
-		ai = yes
-	}
-
-    administrative_efficiency_modifier = 0.1
-    icon = 16
 }
 
 hormuz_strait = {
@@ -1230,7 +1049,7 @@ classless_society_modifier = {
         invention = the_classless_society
         government = proletarian_dictatorship
     }
-    min_social_spending = 0.5
+    min_social_spending = 0.05
     education_efficiency_modifier = 0.2
     global_immigrant_attract = 0.35
     suppression_points_modifier = 0.2

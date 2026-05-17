@@ -1023,35 +1023,34 @@ country_event = {
 		ai = no
         colonial_nation = yes
         civilized = yes
-        NOT = { administration_spending = 0.5 }
+        NOT = { administration_spending = 0.10 }
         NOT = { state_n_government = 1 }
     }
 
     mean_time_to_happen = {
         months = 300
         modifier = {
+            factor = 1.5
+            administration_spending = 0.10
+        }
+        modifier = {
             factor = 0.9
             NOT = {
-                administration_spending = 0.4
+                administration_spending = 0.08
             }
         }
         modifier = {
             factor = 0.9
             NOT = {
-                administration_spending = 0.3
+                administration_spending = 0.06
             }
         }
         modifier = {
             factor = 0.8
             NOT = {
-                administration_spending = 0.2
+                administration_spending = 0.04
             }
         }
-        modifier = {
-            factor = 1.5
-            administration_spending = 0.4
-        }
-
     }
 
     option = {
@@ -1865,8 +1864,8 @@ country_event = {
         colonial_nation = yes
         civilized = yes
         capital_scope = { continent = europe }
-        administration_spending = 0.6
-        education_spending = 0.6
+        administration_spending = 0.2
+        education_spending = 0.2
         military_spending = 0.6
         NOT = { num_of_revolts = 1 }
     }
@@ -1899,11 +1898,11 @@ country_event = {
         }
         modifier = {
             factor = 0.9
-            education_spending = 0.9
+            education_spending = 0.3
         }
         modifier = {
             factor = 0.9
-            administration_spending = 0.9
+            administration_spending = 0.3
         }
         modifier = {
             factor = 0.9
@@ -2030,7 +2029,7 @@ country_event = {
         civilized = yes
         press_rights = free_press
         NOT = {
-            administration_spending = 0.9
+            administration_spending = 0.25
         }
     }
 
@@ -2047,7 +2046,7 @@ country_event = {
         modifier = {
             factor = 0.9
             NOT = {
-                administration_spending = 0.7
+                administration_spending = 0.20
             }
         }
         modifier = {

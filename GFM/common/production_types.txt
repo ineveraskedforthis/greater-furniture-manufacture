@@ -2,8 +2,8 @@
 
 factory_template = {
     efficiency = {
-        cement = 0.5 #if no cement, work at 75% efficiency #cost = 8
-        machine_parts = 0.05 # was 0.01 cost = 36.5        # 9.825/day/level for both
+        cement = 0.5
+        machine_parts = 0.05
         steel = 0.05
         paper = 0.05
     }
@@ -34,7 +34,7 @@ factory_template = {
 
 cheap_factory_template = {
     efficiency = {
-        cement = 0.25 #if no cement, work at 75% efficiency #cost = £4/level
+        cement = 0.25 #if no cement, work at 75% efficiency #cost = ï¿½4/level
         machine_parts = 0.025
         steel = 0.01
         paper = 0.05
@@ -447,6 +447,7 @@ luxury_clothes_factory = {
     input_goods = {
         regular_clothes = 0.9    #5.22
         silk = 5        #39    total input+maint = 54
+        dye = 0.1
     }
     output_goods = luxury_clothes
     value = 1.1        #71.5 - profit = 17.5
@@ -471,6 +472,8 @@ luxury_furniture_factory = {
     input_goods = {
         furniture = 2         #9.8
         tropical_wood = 10 #40.5    total input+maint = 60.125
+        dye = 0.1
+        silk = 0.1
     }
     output_goods = luxury_furniture
     value = 1.3            #76.7, from 64.9. Profit margin is 21.61%. - profit is 16.6
@@ -851,9 +854,11 @@ lumber_mill = {
 
 fabric_factory = {
     template = factory_template
+    efficiency = {
+        dye = 0.1
+    }
     input_goods = {
-        cotton = 18        # 36
-        dye = 2                # 24 total input+maint = 69.875
+        cotton = 18
     }
     output_goods = fabric
     value = 44            #79.2 - profit = 9.3
@@ -1025,6 +1030,9 @@ cattle_ranch = {
 
 coal_mine = {
     template = RGO_template_labourers
+    efficiency = {
+        explosives = 0.1
+    }
     output_goods = coal
     value = 2.4 #2.4
     mine = yes
@@ -1032,6 +1040,9 @@ coal_mine = {
 
 coffee_plantation = {
     template = RGO_template_farmers
+    efficiency = {
+        fertilizer = 0.1
+    }
     output_goods = coffee
     value = 1.5    #1.5
     farm = yes
@@ -1039,6 +1050,9 @@ coffee_plantation = {
 
 cotton_plantation = {
     template = RGO_template_farmers
+    efficiency = {
+        fertilizer = 0.1
+    }
     output_goods = cotton
     value = 1.8 #3
     farm = yes
@@ -1046,6 +1060,9 @@ cotton_plantation = {
 
 sugarcane_plantation = {
     template = RGO_template_farmers
+    efficiency = {
+        fertilizer = 0.1
+    }
     output_goods = sugar
     value = 1
     farm = yes
@@ -1053,6 +1070,9 @@ sugarcane_plantation = {
 
 dye_plantation = {
     template = RGO_template_farmers
+    efficiency = {
+        fertilizer = 0.1
+    }
     output_goods = dye
     value = 0.22
     farm = yes
@@ -1060,6 +1080,10 @@ dye_plantation = {
 
 fishing_wharf = {
     template = RGO_template_farmers
+    efficiency = {
+        lumber = 0.1
+        steamer_convoy = 0.1
+    }
     output_goods = fish
     value = 2.1 #2.2
     farm = yes
@@ -1067,6 +1091,9 @@ fishing_wharf = {
 
 grain_farm = {
     template = RGO_template_farmers
+    efficiency = {
+        fertilizer = 0.1
+    }
     output_goods = grain
     value = 1.7 #1.8
     farm = yes
@@ -1074,6 +1101,9 @@ grain_farm = {
 
 iron_mine = {
     template = RGO_template_labourers
+    efficiency = {
+        explosives = 0.1
+    }
     output_goods = iron
     value = 2.0
     mine = yes
@@ -1081,6 +1111,9 @@ iron_mine = {
 
 oil_rig = {
     template = RGO_template_labourers
+    efficiency = {
+        machine_parts = 0.1
+    }
     output_goods = oil
     value = 1
     mine = yes
@@ -1088,6 +1121,9 @@ oil_rig = {
 
 opium_plantation = {
     template = RGO_template_farmers
+    efficiency = {
+        fertilizer = 0.1
+    }
     output_goods = opium
     value = 0.7
     farm = yes
@@ -1095,6 +1131,9 @@ opium_plantation = {
 
 orchard = {
     template = RGO_template_farmers
+    efficiency = {
+        fertilizer = 0.1
+    }
     output_goods = fruit
     value = 2.7 #2.8
     farm = yes
@@ -1102,6 +1141,9 @@ orchard = {
 
 precious_metal_mine = {
     template = RGO_template_labourers
+    efficiency = {
+        explosives = 0.1
+    }
     output_goods = precious_metal
     value = 2.25
     mine = yes
@@ -1109,6 +1151,9 @@ precious_metal_mine = {
 
 gold_mine = {
     template = RGO_template_labourers
+    efficiency = {
+        explosives = 0.1
+    }
     output_goods = gold
     value = 3
     mine = yes
@@ -1116,6 +1161,9 @@ gold_mine = {
 
 precious_goods_market = {
     template = RGO_template_labourers
+    efficiency = {
+        paper = 0.1
+    }
     output_goods = precious_goods
     value = 3
     mine = yes
@@ -1158,6 +1206,10 @@ mercury_market = {
 
 rubber_lodge = {
     template = RGO_template_labourers
+    efficiency = {
+        iron = 0.1
+        automobiles = 0.1
+    }
     output_goods = rubber
     value = 0.75
     farm = yes
@@ -1179,13 +1231,40 @@ silkworm_ranch = {
 
 sulphur_mine = {
     template = RGO_template_labourers
+    efficiency = {
+        explosives = 0.1
+    }
     output_goods = sulphur
     value = 3
     mine = yes
 }
 
+guano_source = {
+    template = RGO_template_labourers
+    efficiency = {
+        iron = 0.1
+        paper = 0.1
+    }
+    output_goods = fertilizer
+    value = 10
+    mine = yes
+}
+
+wine_orchard = {
+    template = RGO_template_farmers
+    efficiency = {
+        fertilizer = 0.1
+    }
+    output_goods = wine
+    value = 10
+    farm = yes
+}
+
 tea_plantation = {
     template = RGO_template_farmers
+    efficiency = {
+        fertilizer = 0.1
+    }
     output_goods = tea
     value = 1.75    #1.75
     farm = yes
@@ -1193,6 +1272,11 @@ tea_plantation = {
 
 timber_lodge = {
     template = RGO_template_labourers
+    efficiency = {
+        iron = 0.1
+        steel = 0.1
+        machine_parts = 0.1
+    }
     output_goods = timber
     value = 8 #8
     farm = yes
@@ -1200,6 +1284,9 @@ timber_lodge = {
 
 tobacco_plantation = {
     template = RGO_template_farmers
+    efficiency = {
+        fertilizer = 0.1
+    }
     output_goods = tobacco
     value = 2 #2.5
     farm = yes
@@ -1207,6 +1294,11 @@ tobacco_plantation = {
 
 tropical_wood_lodge = {
     template = RGO_template_labourers
+    efficiency = {
+        iron = 0.1
+        steel = 0.1
+        machine_parts = 0.1
+    }
     output_goods = tropical_wood
     value = 4
     farm = yes
@@ -1397,6 +1489,7 @@ artisan_luxury_clothes = {
     input_goods = {
         regular_clothes = 0.9    #5.22
         silk = 3.9        #39    total input = 44.22
+        dye = 0.1
     }
     output_goods = luxury_clothes
     value = 1            #65 - profit = 20.78
@@ -1415,6 +1508,8 @@ artisan_luxury_furniture = {
     input_goods = {
         furniture = 2         #9.8
         tropical_wood = 7.5 #40.5    total input = 50.3
+        dye = 0.1
+        silk = 0.1
     }
     output_goods = luxury_furniture
     value = 1.2            #70.8 - profit = 20.5
@@ -1679,8 +1774,7 @@ artisan_lumber = {
 
 artisan_fabric = {
     input_goods = {
-        cotton = 18        # 36
-        dye = 2                # 24 total input+maint = 60
+        cotton = 25        # 36
     }
     output_goods = fabric
     value = 38        #68.4 - profit = 8.4
@@ -1749,7 +1843,6 @@ artisan_fertilizer = {
 artisan_fabric_wool = {
     input_goods = {
         wool = 20 #14
-        dye = 2    #24
     }
     output_goods = fabric
     value = 24.5    #43.2

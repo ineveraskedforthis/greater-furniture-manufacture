@@ -2630,7 +2630,7 @@ the_han_system = {
     administrative_efficiency_modifier = -0.05
     min_military_spending = 0.1
     pension_level = 0.25
-    min_social_spending = 0.25
+    min_social_spending = 0.01
     max_social_spending = 0.50
     icon = 16
 }
@@ -3556,7 +3556,7 @@ the_eight_banners = {
     administrative_efficiency_modifier = -0.05
     min_military_spending = 0.25
     pension_level = 0.25
-    min_social_spending = 0.25
+    min_social_spending = 0.01
     max_social_spending = 0.50
     research_points_modifier = -0.15
     cb_generation_speed_modifier = -0.75
@@ -3933,7 +3933,7 @@ austerity = {
 	rgo_output = 0.1
 	rgo_throughput = 0.1
     supply_consumption = -0.2
-	
+
 	max_military_spending = -0.5
 	max_social_spending = -0.5
 	min_tariff = 1
@@ -4551,7 +4551,7 @@ thrane_angry = {
 
 thrane_glad = {
     social_reform_desire = 0.5
-	min_social_spending = 1
+	min_social_spending = 0.01
 	max_social_spending = 1
 	max_tariff = -0.3
 	icon = 7
@@ -5114,7 +5114,7 @@ latin_american_integration = {
 }
 
 national_workshopsmod = {
-    min_social_spending = 1
+    min_social_spending = 0.01
     icon = 3
 }
 
@@ -5336,13 +5336,13 @@ fawning_army_bach = {
 	ruling_party_support = 0.1
 }
 
-france_land_crisis = {	
+france_land_crisis = {
 	industry_tech_research_bonus = -0.1
 	commerce_tech_research_bonus = -0.1
 	global_pop_militancy_modifier = 0.1
 	rgo_output = -0.3
 	factory_throughput = -0.25
-	ruling_party_support = -0.25	
+	ruling_party_support = -0.25
 	icon = 14
 }
 french_military_reform = {

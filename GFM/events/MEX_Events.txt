@@ -1,5 +1,5 @@
 #110060: The Bear Flag Revolt
-#111025: Benito Juárez
+#111025: Benito Juï¿½rez
 #4207052, 4207054: Mexico asks US to remove cores, 4207053 in Garcia_FF.txt
 #4207015, 111011: Plan Definitivo Restaurador after constitution_of_eighteenfiftyseven in MEX_Events.txt, leading to Reform War if refused
 #4207016: Underground Railroad to Mexico
@@ -11,12 +11,12 @@
 #4207093: British Columbian Ambitions vanish
 #4207092: Mexican-Oregonian Identity
 #4207005: California declares Independence (1836)
-#4207002: La Rebelión Chatina
+#4207002: La Rebeliï¿½n Chatina
 #4207035, 4207039: The Caste War, The End of the Caste War
 #4207041, 4207042: Land Exchange with Britain (Mississippi)
 #8573973: The Fall of Mexico City
-#123616: The Chimayó Rebellion
-#44805: Antonio López de Santa Anna (1836 day 1 event)
+#123616: The Chimayï¿½ Rebellion
+#44805: Antonio Lï¿½pez de Santa Anna (1836 day 1 event)
 #44815: Texas Recaptured
 #44835: The Plan of Tuxtepec (Porfirio Diaz Coup)
 #44800, 44801, 44802, 44803: HFM Events for the Mexican Revolution
@@ -28,8 +28,8 @@
 #44820: The Republic of the Rio Grande
 #960691: The Federalist Revolution of Tabasco
 #4207047: The Bases of Tacubaya
-#44821: The Yucatán Republic
-#4207051: Nicolás Bravo dissolves the Congress
+#44821: The Yucatï¿½n Republic
+#4207051: Nicolï¿½s Bravo dissolves the Congress
 #42070493: The Organic Bases
 #42070492: General Santa Anna flees the Country
 #4207049: The Plan of la Ciudadela
@@ -47,16 +47,16 @@
 #4207099: We have achieved Independence! (YUC)
 
 #Singular flavor events without further impact:
-#4206993: México a través de los siglos
+#4206993: Mï¿½xico a travï¿½s de los siglos
 #4206994: Clemencia
 #4207003: Tequila Herradura
 #4207000: Puente de Panzacola
-#4206999: Ciudad Juárez
-#4207021: El Batallón de San Patricio
+#4206999: Ciudad Juï¿½rez
+#4207021: El Batallï¿½n de San Patricio
 #4207022: El Vocabulario de Mexicanismos
-#4207023: The San Andrés Explosion
+#4207023: The San Andrï¿½s Explosion
 #4207024: The Mexico-Veracruz Railway
-#4207026: La Orquesta Sinfónica Nacional
+#4207026: La Orquesta Sinfï¿½nica Nacional
 #110053: The Death of Victorio
 #4207009: La Fundidora
 #4207108:
@@ -262,7 +262,7 @@ country_event = {
 			government = prov_gov_liberal
 			ruling_party_ideology = liberal
 			add_accepted_culture = afro_latino
-			define_general = { name = "José de Urrea" personality = defence_1.1 background = attack_2.76 }
+			define_general = { name = "Josï¿½ de Urrea" personality = defence_1.1 background = attack_2.76 }
 			capital_scope = {
                 sub_unit = { type = infantry value = current }
                 sub_unit = { type = infantry value = current }
@@ -293,7 +293,7 @@ country_event = {
 	}
 
 	option = {
-		name = "Federalism or Death! §BPlay as revolt§!"
+		name = "Federalism or Death! ï¿½BPlay as revoltï¿½!"
 		war_exhaustion = 10
 		set_global_flag = mex_fedrevolt
 		any_owned = {
@@ -317,7 +317,7 @@ country_event = {
 			government = prov_gov_liberal
 			ruling_party_ideology = liberal
 			add_accepted_culture = afro_latino
-			define_general = { name = "José de Urrea" personality = defence_1.1 background = attack_2.76 }
+			define_general = { name = "Josï¿½ de Urrea" personality = defence_1.1 background = attack_2.76 }
 			capital_scope = {
                 sub_unit = { type = infantry value = current }
                 sub_unit = { type = infantry value = current }
@@ -392,7 +392,7 @@ country_event = {
             relation = { who = TEX value = 50 }
 			define_general = { name = "Antonio Canales" personality = defence_minus_1.1 background = attack_3.1 }
 			define_general = { name = "Samuel Jordan" personality = defence_2.1 background = no_background }
-			define_general = { name = "José Antonio de Zapata" personality = no_personality background = attack_2.1 }
+			define_general = { name = "Josï¿½ Antonio de Zapata" personality = no_personality background = attack_2.1 }
 			define_general = { name = "Antonio Canales Rosillo" personality = defence_1.1 background = attack_1.1 }
         }
 		casus_belli = { target = RGR type = conquest months = 12 }
@@ -405,7 +405,7 @@ country_event = {
     }
 
     option = {
-        name = "Freedom for the Riograndese! §BPlay as Rio Grande§W"
+        name = "Freedom for the Riograndese! ï¿½BPlay as Rio Grandeï¿½W"
 		war_exhaustion = 10
         any_owned = { limit = { is_core = RGR } secede_province = RGR }
         RGR = {
@@ -422,7 +422,7 @@ country_event = {
             relation = { who = TEX value = 50 }
 			define_general = { name = "Antonio Canales" personality = defence_minus_1.1 background = attack_3.1 }
 			define_general = { name = "Samuel Jordan" personality = defence_2.1 background = no_background }
-			define_general = { name = "José Antonio de Zapata" personality = no_personality background = attack_2.1 }
+			define_general = { name = "Josï¿½ Antonio de Zapata" personality = no_personality background = attack_2.1 }
 			define_general = { name = "Antonio Canales Rosillo" personality = defence_1.1 background = attack_1.1 }
         }
 		casus_belli = { target = RGR type = conquest months = 12 }
@@ -443,7 +443,7 @@ country_event = {
     desc = "TABASCOREVOLT"
     picture = "tabasco_revolt"
     fire_only_once = yes
-	
+
 	trigger = {
 		year = 1841
 		month = 2
@@ -489,7 +489,7 @@ country_event = {
     }
 
     option = {
-        name = "Federation or death! §BLead the revolt§W"
+        name = "Federation or death! ï¿½BLead the revoltï¿½W"
 		set_global_flag = mex_fedrevolt
 		war_exhaustion = 10
 		2165 = { add_core = MEE secede_province = MEE }
@@ -592,7 +592,7 @@ country_event = {
 			add_country_modifier = {
 				name = unrecognized_country
 				duration = 728
-			}			
+			}
             any_pop = { militancy = -6 }
         }
 		war = {
@@ -603,7 +603,7 @@ country_event = {
     }
 
     option = {
-        name = "Glory to the Yucatecans! §BPlay as Yucatan§W"
+        name = "Glory to the Yucatecans! ï¿½BPlay as Yucatanï¿½W"
 		set_global_flag = yuc_revolt_happened
         war_exhaustion = 10
         MEX_2183 = {
@@ -623,7 +623,7 @@ country_event = {
 			add_country_modifier = {
 				name = unrecognized_country
 				duration = 728
-			}			
+			}
             any_pop = { militancy = -6 }
         }
 		war = {
@@ -635,10 +635,10 @@ country_event = {
     }
 }
 
-#Nicolás Bravo dissolves the Congress after the Bases of Tacubaya above as part of the larger event chain
+#Nicolï¿½s Bravo dissolves the Congress after the Bases of Tacubaya above as part of the larger event chain
 country_event = {
 	id = 4207051
-	title = "Nicolás Bravo dissolves the Congress"
+	title = "Nicolï¿½s Bravo dissolves the Congress"
 	desc = "EVTDESC4207051"
 	picture = "nic_bravo"
 	fire_only_once = yes
@@ -677,7 +677,7 @@ country_event = {
 	}
 }
 
-#The Organic Bases are implemented after Nicolás Bravo dissolves the Congress above as part of the larger event chain
+#The Organic Bases are implemented after Nicolï¿½s Bravo dissolves the Congress above as part of the larger event chain
 country_event = {
 	id = 42070493
 	title = "The Organic Bases"
@@ -785,7 +785,7 @@ country_event = {
 	mean_time_to_happen = { months = 1 }
 
 	option = {
-		name = "Santa Anna betrayed Farías? Again? What a surprise."
+		name = "Santa Anna betrayed Farï¿½as? Again? What a surprise."
 		ruling_party_ideology = conservative
 		any_pop = {
 			scaled_militancy = {
@@ -835,7 +835,7 @@ country_event = {
 	}
 }
 
-#Santa Anna's supreme Victory occurs if Santa Anna rules Mexico and wins the MAW, instituting a dictatorship that will 
+#Santa Anna's supreme Victory occurs if Santa Anna rules Mexico and wins the MAW, instituting a dictatorship that will
 country_event = {
 	id = 42070494
 	title = "Santa Anna's supreme Victory"
@@ -948,7 +948,7 @@ country_event = {
 	title = "A Compromise with the Central Government"
 	desc = "EVTDESC4207089"
 	picture = "treaty"
-	
+
 	trigger = {
 		has_global_flag = mex_fedrevolt
 		tag = MEE
@@ -997,14 +997,14 @@ country_event = {
 		political_reform = open_borders
 		political_reform = no_trade_unions
 		random_owned = { limit = { owner = { school_reforms = no_schools } } owner = { social_reform = low_schools } }
-		define_general = { name = "Francisco García Salinas" personality = defence_1.1 background = attack_1.1 }
+		define_general = { name = "Francisco Garcï¿½a Salinas" personality = defence_1.1 background = attack_1.1 }
 		define_general = { name = "Mariano Arista" personality = no_personality background = no_background }
 		define_general = { name = "Antonio Canales Rosillo" personality = defence_minus_1.51 background = attack_1.1 }
-		define_general = { name = "Vicente Filísola" personality = defence_2.76 background = attack_1.1 }
+		define_general = { name = "Vicente Filï¿½sola" personality = defence_2.76 background = attack_1.1 }
 		define_general = { name = "Pedro de Ampudia" personality = defence_2.76 background = attack_2.76 }
-		define_general = { name = "José María Flores" personality = defence_1.1 background = attack_minus_1.51 }
-		define_general = { name = "José de Urrea" personality = defence_1.1 background = attack_2.76 }
-		define_general = { name = "Martín Perfecto de Cos" personality = defence_minus_1.101 background = no_background }
+		define_general = { name = "Josï¿½ Marï¿½a Flores" personality = defence_1.1 background = attack_minus_1.51 }
+		define_general = { name = "Josï¿½ de Urrea" personality = defence_1.1 background = attack_2.76 }
+		define_general = { name = "Martï¿½n Perfecto de Cos" personality = defence_minus_1.101 background = no_background }
 		capital = 2172
 		add_country_modifier = { name = national_instability duration = 730 }
 		add_country_modifier = { name = national_confusion duration = 730 }
@@ -1017,7 +1017,7 @@ country_event = {
 	title = "The Federalist Revolt crumbles"
 	desc = "EVTDESC4207090"
 	picture = "treaty"
-	
+
 	trigger = {
 		has_global_flag = mex_fedrevolt
 		tag = MEX
@@ -1067,7 +1067,7 @@ country_event = {
 	desc = "EVTDESC4207091"
 	picture = "treaty"
 	fire_only_once = yes
-	
+
 	trigger = {
 		has_global_flag = mex_fedrevolt
 		tag = MEE
@@ -1115,14 +1115,14 @@ country_event = {
 		political_reform = settlement
 		political_reform = open_borders
 		political_reform = proportional_representation
-		define_general = { name = "Francisco García Salinas" personality = defence_1.1 background = attack_1.1 }
+		define_general = { name = "Francisco Garcï¿½a Salinas" personality = defence_1.1 background = attack_1.1 }
 		define_general = { name = "Mariano Arista" personality = no_personality background = no_background }
 		define_general = { name = "Antonio Canales Rosillo" personality = defence_minus_1.51 background = attack_1.1 }
-		define_general = { name = "Vicente Filísola" personality = defence_2.76 background = attack_1.1 }
+		define_general = { name = "Vicente Filï¿½sola" personality = defence_2.76 background = attack_1.1 }
 		define_general = { name = "Pedro de Ampudia" personality = defence_2.76 background = attack_2.76 }
-		define_general = { name = "José María Flores" personality = defence_1.1 background = attack_minus_1.51 }
-		define_general = { name = "José de Urrea" personality = defence_1.1 background = attack_2.76 }
-		define_general = { name = "Martín Perfecto de Cos" personality = defence_minus_1.101 background = no_background }
+		define_general = { name = "Josï¿½ Marï¿½a Flores" personality = defence_1.1 background = attack_minus_1.51 }
+		define_general = { name = "Josï¿½ de Urrea" personality = defence_1.1 background = attack_2.76 }
+		define_general = { name = "Martï¿½n Perfecto de Cos" personality = defence_minus_1.101 background = no_background }
 		capital = 2172
 	}
 }
@@ -1365,7 +1365,7 @@ country_event = {
 	desc = "EVTDESC4207096"
 	picture = "treaty"
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "We shall welcome our fellow federalist fighters!"
 		prestige = 5
@@ -1517,9 +1517,9 @@ country_event = {
 		}
 		RGR = {
 			define_general = { name = "Enrique Gorostieta Velarde" personality = defence_2.1 background = attack_1.1 }
-			define_general = { name = "José Reyes Vega" personality = defence_1.1 background = attack_2.1 }
-			define_general = { name = "Alberto Gutiérrez" personality = defence_2.1 background = no_background }
-			define_general = { name = "Victoriano Ramírez" personality = no_personality background = attack_3.1 }
+			define_general = { name = "Josï¿½ Reyes Vega" personality = defence_1.1 background = attack_2.1 }
+			define_general = { name = "Alberto Gutiï¿½rrez" personality = defence_2.1 background = no_background }
+			define_general = { name = "Victoriano Ramï¿½rez" personality = no_personality background = attack_3.1 }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -2173,76 +2173,85 @@ province_event = {
     }
 }
 
-#Antonio López de Santa Anna is a day 1 event for 1836 Mexico, effects partially shared by the Siete Leyes event 183536 in 1830_MEX_Events.txt
+#Antonio Lï¿½pez de Santa Anna is a day 1 event for 1836 Mexico, effects partially shared by the Siete Leyes event 183536 in 1830_MEX_Events.txt
 country_event = {
-    id = 44805
-    title = "EVTNAME44805" #Antonio López de Santa Anna
-    desc = "EVTDESC44805"
-    picture = "antonio_lopez_de_santa_ana"
+	id = 44805
+	title = "EVTNAME44805" #Antonio Lï¿½pez de Santa Anna
+
+	desc = "EVTDESC44805"
+
+	picture = "antonio_lopez_de_santa_ana"
+
 	fire_only_once = yes
 	is_triggered_only = yes
 
-    option = {
-        name = "EVT44805OPTA"
-        any_pop = {
-            limit = {
-                is_primary_culture = yes
-                OR = {
-                    type = soldiers
-                    type = aristocrats
-                    type = officers
-                }
-            }
-            ideology = {
-                value = reactionary
-                factor = 0.7
-            }
-            ideology = {
-                value = conservative
-                factor = 0.3
-            }
-        }
-        any_pop = {
-            limit = {
-                NOT = { type = soldiers }
-                NOT = { type = aristocrats }
-                NOT = { type = officers }
-                is_primary_culture = yes
-                location = {
-                    OR = {
-                        province_id = 2137
-                        province_id = 2141
-                        province_id = 2162
-                        province_id = 2166
-                        region = MEX_2172
-                    }
-                }
-            }
-            ideology = {
-                value = liberal
-                factor = 0.6
-            }
-            consciousness = 3
-        }
-        any_owned = {
-            limit = { region = MEX_2172 }
-            add_province_modifier = {
-                name = peasant_revolt
-                duration = 1095
-            }
-        }
-		add_country_modifier = { name = fight_the_power duration = 3650 }
+	option = {
+		name = "EVT44805OPTA"
+
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				OR = {
+					type = soldiers
+					type = aristocrats
+					type = officers
+				}
+			}
+			ideology = {
+				value = reactionary
+				factor = 0.7
+			}
+			ideology = {
+				value = conservative
+				factor = 0.3
+			}
+		}
+		any_pop = {
+			limit = {
+				NOT = { type = soldiers }
+				NOT = { type = aristocrats }
+				NOT = { type = officers }
+				is_primary_culture = yes
+				location = {
+					OR = {
+						province_id = 2137
+						province_id = 2141
+						province_id = 2162
+						province_id = 2166
+						region = MEX_2172
+					}
+				}
+			}
+			ideology = {
+				value = liberal
+				factor = 0.6
+			}
+			consciousness = 3
+		}
+		any_owned = {
+			limit = {
+				region = MEX_2172
+			}
+			add_province_modifier = {
+				name = peasant_revolt
+				duration = 1095
+			}
+		}
+		add_country_modifier = {
+			name = fight_the_power
+			duration = 3650
+		}
 		add_country_modifier = {
 			name = santa_ana_rule
 			duration = -1
 		}
-    }
+	}
 }
 
-#The Chimayó Rebellion in New Mexico fires in 1837, makes pops angry
+#The Chimayï¿½ Rebellion in New Mexico fires in 1837, makes pops angry
 country_event = {
     id = 123616
-    title = "The Chimayó Rebellion"
+    title = "The Chimayï¿½ Rebellion"
     desc = "CHIMAYOREBELLION"
     fire_only_once = yes
     picture = "chimayo_revolt"
@@ -2329,7 +2338,7 @@ country_event = {
 		war_exhaustion = 25
 		ai_chance = { factor = 1 }
 	}
-	
+
 	option = {
 		name = "We have to surrender..."
 		any_owned = { change_controller = USA }
@@ -2337,10 +2346,10 @@ country_event = {
 	}
 }
 
-#La Rebelión Chatina in 1896, makes native pops in Oaxaca angry
+#La Rebeliï¿½n Chatina in 1896, makes native pops in Oaxaca angry
 country_event = {
 	id = 4207002
-	title = "La Rebelión Chatina"
+	title = "La Rebeliï¿½n Chatina"
 	desc = "EVTDESC4207002"
 	picture = "chatinos"
 	fire_only_once = yes
@@ -2460,7 +2469,7 @@ country_event = {
 	}
 
 	option = {
-		name = "Viva California! §BPlay as California" #Play as CAL
+		name = "Viva California! ï¿½BPlay as California" #Play as CAL
 		any_pop = {
 			limit = {
 				location = {
@@ -2911,7 +2920,7 @@ country_event = {
     picture = "reformist_war"
     is_triggered_only = yes
     fire_only_once = yes
-	
+
     option = {
         name = "We shall defend the constitution!"
 		war_exhaustion = 30
@@ -2971,7 +2980,7 @@ country_event = {
 		ai_chance = { factor = 1 }
     }
 	option = {
-        name = "Depose these heathens! §BPlay as the Conservatives§W"
+        name = "Depose these heathens! ï¿½BPlay as the Conservativesï¿½W"
 		war_exhaustion = 30
 		all_core = { add_core = MEE }
 		set_global_flag = reform_war
@@ -3038,7 +3047,7 @@ country_event = {
     desc = "EVTDESC110060"
     picture = "MEX_Bear_Flag_Revolt"
 	fire_only_once = yes
-	
+
     trigger = {
         tag = MEX
         war_with = USA
@@ -3093,10 +3102,10 @@ country_event = {
     }
 }
 
-#Benito Juárez for democratic Mexico in 1858
+#Benito Juï¿½rez for democratic Mexico in 1858
 country_event = {
 	id = 111025
-	title = "Benito Juárez"
+	title = "Benito Juï¿½rez"
 	desc = "EVTDESC111025"
 	picture = "benito_juarez"
 	fire_only_once = yes
@@ -3444,10 +3453,10 @@ country_event = {
 
 ###Below this point are the singular flavor events disconnected from other content###
 
-#México a través de los siglos (Prestige Event)
+#Mï¿½xico a travï¿½s de los siglos (Prestige Event)
 country_event = {
 	id = 4206993
-	title = "México a través de los siglos"
+	title = "Mï¿½xico a travï¿½s de los siglos"
 	desc = "EVTDESC4206993"
 	picture = "mexicanhistory"
 	fire_only_once = yes
@@ -3561,10 +3570,10 @@ country_event = {
 	}
 }
 
-#El Paso del Norte renamed to Ciudad Juárez if Mexico won French Expedition (Prestige Event)
+#El Paso del Norte renamed to Ciudad Juï¿½rez if Mexico won French Expedition (Prestige Event)
 country_event = {
 	id = 4206999
-	title = "Ciudad Juárez"
+	title = "Ciudad Juï¿½rez"
 	desc = "EVTDESC4206999"
 	picture = "ciudadjuarezevt"
 	fire_only_once = yes
@@ -3585,15 +3594,15 @@ country_event = {
 		prestige = 2.5
 		2143 = {
 			any_pop = { militancy = -1 }
-			change_province_name = "Ciudad Juárez"
+			change_province_name = "Ciudad Juï¿½rez"
 		}
 	}
 }
 
-#El Batallón de San Patricio fires during the MAW, giving Mexico a general and reducing war exhaustion a teeny bit
+#El Batallï¿½n de San Patricio fires during the MAW, giving Mexico a general and reducing war exhaustion a teeny bit
 country_event = {
 	id = 4207021
-	title = "El Batallón de San Patricio"
+	title = "El Batallï¿½n de San Patricio"
 	desc = "EVTDESC4207021"
 	picture = "sanpatricio"
 	fire_only_once = yes
@@ -3607,7 +3616,7 @@ country_event = {
 	mean_time_to_happen = { months = 3 }
 
 	option = {
-		name = "Éirinn go deo!"
+		name = "ï¿½irinn go deo!"
 		war_exhaustion = -5
 		define_general = { name = "John O'Riley" personality = defence_2.2 background = no_background }
 		any_pop = { limit = { has_pop_culture = irish } militancy = -1 }
@@ -3636,15 +3645,15 @@ country_event = {
 	mean_time_to_happen = { months = 4 }
 
 	option = {
-		name = "Chingón."
+		name = "Chingï¿½n."
 		prestige = 2.5
 	}
 }
 
-#The San Andrés Explosion fires for Mexico while fighting France (Prestige Event)
+#The San Andrï¿½s Explosion fires for Mexico while fighting France (Prestige Event)
 country_event = {
 	id = 4207023
-	title = "The San Andrés Explosion"
+	title = "The San Andrï¿½s Explosion"
 	desc = "EVTDESC4207023"
 	picture = "colecturiaexplosion"
 	fire_only_once = yes
@@ -3701,10 +3710,10 @@ country_event = {
 	}
 }
 
-#La Orquesta Sinfónica Nacional fires in 1915 (Prestige Event)
+#La Orquesta Sinfï¿½nica Nacional fires in 1915 (Prestige Event)
 country_event = {
 	id = 4207026
-	title = "La Orquesta Sinfónica Nacional"
+	title = "La Orquesta Sinfï¿½nica Nacional"
 	desc = "EVTDESC4207026"
 	picture = "orchestramex"
 	fire_only_once = yes

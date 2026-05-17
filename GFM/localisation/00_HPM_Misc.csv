@@ -129,8 +129,6 @@ enforce_conference_decision_setup;Force a §Ycountry§W to abide to the §YGreat Po
 yes_to_congo;Voted Yes for the Congo Free State.;;;;;;;;;;;;;
 no_to_congo;Votes No for the Congo Free State.;;;;;;;;;;;;;
 abstained_to_congo;Abstain from Voting.;;;;;;;;;;;;;
-admin_spen;AI Administration Spending;;;;;;;;;;;;;
-educational_spen;AI Educational Spending;;;;;;;;;;;;;
 has_siege;Has Siege;;;;;;;;;;;;;
 debt_default_to;Debt Default To;;;;;;;;;;;;;
 radical_republic_ruler;Chairman;;;;;;;;;;;;;

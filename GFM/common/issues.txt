@@ -173,7 +173,7 @@ party_issues = {
     }
     social_policy = {
         no_state_interference = {
-            max_social_spending = 0.5
+            max_social_spending = 0.00
         }
         colonial_spending_policy = {
             max_social_spending = 0.01
@@ -181,10 +181,10 @@ party_issues = {
         no_position_set = {
         }
         populist_welfare = {
-            min_social_spending = 0.15
+            min_social_spending = 0.05
         }
         welfare_state = {
-            min_social_spending = 0.33
+            min_social_spending = 0.25
         }
     }
 }
@@ -795,18 +795,22 @@ social_reforms = {
         trinket_subsidies = {
             unemployment_benefit = 0.25
             global_immigrant_attract = 0.01
+            min_social_spending = 0.01
         }
         low_subsidies = {
             unemployment_benefit = 0.50
             global_immigrant_attract = 0.02
+            min_social_spending = 0.02
         }
         acceptable_subsidies = {
             unemployment_benefit = 0.75
             global_immigrant_attract = 0.03
+            min_social_spending = 0.03
         }
         good_subsidies = {
             unemployment_benefit = 1.0
             global_immigrant_attract = 0.04
+            min_social_spending = 0.04
         }
     }
     pensions = {
@@ -816,19 +820,23 @@ social_reforms = {
         trinket_pensions = {
             pension_level    = 0.25
             global_immigrant_attract = 0.01
+            min_social_spending = 0.01
         }
         low_pensions = {
             pension_level    = 0.50
             global_immigrant_attract = 0.02
+            min_social_spending = 0.02
         }
         acceptable_pensions = {
             pension_level    = 0.75
             global_immigrant_attract = 0.03
+            min_social_spending = 0.03
         }
         good_pensions = {
             pension_level    = 1
             global_population_growth = 0.0005
             global_immigrant_attract = 0.04
+            min_social_spending = 0.04
         }
     }
     health_care = {
@@ -869,19 +877,19 @@ social_reforms = {
             global_assimilation_rate = -0.002
         }
         low_schools = {
-            education_efficiency_modifier = 0.05
+            education_efficiency_modifier = 0.1
             global_assimilation_rate = 0.002
             global_immigrant_attract = 0.02
             administrative_multiplier = 1
         }
         acceptable_schools = {
-            education_efficiency_modifier = 0.075
+            education_efficiency_modifier = 0.2
             global_assimilation_rate = 0.005
             global_immigrant_attract = 0.03
             administrative_multiplier = 2
         }
         good_schools = {
-            education_efficiency_modifier = 0.1
+            education_efficiency_modifier = 0.3
             global_assimilation_rate = 0.01
             global_immigrant_attract = 0.04
             administrative_multiplier = 3
@@ -986,7 +994,7 @@ economic_reforms = {
             civilization_progress_modifier = 0.1
             allow = {
             }
-			
+
             on_execute = {
                 effect = {
                     any_pop = {
@@ -1080,7 +1088,7 @@ economic_reforms = {
             civilization_progress_modifier = 0.15
             allow = {
             }
-			
+
             on_execute = {
                 effect = {
                     any_pop = {
@@ -1139,7 +1147,7 @@ economic_reforms = {
             civilization_progress_modifier = 0.15
             allow = {
             }
-			
+
             on_execute = {
                 effect = {
                     plurality = 5
@@ -1174,7 +1182,7 @@ economic_reforms = {
             civilization_progress_modifier = 0.25
             allow = {
             }
-			
+
             on_execute = {
                 effect = {
                     plurality = 5
