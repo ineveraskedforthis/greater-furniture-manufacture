@@ -16,7 +16,6 @@ political_decisions = {
 					invention = machine_tools
 					invention = nitroglycerin
 					iron_steamers = 1
-					money = 75000
 				}
 			}
             NOT = { is_canal_enabled = 1 }
@@ -27,7 +26,6 @@ political_decisions = {
             invention = machine_tools
             invention = nitroglycerin
             iron_steamers = 1
-            money = 75000
         }
         effect = {
             set_global_flag = kiel_under_construction
@@ -71,14 +69,12 @@ political_decisions = {
                     invention = machine_tools
                     invention = nitroglycerin
                     iron_steamers = 1
-                    money = 250000
                 }
                 AND = {
                     year = 1859
                     ai = yes
                 }
             }
-			money = 250000
         }
 
         effect = {
@@ -152,11 +148,7 @@ political_decisions = {
                     ai = yes
                 }
             }
-            OR = {
-                business_banks = 1
-                money = 150000
-            }
-            money = 50100
+            business_banks = 1
             1755 = { owner = { NOT = { truce_with = THIS war_with = THIS is_greater_power = yes } } }
         }
 
@@ -210,10 +202,7 @@ political_decisions = {
 			}
             NOT = { 1755 = { owner = { military_score = THIS } } }
             OR = {
-                AND = {
-                    money = 200000
-                    1755 = { owner = { part_of_sphere = no } }
-                }
+                1755 = { owner = { part_of_sphere = no } }
                 AND = {
                     ai = yes
                     1755 = { owner = { part_of_sphere = no } }
@@ -232,7 +221,7 @@ political_decisions = {
 						ENG = {
 							raider_group_doctrine = 1
 							invention = ironclads
-							ai = yes 
+							ai = yes
 						}
 						ENG = {
 							raider_group_doctrine = 1
@@ -271,7 +260,7 @@ political_decisions = {
         news_desc_long = "panama_canal_NEWS_LONG"
         news_desc_medium = "panama_canal_NEWS_MEDIUM"
         news_desc_short = "panama_canal_NEWS_SHORT"
-		
+
         potential = {
             is_greater_power = yes
             interchangeable_parts = 1
@@ -285,7 +274,6 @@ political_decisions = {
             invention = nitroglycerin
             iron_steamers = 1
             invention = prophylaxis_against_malaria
-            money = 250000
             OR = {
                 1723 = { owner = { in_sphere = THIS } }
                 owns = 1723
@@ -333,10 +321,6 @@ political_decisions = {
             1723 = { owner = { NOT = { truce_with = THIS } war = no in_default = THIS } }
             NOT = { 1723 = { owner = { military_score = THIS } } }
             OR = {
-                AND = {
-                    money = 500000
-                    1723 = { owner = { part_of_sphere = no } }
-                }
                 1723 = { owner = { in_sphere = THIS } }
             }
         }
@@ -420,7 +404,6 @@ political_decisions = {
             invention = machine_tools
             invention = nitroglycerin
             iron_steamers = 1
-            money = 400100
         }
 
         effect = {

@@ -20,8 +20,6 @@ country_event = {
         }
         ai_chance = {
             factor = 20
-            modifier = { factor = 0 NOT = { money = 501000 } }
-            modifier = { factor = 100 money = 501000 }
         }
     }
 
@@ -38,8 +36,6 @@ country_event = {
         }
         ai_chance = {
             factor = 20
-            modifier = { factor = 0 NOT = { money = 401000 } }
-            modifier = { factor = 100 NOT = { money = 501000 } money = 401000 }
         }
     }
 
@@ -56,8 +52,6 @@ country_event = {
         }
         ai_chance = {
             factor = 20
-            modifier = { factor = 0 NOT = { money = 301000 } }
-            modifier = { factor = 100 NOT = { money = 401000 } money = 301000 }
         }
     }
 
@@ -74,8 +68,6 @@ country_event = {
         }
         ai_chance = {
             factor = 20
-            modifier = { factor = 0 NOT = { money = 275000 } }
-            modifier = { factor = 100 NOT = { money = 301000 } money = 275000 }
         }
     }
 
@@ -92,7 +84,6 @@ country_event = {
         }
         ai_chance = {
             factor = 20
-            modifier = { factor = 0 money = 251000 }
         }
     }
 }
@@ -225,7 +216,7 @@ country_event = {
     }
 
 	option = {
-        name = "Glory for $COUNTRY$! §GLose 2 infamy§!"
+        name = "Glory for $COUNTRY$! ï¿½GLose 2 infamyï¿½!"
         set_global_flag = suez_inauguration
         set_country_flag = suez_builder
         clr_global_flag = suez_canal_construction
@@ -511,8 +502,6 @@ country_event = {
         }
         ai_chance = {
             factor = 0.33
-            modifier = { factor = 0 NOT = { money = 125000 } }
-            modifier = { factor = 100 money = 125000 }
         }
     }
 
@@ -527,8 +516,6 @@ country_event = {
         }
         ai_chance = {
             factor = 0.33
-            modifier = { factor = 0 NOT = { money = 95000 } }
-            modifier = { factor = 100 money = 95000 NOT = { money = 125000 } }
         }
     }
 
@@ -543,7 +530,6 @@ country_event = {
         }
         ai_chance = {
             factor = 0.34
-            modifier = { factor = 0 money = 75000 }
         }
     }
 }
@@ -599,8 +585,6 @@ country_event = {
         }
         ai_chance = {
             factor = 0.25
-            modifier = { factor = 0 NOT = { money = 501000 } }
-            modifier = { factor = 100 money = 501000 }
         }
     }
 
@@ -618,8 +602,6 @@ country_event = {
 		1723 = { add_province_modifier = { name = province_small_immigration_boom duration = 365 } }
         ai_chance = {
             factor = 0.25
-            modifier = { factor = 0 NOT = { money = 451000 } }
-            modifier = { factor = 100 money = 351000 NOT = { money = 451000 } }
         }
     }
 
@@ -637,8 +619,6 @@ country_event = {
 		1723 = { add_province_modifier = { name = province_small_immigration_boom duration = 365 } }
         ai_chance = {
             factor = 0.25
-            modifier = { factor = 0 NOT = { money = 351000 } }
-            modifier = { factor = 100 money = 351000 NOT = { money = 451000 } }
         }
     }
 
@@ -656,8 +636,6 @@ country_event = {
 		1723 = { add_province_modifier = { name = province_small_immigration_boom duration = 365 } }
         ai_chance = {
             factor = 0.25
-            modifier = { factor = 0 NOT = { money = 301000 } }
-            modifier = { factor = 100 money = 301000 NOT = { money = 451000 } }
         }
     }
 
@@ -675,7 +653,6 @@ country_event = {
 		1723 = { add_province_modifier = { name = province_small_immigration_boom duration = 365 } }
         ai_chance = {
             factor = 0.25
-            modifier = { factor = 0 money = 301000 }
         }
     }
 }

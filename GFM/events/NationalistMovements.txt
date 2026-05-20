@@ -3034,7 +3034,7 @@ province_event = {
     }
 
     mean_time_to_happen = {
-        months = 700
+        months = 1
         modifier = {
             factor = 0.9
             average_militancy = 6
