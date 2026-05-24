@@ -1023,6 +1023,10 @@ RGO_template_labourers = {
 ### RGOs #####################################################################################
 cattle_ranch = {
     template = RGO_template_farmers
+    efficiency = {
+        machine_parts = 0.1
+        automobiles = 0.1
+    }
     output_goods = cattle
     value = 1.7 #1.8
     farm = yes
@@ -1042,6 +1046,8 @@ coffee_plantation = {
     template = RGO_template_farmers
     efficiency = {
         fertilizer = 0.1
+        machine_parts = 0.1
+        automobiles = 0.1
     }
     output_goods = coffee
     value = 1.5    #1.5
@@ -1052,6 +1058,8 @@ cotton_plantation = {
     template = RGO_template_farmers
     efficiency = {
         fertilizer = 0.1
+        machine_parts = 0.1
+        automobiles = 0.1
     }
     output_goods = cotton
     value = 1.8 #3
@@ -1062,6 +1070,8 @@ sugarcane_plantation = {
     template = RGO_template_farmers
     efficiency = {
         fertilizer = 0.1
+        machine_parts = 0.1
+        automobiles = 0.1
     }
     output_goods = sugar
     value = 1
@@ -1072,6 +1082,8 @@ dye_plantation = {
     template = RGO_template_farmers
     efficiency = {
         fertilizer = 0.1
+        machine_parts = 0.1
+        automobiles = 0.1
     }
     output_goods = dye
     value = 0.22
@@ -1093,6 +1105,8 @@ grain_farm = {
     template = RGO_template_farmers
     efficiency = {
         fertilizer = 0.1
+        machine_parts = 0.1
+        automobiles = 0.1
     }
     output_goods = grain
     value = 1.7 #1.8
@@ -1123,6 +1137,8 @@ opium_plantation = {
     template = RGO_template_farmers
     efficiency = {
         fertilizer = 0.1
+        machine_parts = 0.1
+        automobiles = 0.1
     }
     output_goods = opium
     value = 0.7
@@ -1133,6 +1149,8 @@ orchard = {
     template = RGO_template_farmers
     efficiency = {
         fertilizer = 0.1
+        machine_parts = 0.1
+        automobiles = 0.1
     }
     output_goods = fruit
     value = 2.7 #2.8
@@ -1217,6 +1235,9 @@ rubber_lodge = {
 
 sheep_ranch = {
     template = RGO_template_farmers
+    efficiency = {
+        automobiles = 0.1
+    }
     output_goods = wool
     value = 4.8 #5
     farm = yes
