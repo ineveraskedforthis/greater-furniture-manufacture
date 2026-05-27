@@ -36,65 +36,63 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
+		# SWITZERLAND NEUTRALITY
+
 		name = "Checking..."
-		random_owned = {
+		if = {
 			limit = {
-				owner = {
-					SWI = {
-						ai = no
-						has_country_modifier = neutrality_modifier
-						OR = {
-							any_greater_power = { military_access = SWI }
-							any_neighbor_country = { NOT = { vassal_of = SWI } military_access = SWI }
-							sphere_owner = { military_access = SWI }
-							AND = {
-								num_of_allies = 1
-								NOT = { NCT = { alliance_with = SWI } }
-							}
-							AND = {
-								num_of_allies = 2
-								NCT = { exists = yes alliance_with = SWI }
-							}
-							war = yes
+				SWI = {
+					ai = no
+					has_country_modifier = neutrality_modifier
+					OR = {
+						any_greater_power = { military_access = SWI }
+						any_neighbor_country = { NOT = { vassal_of = SWI } military_access = SWI }
+						sphere_owner = { military_access = SWI }
+						AND = {
+							num_of_allies = 1
+							NOT = { NCT = { alliance_with = SWI } }
 						}
+						AND = {
+							num_of_allies = 2
+							NCT = { exists = yes alliance_with = SWI }
+						}
+						war = yes
 					}
 				}
 			}
-			owner = {
-				any_country = {
-					limit = {
-						exists = yes
-						NOT = { vassal_of = SWI }
-						OR = {
-							military_access = SWI
-							alliance_with = SWI
-						}
-					}
-					relation = { who = SWI value = -125 }
-				}
-				any_country = {
-					limit = {
-						exists = yes
-						alliance_with = SWI
-						NOT = { vassal_of = SWI }
-					}
-					leave_alliance = SWI
-				}
-				any_country = {
-					limit = {
-						exists = yes
-						war_with = SWI
-					}
-					end_war = SWI
-				}
-				any_country = {
-					limit = {
-						exists = yes
+			any_country = {
+				limit = {
+					exists = yes
+					NOT = { vassal_of = SWI }
+					OR = {
 						military_access = SWI
-						NOT = { vassal_of = SWI }
+						alliance_with = SWI
 					}
-					end_military_access = SWI
 				}
+				relation = { who = SWI value = -125 }
+			}
+			any_country = {
+				limit = {
+					exists = yes
+					alliance_with = SWI
+					NOT = { vassal_of = SWI }
+				}
+				leave_alliance = SWI
+			}
+			any_country = {
+				limit = {
+					exists = yes
+					war_with = SWI
+				}
+				end_war = SWI
+			}
+			any_country = {
+				limit = {
+					exists = yes
+					military_access = SWI
+					NOT = { vassal_of = SWI }
+				}
+				end_military_access = SWI
 			}
 		}
 
@@ -136,134 +134,126 @@ country_event = {
 				ai = yes
 			}
 			random_list = {
-                17 = { overlord = { country_event = 70005 } }
-                17 = { overlord = { country_event = { id = 70005 days = 1 } } }
-                17 = { overlord = { country_event = { id = 70005 days = 2 } } }
-                17 = { overlord = { country_event = { id = 70005 days = 3 } } }
-                17 = { overlord = { country_event = { id = 70005 days = 4 } } }
-                15 = { overlord = { country_event = { id = 70005 days = 5 } } }
-            }
+				17 = { overlord = { country_event = 70005 } }
+				17 = { overlord = { country_event = { id = 70005 days = 1 } } }
+				17 = { overlord = { country_event = { id = 70005 days = 2 } } }
+				17 = { overlord = { country_event = { id = 70005 days = 3 } } }
+				17 = { overlord = { country_event = { id = 70005 days = 4 } } }
+				15 = { overlord = { country_event = { id = 70005 days = 5 } } }
+			}
 		}
-		random_owned = {
+
+
+		# SPLENDID ISOLATION
+
+		if = {
 			limit = {
-				owner = {
-					ENG = {
-						has_country_modifier = pax_britannica
-						rank = 1
+				ENG = {
+					has_country_modifier = pax_britannica
+					rank = 1
+				}
+				OR = {
+					AND = {
+						any_greater_power = { alliance_with = ENG }
+						ENG = { NOT = { has_country_flag = ai_splendid_isolation } }
 					}
-					OR = {
-						AND = {
-							any_greater_power = { alliance_with = ENG }
-							ENG = { NOT = { has_country_flag = ai_splendid_isolation } }
-						}
-						AND = {
-							any_greater_power = { AND = { ai = yes alliance_with = ENG } }
-							ENG = { has_country_flag = ai_splendid_isolation }
-						}
+					AND = {
+						any_greater_power = { AND = { ai = yes alliance_with = ENG } }
+						ENG = { has_country_flag = ai_splendid_isolation }
 					}
-					OR = {
-						TUR = {
-							is_greater_power = yes
-							NOT = { alliance_with = ENG }
-						}
-						TUR = { is_greater_power = no }
-						AND = {
-							ENG = { has_country_flag = ai_splendid_isolation }
-							TUR = { ai = no }
-						}
+				}
+				OR = {
+					TUR = {
+						is_greater_power = yes
+						NOT = { alliance_with = ENG }
 					}
-					OR = {
-						JAP = {
-							is_greater_power = yes
-							NOT = { alliance_with = ENG }
-						}
-						JAP = { is_greater_power = no }
-						AND = {
-							ENG = { has_country_flag = ai_splendid_isolation }
-							JAP = { ai = no }
-						}
+					TUR = { is_greater_power = no }
+					AND = {
+						ENG = { has_country_flag = ai_splendid_isolation }
+						TUR = { ai = no }
 					}
-					OR = {
-						BEL = {
-							is_greater_power = yes
-							NOT = { alliance_with = ENG }
-						}
-						BEL = { is_greater_power = no }
-						AND = {
-							ENG = { has_country_flag = ai_splendid_isolation }
-							BEL = { ai = no }
-						}
+				}
+				OR = {
+					JAP = {
+						is_greater_power = yes
+						NOT = { alliance_with = ENG }
 					}
-					OR = {
-						POR = {
-							is_greater_power = yes
-							NOT = { alliance_with = ENG }
-						}
-						POR = { is_greater_power = no }
-						AND = {
-							ENG = { has_country_flag = ai_splendid_isolation }
-							POR = { ai = no }
-						}
+					JAP = { is_greater_power = no }
+					AND = {
+						ENG = { has_country_flag = ai_splendid_isolation }
+						JAP = { ai = no }
 					}
-					NOT = { exists = IRE }
-					NOT = { exists = GER }
-					NOT = { exists = GCF }
-					NOT = { year = 1870 }
-					NOT = {
-						AND = {
-							EGY = { war_with = TUR }
-							war_with = EGY
-							OR = {
-								war_with = FRA
-								war_with = BOR
-							}
+				}
+				OR = {
+					BEL = {
+						is_greater_power = yes
+						NOT = { alliance_with = ENG }
+					}
+					BEL = { is_greater_power = no }
+					AND = {
+						ENG = { has_country_flag = ai_splendid_isolation }
+						BEL = { ai = no }
+					}
+				}
+				OR = {
+					POR = {
+						is_greater_power = yes
+						NOT = { alliance_with = ENG }
+					}
+					POR = { is_greater_power = no }
+					AND = {
+						ENG = { has_country_flag = ai_splendid_isolation }
+						POR = { ai = no }
+					}
+				}
+				NOT = { exists = IRE }
+				NOT = { exists = GER }
+				NOT = { exists = GCF }
+				NOT = { year = 1870 }
+				NOT = {
+					AND = {
+						EGY = { war_with = TUR }
+						war_with = EGY
+						OR = {
+							war_with = FRA
+							war_with = BOR
 						}
 					}
 				}
 			}
-			owner = {
-				random_owned = {
-					limit = {
-						owner = {
-							ENG = { NOT = { has_country_flag = ai_splendid_isolation } }
-						}
-					}
-					owner = {
-						any_greater_power = {
-							limit = {
-								NOT = {
-									tag = BEL
-									tag = JAP
-									tag = TUR
-								}
-								alliance_with = ENG
-							}
-							leave_alliance = ENG
-							relation = { who = ENG value = -150 }
-						}
-					}
+			if = {
+				limit = {
+					ENG = { NOT = { has_country_flag = ai_splendid_isolation } }
 				}
-				random_owned = {
+				any_greater_power = {
 					limit = {
-						owner = {
-							ENG = { has_country_flag = ai_splendid_isolation }
+						NOT = {
+							tag = BEL
+							tag = JAP
+							tag = TUR
 						}
+						alliance_with = ENG
 					}
-					owner = {
-						any_greater_power = {
-							limit = {
-								ai = yes
-								NOT = {
-									tag = BEL
-									tag = JAP
-									tag = TUR
-								}
-								alliance_with = ENG
-							}
-							leave_alliance = ENG
-							relation = { who = ENG value = -150 }
+					leave_alliance = ENG
+					relation = { who = ENG value = -150 }
+				}
+			}
+			if = {
+				limit = {
+					ENG = { has_country_flag = ai_splendid_isolation }
+				}
+				any_greater_power = {
+					limit = {
+						ai = yes
+						NOT = {
+							tag = BEL
+							tag = JAP
+							tag = TUR
 						}
+						alliance_with = ENG
 					}
+					leave_alliance = ENG
+					relation = { who = ENG value = -150 }
 				}
 			}
 		}
@@ -280,12 +270,15 @@ country_event = {
 
 	option = {
 		name = "Checking..."
+
+		# ENSURE THAT CLN DOESN'T OWN PROVINCES
 		any_owned = {
 			limit = {
 				NOT = { province_id = 3486 }
 			}
 			secede_province = ---
 		}
+
 		#updating missing flags
 		any_country = {
 			limit = {
@@ -296,6 +289,7 @@ country_event = {
 			}
 			set_country_flag = existing_country
 		}
+
 		any_country = {
 			limit = {
 				has_country_flag = existing_country
@@ -318,83 +312,76 @@ country_event = {
 	option = {
 		name = "Checking..."
 		any_country = {
-            limit = {
-                has_country_flag = native_assimilation_enacted
-                NOT = { has_country_modifier = native_assimilation_act_policy }
-            }
-            clr_country_flag = native_assimilation_enacted
-        }
-		random_owned = {
 			limit = {
-				owner = {
-					NOT = { BOR = { has_country_flag = monarchy_government } }
-					BOR = { exists = yes }
-				}
+				has_country_flag = native_assimilation_enacted
+				NOT = { has_country_modifier = native_assimilation_act_policy }
 			}
-			owner = {
-				BOR = { all_core = { add_core = FRA remove_core = BOR } change_tag = FRA }
-			}
+			clr_country_flag = native_assimilation_enacted
 		}
-		random_owned = {
+		if = {
 			limit = {
-				owner = {
-					NOT = { SPC = { has_country_flag = monarchy_government } }
-					SPC = { exists = yes }
-				}
+				NOT = { BOR = { has_country_flag = monarchy_government } }
+				BOR = { exists = yes }
 			}
-			owner = {
-				SPC = {
-					remove_country_modifier = fueros_unresolved_1
-					remove_country_modifier = fueros_unresolved_2
-					remove_country_modifier = fueros_unresolved_3
-					remove_country_modifier = fueros_unresolved_4
-					remove_country_modifier = fueros_unresolved_5
-					remove_country_modifier = fueros_unresolved_6
-					remove_country_modifier = fueros_unresolved_7
-					remove_country_modifier = carlist_distributism
-					remove_country_modifier = marotist_reforms
-					any_owned = {
-						remove_province_modifier = fueros_autonomy
-						remove_province_modifier = fueros_autonomy_2
-						remove_province_modifier = fueros_autonomy_3
-						remove_province_modifier = fueros_autonomy_4
-					}
-					all_core = {
-						add_core = SPA
-						remove_core = SPC
-					}
-					change_tag = SPA
+			BOR = { all_core = { add_core = FRA remove_core = BOR } change_tag = FRA }
+		}
+		if = {
+			limit = {
+				NOT = { SPC = { has_country_flag = monarchy_government } }
+				SPC = { exists = yes }
+			}
+
+			SPC = {
+				remove_country_modifier = fueros_unresolved_1
+				remove_country_modifier = fueros_unresolved_2
+				remove_country_modifier = fueros_unresolved_3
+				remove_country_modifier = fueros_unresolved_4
+				remove_country_modifier = fueros_unresolved_5
+				remove_country_modifier = fueros_unresolved_6
+				remove_country_modifier = fueros_unresolved_7
+				remove_country_modifier = carlist_distributism
+				remove_country_modifier = marotist_reforms
+				any_owned = {
+					remove_province_modifier = fueros_autonomy
+					remove_province_modifier = fueros_autonomy_2
+					remove_province_modifier = fueros_autonomy_3
+					remove_province_modifier = fueros_autonomy_4
 				}
+				all_core = {
+					add_core = SPA
+					remove_core = SPC
+				}
+				change_tag = SPA
 			}
 		}
 		#abolishing serfdom
 		any_country = {
-            limit = {
-                any_owned_province = { has_pop_type = serfs }
-                NOT = { debt_law = serfdom }
-            }
-            any_owned = {
-                limit = {
-                    has_pop_type = serfs
-                    has_pop_type = labourers
-                }
-                any_pop = { limit = { type = serfs } pop_type = labourers money = 1000 }
-            }
-            any_owned = {
-                limit = {
-                    has_pop_type = serfs
-                    has_pop_type = farmers
-                }
-                any_pop = { limit = { type = serfs } pop_type = farmers money = 1000 }
-            }
-            any_owned = {
-                limit = {
-                    has_pop_type = serfs
-                    NOT = { has_pop_type = farmers has_pop_type = labourers }
-                }
-                any_pop = { limit = { type = serfs } pop_type = farmers money = 1000 }
-            }
-        }
+			limit = {
+				any_owned_province = { has_pop_type = serfs }
+				NOT = { debt_law = serfdom }
+			}
+			any_owned = {
+				limit = {
+					has_pop_type = serfs
+					has_pop_type = labourers
+				}
+				any_pop = { limit = { type = serfs } pop_type = labourers money = 1000 }
+			}
+			any_owned = {
+				limit = {
+					has_pop_type = serfs
+					has_pop_type = farmers
+				}
+				any_pop = { limit = { type = serfs } pop_type = farmers money = 1000 }
+			}
+			any_owned = {
+				limit = {
+					has_pop_type = serfs
+					NOT = { has_pop_type = farmers has_pop_type = labourers }
+				}
+				any_pop = { limit = { type = serfs } pop_type = farmers money = 1000 }
+			}
+		}
 		any_country = {
 			limit = {
 				ai = yes
@@ -1093,42 +1080,43 @@ country_event = {
 			}
 			government = hms_government
 		}
-		random_owned = {
-			limit = { owner = {
+		if = {
+			limit = {
 				URM = {
 					primary_culture = kurdish
 					vassal_of = PER
 					NOT = { neighbour = PER }
 					war = no
 				}
-			} }
-			owner = { create_vassal = URM release_vassal = MKU }
+			}
+			create_vassal = URM
+			release_vassal = URM
 		}
-		random_owned = {
-			limit = { owner = {
+		if = {
+			limit = {
 				MKU = {
 					primary_culture = kurdish
 					vassal_of = PER
 					NOT = { neighbour = PER }
 					war = no
 				}
-			} }
-			owner = { create_vassal = MKU release_vassal = MKU }
+			}
+			create_vassal = MKU
+			release_vassal = MKU
 		}
-		random_owned = {
-			limit = { owner = {
+		if = {
+			limit = {
 				NOT = { year = 1831 }
 				869 = { controlled_by = TUR }
 				872 = { controlled_by = TUR }
 				871 = { controlled_by = TUR }
 				NOT = { CLN = { has_country_flag = nomorerebelsradicals } }
-			} }
-			owner = {
-				CLN = { set_country_flag = nomorerebelsradicals }
-				869 = { any_pop = { militancy = -10 } }
-				872 = { any_pop = { militancy = -10 } }
-				871 = { any_pop = { militancy = -10 } }
 			}
+
+			CLN = { set_country_flag = nomorerebelsradicals }
+			869 = { any_pop = { militancy = -10 } }
+			872 = { any_pop = { militancy = -10 } }
+			871 = { any_pop = { militancy = -10 } }
 		}
 		any_country = {
 			limit = {
@@ -1162,19 +1150,20 @@ country_event = {
 			}
 			create_alliance = TUR
 		}
-		any_country = {
-			limit = {
-				tag = BNB
-				in_sphere = TUR
-				is_vassal = no
-				NOT = { war_with = TUR }
-				NOT = { year = 1836 }
-				alliance_with = MKN
-				MKN = { ai = yes }
-				NOT = { alliance_with = SRN }
-				ai = yes
+		BNB = {
+			if = {
+				limit = {
+					in_sphere = TUR
+					is_vassal = no
+					NOT = { war_with = TUR }
+					NOT = { year = 1836 }
+					alliance_with = MKN
+					MKN = { ai = yes }
+					NOT = { alliance_with = SRN }
+					ai = yes
+				}
+				leave_alliance = MKN
 			}
-			leave_alliance = MKN
 		}
 		any_land_province = {
 			limit = {
@@ -1190,48 +1179,6 @@ country_event = {
 			remove_province_modifier = slave_trade_decadence_2
 			remove_province_modifier = slave_trade_decadence_3
 			remove_province_modifier = slave_trade_decadence_4
-		}
-		any_land_province = {
-			limit = {
-				NOT = {
-					has_province_modifier = unemployment_joever
-				}
-				month = 1
-				NOT = {
-					province_control_days = 2
-				}
-				OR = {
-					unemployment_by_type = {
-						type = farmers
-						value = 0.4
-					}
-					unemployment_by_type = {
-						type = labourers
-						value = 0.4
-					}
-				}
-			}
-			add_province_modifier = { name = unemployment_joever duration = 45 }
-		}
-		any_land_province = {
-			limit = {
-				has_province_modifier = unemployment_joever
-				month = 1
-				NOT = {
-					province_control_days = 2
-				}
-				NOT = {
-					unemployment_by_type = {
-						type = farmers
-						value = 0.4
-					}
-					unemployment_by_type = {
-						type = labourers
-						value = 0.4
-					}
-				}
-			}
-			remove_province_modifier = unemployment_joever
 		}
 		any_land_province = {
 			limit = {
@@ -1469,90 +1416,82 @@ country_event = {
 				value = -50
 			}
 		}
-		random_owned = {
+		if = {
 			limit = {
-				owner = {
-					PEU = {
-						ai = yes
-						war = no
-						is_vassal = no
-						owns = 2319
-						owns = 3823
-						owns = 3557
-					}
-					BOL = {
-						ai = yes
-						war = no
-						is_vassal = no
-						owns = 2320
-						owns = 2321
-						owns = 3326
-						owns = 2549
-					}
+				PEU = {
+					ai = yes
+					war = no
+					is_vassal = no
+					owns = 2319
+					owns = 3823
+					owns = 3557
 				}
-			}
-			owner = {
-				UTI = { civilized = yes }
-				2319 = { add_core = UTI }
-				PEU = { release = UTI }
-				BOL = { inherit = UTI }
-				2319 = { remove_core = UTI }
 				BOL = {
-					any_owned = {
-						limit = {
-							OR = {
-								province_id = 3381
-								province_id = 3435
-								province_id = 2549
-								province_id = 3326
-								province_id = 2321
-								province_id = 3382
-							}
+					ai = yes
+					war = no
+					is_vassal = no
+					owns = 2320
+					owns = 2321
+					owns = 3326
+					owns = 2549
+				}
+			}
+			UTI = { civilized = yes }
+			2319 = { add_core = UTI }
+			PEU = { release = UTI }
+			BOL = { inherit = UTI }
+			2319 = { remove_core = UTI }
+			BOL = {
+				any_owned = {
+					limit = {
+						OR = {
+							province_id = 3381
+							province_id = 3435
+							province_id = 2549
+							province_id = 3326
+							province_id = 2321
+							province_id = 3382
 						}
-						add_core = UTI
 					}
+					add_core = UTI
 				}
-				BOL = { release = UTI }
-				PEU = { inherit = UTI }
-				UTI = { all_core = { remove_core = UTI } }
-				UTI = { civilized = no }
 			}
+			BOL = { release = UTI }
+			PEU = { inherit = UTI }
+			UTI = { all_core = { remove_core = UTI } }
+			UTI = { civilized = no }
 		}
-		random_owned = {
+		if = {
 			limit = {
-				owner = {
-					has_global_flag = sw_set
-				}
+				has_global_flag = sw_set
 			}
-			owner = {
-				any_country = {
-					limit = {
-						rank = 8
-						NOT = { has_country_modifier = DVG_badboy_1 }
-					}
-					add_country_modifier = { name = DVG_badboy_1 duration = -1 }
+			any_country = {
+				limit = {
+					rank = 8
+					NOT = { has_country_modifier = DVG_badboy_1 }
 				}
-				any_country = {
-					limit = {
-						rank = 8
-						has_country_modifier = DVG_badboy_2
-					}
-					remove_country_modifier = DVG_badboy_2
+				add_country_modifier = { name = DVG_badboy_1 duration = -1 }
+			}
+			any_country = {
+				limit = {
+					rank = 8
+					has_country_modifier = DVG_badboy_2
 				}
-				any_country = {
-					limit = {
-						NOT = { rank = 8 }
-						NOT = { has_country_modifier = DVG_badboy_2 }
-					}
-					add_country_modifier = { name = DVG_badboy_2 duration = -1 }
+				remove_country_modifier = DVG_badboy_2
+			}
+			any_country = {
+				limit = {
+					NOT = { rank = 8 }
+					NOT = { has_country_modifier = DVG_badboy_2 }
 				}
-				any_country = {
-					limit = {
-						NOT = { rank = 8 }
-						has_country_modifier = DVG_badboy_1
-					}
-					remove_country_modifier = DVG_badboy_1
+				add_country_modifier = { name = DVG_badboy_2 duration = -1 }
+			}
+			any_country = {
+				limit = {
+					NOT = { rank = 8 }
+					has_country_modifier = DVG_badboy_1
 				}
+				remove_country_modifier = DVG_badboy_1
 			}
 		}
 		any_country = {
@@ -1788,92 +1727,86 @@ country_event = {
 			}
 			set_country_flag = insane_warship_check
 		}
-        any_country = {
-            limit = {
-                tag = ION
-                OR = {
-                    accepted_culture = british
-                    accepted_culture = north_italian
-                }
-                OR = {
-                    any_owned_province = { NOT = { is_core = ION } }
-                    exists = no
-                }
-				is_cultural_union = no
-				ai = yes
-                NOT = { has_country_flag = normalized_cultures }
-            }
-            set_country_flag = normalized_cultures
-            remove_accepted_culture = british
-            remove_accepted_culture = north_italian
-        }
+		ION = {
+			if = {
+				limit = {
+					OR = {
+						accepted_culture = british
+						accepted_culture = north_italian
+					}
+					OR = {
+						any_owned_province = { NOT = { is_core = ION } }
+						exists = no
+					}
+					is_cultural_union = no
+					ai = yes
+					NOT = { has_country_flag = normalized_cultures }
+				}
+				set_country_flag = normalized_cultures
+				remove_accepted_culture = british
+				remove_accepted_culture = north_italian
+			}
+		}
 
-        any_country = {
-            limit = {
-                tag = GRE
-                OR = {
-                    accepted_culture = british
-                    accepted_culture = north_italian
-                }
-				is_cultural_union = no
-				ai = yes
-                NOT = { has_country_flag = normalized_cultures }
-            }
-            set_country_flag = normalized_cultures
-            remove_accepted_culture = british
-             remove_accepted_culture = north_italian
-        }
-		random_owned = {
-			limit = {
-				owner = {
-					exists = BRZ
-					BRZ = { slavery = no_slavery }
-					BRZ = { has_country_modifier = mulatto_modifier }
+		GRE = {
+			if = {
+				limit = {
+					OR = {
+						accepted_culture = british
+						accepted_culture = north_italian
+					}
+					is_cultural_union = no
+					ai = yes
+					NOT = { has_country_flag = normalized_cultures }
 				}
+				set_country_flag = normalized_cultures
+				remove_accepted_culture = british
+				remove_accepted_culture = north_italian
 			}
-			owner = { BRZ = { remove_country_modifier = mulatto_modifier } }
 		}
+
+		BRZ = {
+			if = {
+				limit = {
+					exists = yes
+					slavery = no_slavery
+					has_country_modifier = mulatto_modifier
+				}
+
+				remove_country_modifier = mulatto_modifier
+			}
+		}
+
+		# CLEAN UP ITILITY CORES
 		UTI = { all_core = { remove_core = UTI } }
-		random_owned = {
+
+		if = {
 			limit = {
-				owner = {
-					has_global_flag = yes_do_it2
-				}
+				has_global_flag = yes_do_it2
 			}
-			owner = {
-				CLN = { primary_culture = nguni }
-				clr_global_flag = yes_do_it
-				clr_global_flag = yes_do_it2
-				2909 = { any_pop = { move_pop = 2071 } }
-				MAT = { capital = 2071 }
-				CLN = { primary_culture = british }
-			}
+
+			CLN = { primary_culture = nguni }
+			clr_global_flag = yes_do_it
+			clr_global_flag = yes_do_it2
+			2909 = { any_pop = { move_pop = 2071 } }
+			MAT = { capital = 2071 }
+			CLN = { primary_culture = british }
 		}
-		random_owned = {
+
+		if = {
 			limit = {
-				owner = {
-					has_global_flag = yes_do_it
-				}
+				has_global_flag = yes_do_it2
 			}
-			owner = {
-				CLN = { primary_culture = nguni }
-				clr_global_flag = yes_do_it
-				set_global_flag = yes_do_it2
-				2902 = { any_pop = { move_pop = 2072 } }
-				MAT = { capital = 2072 }
-				CLN = { primary_culture = british }
-			}
+
+			CLN = { primary_culture = nguni }
+			clr_global_flag = yes_do_it
+			set_global_flag = yes_do_it2
+			2902 = { any_pop = { move_pop = 2072 } }
+			MAT = { capital = 2072 }
+			CLN = { primary_culture = british }
 		}
-		random_owned = {
-			limit = {
-				owner = {
-					has_global_flag = you_are_playing_mp
-					month = 2
-					NOT = { has_global_flag = renaming_setup }
-				}
-			}
-			owner = { set_global_flag = renaming_setup }
-		}
+
+		# CLEAR COLONY EXEMPTION FROM EVERYONE
 		any_country = {
 			limit = {
 				exists = no
@@ -1881,218 +1814,222 @@ country_event = {
 			}
 			clr_country_flag = colony_exemption
 		}
+
+		# CLEAR WESTERN PRESENCE FROM NATIONS WHICH ARE ALREADY WESTERNIZED
 		any_country = {
-            limit = {
+			limit = {
 				has_country_modifier = western_presence
-                civilized = yes
+				civilized = yes
 				exists = yes
-            }
-            remove_country_modifier = western_presence
-        }
-		random_owned = {
-			limit = {
-				owner = {
-					VNR = { exists = yes war = no }
-					VNZ = { exists = yes war = no }
-				}
 			}
-			owner = { VNR = { annex_to = VNZ } }
+			remove_country_modifier = western_presence
 		}
-		random_owned = {
+
+		# CIVIL WARS CLEANUP?
+		if = {
 			limit = {
-				owner = {
-					CLR = { exists = yes war = no }
-					CLM = { exists = yes war = no }
-				}
+				VNR = { exists = yes war = no }
+				VNZ = { exists = yes war = no }
 			}
-			owner = { CLR = { annex_to = CLM } }
+			VNR = { annex_to = VNZ }
 		}
-		random_owned = {
+		if = {
 			limit = {
-				owner = {
-					CHR = { exists = yes war = no }
-					CHL = { exists = yes war = no }
-				}
+				CLR = { exists = yes war = no }
+				CLM = { exists = yes war = no }
 			}
-			owner = { CHR = { annex_to = CHL } }
+			CLR = { annex_to = CLM }
 		}
-		random_owned = {
+		if = {
 			limit = {
-				owner = {
-					PRR = {
-						exists = yes
-						war = no
-						OR = {
-							government = prov_gov_conservative
-							government = prov_gov_liberal
-						}
+				CHR = { exists = yes war = no }
+				CHL = { exists = yes war = no }
+			}
+			CHR = { annex_to = CHL }
+		}
+		if = {
+			limit = {
+				PRR = {
+					exists = yes
+					war = no
+					OR = {
+						government = prov_gov_conservative
+						government = prov_gov_liberal
 					}
-					PEU = { exists = yes war = no }
 				}
+				PEU = { exists = yes war = no }
 			}
-			owner = { PRR = { annex_to = PEU } }
+			PRR = { annex_to = PEU }
 		}
-		any_country = {
-			limit = {
-				primary_culture = kurdish
-				tag = BHT
-				exists = yes
-				NOT = { KDS = { exists = yes } }
-				NOT = { government = colonial_company government = absolute_empire government = semi_constitutional_empire government = constitutional_empire }
-				NOT = { tag = KDS }
-				war = no
-				NOT = { has_global_flag = sw_set }
-			}
-			government = absolute_monarchy
-			change_tag = KDS
-			government = absolute_monarchy
-			random_owned = {
+		BHT = {
+			if = {
 				limit = {
-					owner = {
+					primary_culture = kurdish
+					exists = yes
+					NOT = { KDS = { exists = yes } }
+					NOT = {
+						government = colonial_company
+						government = absolute_empire
+						government = semi_constitutional_empire
+						government = constitutional_empire
+					}
+					war = no
+					NOT = { has_global_flag = sw_set }
+				}
+				government = absolute_monarchy
+				change_tag = KDS
+				government = absolute_monarchy
+				if = {
+					limit = {
 						KDS = { vassal_of = TUR }
 					}
-				}
-				owner = {
 					TUR = { release_vassal = KDS }
 				}
 			}
 		}
-		any_country = {
-			limit = {
-				primary_culture = kurdish
-				tag = BNB
-				exists = yes
-				NOT = { KDS = { exists = yes } }
-				NOT = { government = colonial_company government = absolute_empire government = semi_constitutional_empire government = constitutional_empire }
-				NOT = { tag = KDS }
-				war = no
-				NOT = { has_global_flag = sw_set }
-			}
-			government = absolute_monarchy
-			change_tag = KDS
-			government = absolute_monarchy
-			random_owned = {
+		BNB = {
+			if = {
 				limit = {
-					owner = {
+					primary_culture = kurdish
+					exists = yes
+					NOT = { KDS = { exists = yes } }
+					NOT = {
+						government = colonial_company
+						government = absolute_empire
+						government = semi_constitutional_empire
+						government = constitutional_empire
+					}
+					war = no
+					NOT = { has_global_flag = sw_set }
+				}
+				government = absolute_monarchy
+				change_tag = KDS
+				government = absolute_monarchy
+				if = {
+					limit = {
 						KDS = { vassal_of = TUR }
 					}
-				}
-				owner = {
 					TUR = { release_vassal = KDS }
 				}
 			}
 		}
-		any_country = {
-			limit = {
-				primary_culture = kurdish
-				tag = BDN
-				exists = yes
-				NOT = { KDS = { exists = yes } }
-				NOT = { government = colonial_company government = absolute_empire government = semi_constitutional_empire government = constitutional_empire }
-				NOT = { tag = KDS }
-				war = no
-				NOT = { has_global_flag = sw_set }
-			}
-			government = absolute_monarchy
-			change_tag = KDS
-			government = absolute_monarchy
-			random_owned = {
+		BDN = {
+			if = {
 				limit = {
-					owner = {
+					primary_culture = kurdish
+					exists = yes
+					NOT = { KDS = { exists = yes } }
+					NOT = {
+						government = colonial_company
+						government = absolute_empire
+						government = semi_constitutional_empire
+						government = constitutional_empire
+					}
+					war = no
+					NOT = { has_global_flag = sw_set }
+				}
+				government = absolute_monarchy
+				change_tag = KDS
+				government = absolute_monarchy
+				if = {
+					limit = {
 						KDS = { vassal_of = TUR }
 					}
-				}
-				owner = {
 					TUR = { release_vassal = KDS }
 				}
 			}
 		}
-		any_country = {
-			limit = {
-				primary_culture = kurdish
-				tag = RDL
-				exists = yes
-				NOT = { KDS = { exists = yes } }
-				NOT = { government = colonial_company government = absolute_empire government = semi_constitutional_empire government = constitutional_empire }
-				NOT = { tag = KDS }
-				war = no
-				NOT = { has_global_flag = sw_set }
-			}
-			government = absolute_monarchy
-			change_tag = KDS
-			government = absolute_monarchy
-		}
-		any_country = {
-			limit = {
-				primary_culture = kurdish
-				tag = MKN
-				exists = yes
-				NOT = { KDS = { exists = yes } }
-				NOT = { government = colonial_company government = absolute_empire government = semi_constitutional_empire government = constitutional_empire }
-				NOT = { tag = KDS }
-				war = no
-				NOT = { has_global_flag = sw_set }
-			}
-			government = absolute_monarchy
-			change_tag = KDS
-			government = absolute_monarchy
-			random_owned = {
+		RDL = {
+			if = {
 				limit = {
-					owner = {
+					primary_culture = kurdish
+					exists = yes
+					NOT = { KDS = { exists = yes } }
+					NOT = {
+						government = colonial_company
+						government = absolute_empire
+						government = semi_constitutional_empire
+						government = constitutional_empire
+					}
+					war = no
+					NOT = { has_global_flag = sw_set }
+				}
+				government = absolute_monarchy
+				change_tag = KDS
+				government = absolute_monarchy
+				if = {
+					limit = {
 						KDS = { vassal_of = TUR }
 					}
-				}
-				owner = {
 					TUR = { release_vassal = KDS }
 				}
 			}
 		}
-		any_country = {
-			limit = {
-				primary_culture = kurdish
-				tag = BTL
-				exists = yes
-				NOT = { KDS = { exists = yes } }
-				NOT = { government = colonial_company government = absolute_empire government = semi_constitutional_empire government = constitutional_empire }
-				NOT = { tag = KDS }
-				war = no
-				NOT = { has_global_flag = sw_set }
-			}
-			government = absolute_monarchy
-			change_tag = KDS
-			government = absolute_monarchy
-			random_owned = {
+		MKN = {
+			if = {
 				limit = {
-					owner = {
+					primary_culture = kurdish
+					exists = yes
+					NOT = { KDS = { exists = yes } }
+					NOT = {
+						government = colonial_company
+						government = absolute_empire
+						government = semi_constitutional_empire
+						government = constitutional_empire
+					}
+					war = no
+					NOT = { has_global_flag = sw_set }
+				}
+				government = absolute_monarchy
+				change_tag = KDS
+				government = absolute_monarchy
+				if = {
+					limit = {
 						KDS = { vassal_of = TUR }
 					}
+					TUR = { release_vassal = KDS }
 				}
-				owner = {
+
+			}
+		}
+		BTL = {
+			if = {
+				limit = {
+					primary_culture = kurdish
+					exists = yes
+					NOT = { KDS = { exists = yes } }
+					NOT = { government = colonial_company government = absolute_empire government = semi_constitutional_empire government = constitutional_empire }
+					war = no
+					NOT = { has_global_flag = sw_set }
+				}
+				government = absolute_monarchy
+				change_tag = KDS
+				government = absolute_monarchy
+				if = {
+					limit = {
+						KDS = { vassal_of = TUR }
+					}
 					TUR = { release_vassal = KDS }
 				}
 			}
 		}
-		any_country = {
-			limit = {
-				primary_culture = kurdish
-				tag = MLN
-				exists = yes
-				NOT = { KDS = { exists = yes } }
-				NOT = { government = colonial_company }
-				NOT = { tag = KDS }
-				war = no
-				NOT = { has_global_flag = sw_set }
-			}
-			government = absolute_monarchy
-			change_tag = KDS
-			government = absolute_monarchy
-			random_owned = {
+		MLN = {
+			if = {
 				limit = {
-					owner = {
+					primary_culture = kurdish
+					exists = yes
+					NOT = { KDS = { exists = yes } }
+					NOT = { government = colonial_company }
+					war = no
+					NOT = { has_global_flag = sw_set }
+				}
+				government = absolute_monarchy
+				change_tag = KDS
+				government = absolute_monarchy
+				if = {
+					limit = {
 						KDS = { vassal_of = TUR }
 					}
-				}
-				owner = {
 					TUR = { release_vassal = KDS }
 				}
 			}
@@ -2111,15 +2048,11 @@ country_event = {
 			government = absolute_monarchy
 			change_tag = KDS
 			government = absolute_monarchy
-			random_owned = {
+			if = {
 				limit = {
-					owner = {
-						KDS = { vassal_of = TUR }
-					}
+					KDS = { vassal_of = TUR }
 				}
-				owner = {
-					TUR = { release_vassal = KDS }
-				}
+				TUR = { release_vassal = KDS }
 			}
 		}
 		any_country = {
@@ -2136,15 +2069,11 @@ country_event = {
 			government = absolute_monarchy
 			change_tag = KDS
 			government = absolute_monarchy
-			random_owned = {
+			if = {
 				limit = {
-					owner = {
-						KDS = { vassal_of = TUR }
-					}
+					KDS = { vassal_of = TUR }
 				}
-				owner = {
-					TUR = { release_vassal = KDS }
-				}
+				TUR = { release_vassal = KDS }
 			}
 		}
 		any_country = {
@@ -2161,15 +2090,11 @@ country_event = {
 			government = absolute_monarchy
 			change_tag = KDS
 			government = absolute_monarchy
-			random_owned = {
+			if = {
 				limit = {
-					owner = {
-						KDS = { vassal_of = TUR }
-					}
+					KDS = { vassal_of = TUR }
 				}
-				owner = {
-					TUR = { release_vassal = KDS }
-				}
+				TUR = { release_vassal = KDS }
 			}
 		}
 		any_country = {
@@ -2186,15 +2111,11 @@ country_event = {
 			government = absolute_monarchy
 			change_tag = KDS
 			government = absolute_monarchy
-			random_owned = {
+			if = {
 				limit = {
-					owner = {
-						KDS = { vassal_of = TUR }
-					}
+					KDS = { vassal_of = TUR }
 				}
-				owner = {
-					TUR = { release_vassal = KDS }
-				}
+				TUR = { release_vassal = KDS }
 			}
 		}
 		any_country = {
@@ -2210,15 +2131,11 @@ country_event = {
 			}
 			KDS = { inherit = BHT }
 			government = absolute_monarchy
-			random_owned = {
+			if = {
 				limit = {
-					owner = {
-						KDS = { vassal_of = TUR }
-					}
+					KDS = { vassal_of = TUR }
 				}
-				owner = {
-					TUR = { release_vassal = KDS }
-				}
+				TUR = { release_vassal = KDS }
 			}
 		}
 		any_country = {
@@ -2234,15 +2151,11 @@ country_event = {
 			}
 			KDS = { inherit = BNB }
 			government = absolute_monarchy
-			random_owned = {
+			if = {
 				limit = {
-					owner = {
-						KDS = { vassal_of = TUR }
-					}
+					KDS = { vassal_of = TUR }
 				}
-				owner = {
-					TUR = { release_vassal = KDS }
-				}
+				TUR = { release_vassal = KDS }
 			}
 		}
 		any_country = {
@@ -2258,15 +2171,11 @@ country_event = {
 			}
 			KDS = { inherit = BDN }
 			government = absolute_monarchy
-			random_owned = {
+			if = {
 				limit = {
-					owner = {
-						KDS = { vassal_of = TUR }
-					}
+					KDS = { vassal_of = TUR }
 				}
-				owner = {
-					TUR = { release_vassal = KDS }
-				}
+				TUR = { release_vassal = KDS }
 			}
 		}
 		any_country = {
@@ -2295,15 +2204,11 @@ country_event = {
 			}
 			KDS = { inherit = MKN }
 			government = absolute_monarchy
-			random_owned = {
+			if = {
 				limit = {
-					owner = {
-						KDS = { vassal_of = TUR }
-					}
+					KDS = { vassal_of = TUR }
 				}
-				owner = {
-					TUR = { release_vassal = KDS }
-				}
+				TUR = { release_vassal = KDS }
 			}
 		}
 		any_country = {
@@ -2319,15 +2224,11 @@ country_event = {
 			}
 			KDS = { inherit = BTL }
 			government = absolute_monarchy
-			random_owned = {
+			if = {
 				limit = {
-					owner = {
-						KDS = { vassal_of = TUR }
-					}
+					KDS = { vassal_of = TUR }
 				}
-				owner = {
-					TUR = { release_vassal = KDS }
-				}
+				TUR = { release_vassal = KDS }
 			}
 		}
 		any_country = {
@@ -2343,15 +2244,11 @@ country_event = {
 			}
 			KDS = { inherit = MLN }
 			government = absolute_monarchy
-			random_owned = {
+			if = {
 				limit = {
-					owner = {
-						KDS = { vassal_of = TUR }
-					}
+					KDS = { vassal_of = TUR }
 				}
-				owner = {
-					TUR = { release_vassal = KDS }
-				}
+				TUR = { release_vassal = KDS }
 			}
 		}
 		any_country = {
@@ -2367,15 +2264,11 @@ country_event = {
 			}
 			KDS = { inherit = TSI }
 			government = absolute_monarchy
-			random_owned = {
+			if = {
 				limit = {
-					owner = {
-						KDS = { vassal_of = TUR }
-					}
+					KDS = { vassal_of = TUR }
 				}
-				owner = {
-					TUR = { release_vassal = KDS }
-				}
+				TUR = { release_vassal = KDS }
 			}
 		}
 		any_country = {
@@ -2391,15 +2284,11 @@ country_event = {
 			}
 			KDS = { inherit = KHL }
 			government = absolute_monarchy
-			random_owned = {
+			if = {
 				limit = {
-					owner = {
 						KDS = { vassal_of = TUR }
-					}
 				}
-				owner = {
-					TUR = { release_vassal = KDS }
-				}
+				TUR = { release_vassal = KDS }
 			}
 		}
 		any_country = {
@@ -2415,15 +2304,11 @@ country_event = {
 			}
 			KDS = { inherit = SRN }
 			government = absolute_monarchy
-			random_owned = {
+			if = {
 				limit = {
-					owner = {
-						KDS = { vassal_of = TUR }
-					}
+					KDS = { vassal_of = TUR }
 				}
-				owner = {
-					TUR = { release_vassal = KDS }
-				}
+				TUR = { release_vassal = KDS }
 			}
 		}
 		any_country = {
@@ -2439,75 +2324,61 @@ country_event = {
 			}
 			KDS = { inherit = BZD }
 			government = absolute_monarchy
-			random_owned = {
+			if = {
 				limit = {
-					owner = {
-						KDS = { vassal_of = TUR }
-					}
+					KDS = { vassal_of = TUR }
 				}
-				owner = {
-					TUR = { release_vassal = KDS }
-				}
+				TUR = { release_vassal = KDS }
 			}
 		}
-		random_owned = {
+		if = {
 			limit = {
-				owner = {
-					OR = {
-						FRA = { truce_with = PRU has_country_modifier = rhine_crisis }
-						BOR = { truce_with = PRU has_country_modifier = rhine_crisis }
-					}
-					575 = { OR = { owned_by = PRU owned_by = NGF owned_by = GER owned_by = GCF owned_by = AUS owned_by = SGF } }
-					PRU = { is_disarmed = no }
-					NOT = { has_global_flag = clean_up_france_lost_rhine_crisis }
+				OR = {
+					FRA = { truce_with = PRU has_country_modifier = rhine_crisis }
+					BOR = { truce_with = PRU has_country_modifier = rhine_crisis }
 				}
+				575 = { OR = { owned_by = PRU owned_by = NGF owned_by = GER owned_by = GCF owned_by = AUS owned_by = SGF } }
+				PRU = { is_disarmed = no }
+				NOT = { has_global_flag = clean_up_france_lost_rhine_crisis }
 			}
-			owner = {
-				set_global_flag = clean_up_france_lost_rhine_crisis
-				any_country = {
-					limit = {
-						primary_culture = french
-						is_greater_power = yes
-						exists = yes
-					}
-					country_event = 99993
+			set_global_flag = clean_up_france_lost_rhine_crisis
+			any_country = {
+				limit = {
+					primary_culture = french
+					is_greater_power = yes
+					exists = yes
 				}
+				country_event = 99993
 			}
 		}
-        random_owned = {
+
+		if = {
 			limit = {
-				owner = {
-					OR = {
-						FRA = { any_owned_province = { is_core = BOR } }
-						any_owned_province = { is_core = BOR }
-					}
-					FRA = { exists = yes }
-					BOR = { exists = no }
+				OR = {
+					FRA = { any_owned_province = { is_core = BOR } }
+					any_owned_province = { is_core = BOR }
 				}
+				FRA = { exists = yes }
+				BOR = { exists = no }
 			}
-			owner = {
-				BOR = {
-					all_core = { remove_core = BOR add_core = FRA }
-				}
+
+			BOR = {
+				all_core = { remove_core = BOR add_core = FRA }
 			}
 		}
-        random_owned = {
+		if = {
 			limit = {
-				owner = {
-					OR = {
-						BOR = { any_owned_province = { is_core = FRA } }
-						any_owned_province = { is_core = FRA }
-					}
-					BOR = { exists = yes }
-					FRA = { exists = no }
+				OR = {
+					BOR = { any_owned_province = { is_core = FRA } }
+					any_owned_province = { is_core = FRA }
 				}
+				BOR = { exists = yes }
+				FRA = { exists = no }
 			}
-			owner = {
-				FRA = {
-					all_core = { remove_core = FRA add_core = BOR }
-				}
+			FRA = {
+				all_core = { remove_core = FRA add_core = BOR }
 			}
-        }
+		}
 		any_country = {
 			limit = {
 				has_country_flag = theocratic_government
@@ -2522,101 +2393,86 @@ country_event = {
 			}
 			set_country_flag = theocratic_government
 		}
-		random_owned = {
-			limit = { owner = {
+		if = {
+			limit = {
 				SOK = {
 					NOT = { alliance_with = ILO }
 					relation = { who = ILO value = -190 }
 				}
 				ILO = { exists = yes }
 				NOT = { has_global_flag = ilorin_left_us }
-			} }
-			owner = {
-				SOK = { create_alliance = ILO }
-				ILO = { add_country_modifier = {
-				name = puppet_ilorin duration = -1 } }
 			}
+
+			SOK = { create_alliance = ILO }
+			ILO = { add_country_modifier = {
+			name = puppet_ilorin duration = -1 } }
 		}
-		random_owned = {
+		if = {
 			limit = {
-				owner = {
-					SOK = {
-						NOT = { alliance_with = ILO }
-					}
-					NOT = { has_global_flag = ilorin_left_us }
-					ILO = {
-						exists = yes
-						NOT = { relation = { who = SOK value = -190 } }
-						is_vassal = no
-					}
+				SOK = {
+					NOT = { alliance_with = ILO }
+				}
+				NOT = { has_global_flag = ilorin_left_us }
+				ILO = {
+					exists = yes
+					NOT = { relation = { who = SOK value = -190 } }
+					is_vassal = no
 				}
 			}
-			owner = {
-				ILO = { country_event = 184824988 }
-			}
+			ILO = { country_event = 184824988 }
 		}
-		random_owned = {
-			limit = { owner = {
+		if = {
+			limit = {
 				ILO = {
 					any_neighbor_country = { owns = 1948 has_country_flag = i_became_tou NOT = { alliance_with = ILO }
 					relation = { who = ILO value = -190 } }
 				}
 				ILO = { exists = yes }
 				NOT = { has_global_flag = ilorin_left_us }
-			} }
-			owner = {
-				any_country = { limit = { owns = 1948 has_country_flag = i_became_tou neighbour = ILO } create_alliance = ILO }
-				ILO = { add_country_modifier = {
-				name = puppet_ilorin duration = -1 } }
 			}
+			any_country = { limit = { owns = 1948 has_country_flag = i_became_tou neighbour = ILO } create_alliance = ILO }
+			ILO = { add_country_modifier = {
+			name = puppet_ilorin duration = -1 } }
 		}
-		random_owned = {
+		if = {
 			limit = {
-				owner = {
-					ILO = {
-						any_neighbor_country = { owns = 1948 has_country_flag = i_became_tou NOT = { alliance_with = ILO } }
-					}
-					NOT = { has_global_flag = ilorin_left_us }
-					ILO = {
-						exists = yes
-						any_neighbor_country = { owns = 1948 has_country_flag = i_became_tou NOT = { relation = { who = ILO value = -190 } } }
-						is_vassal = no
-					}
+				ILO = {
+					any_neighbor_country = { owns = 1948 has_country_flag = i_became_tou NOT = { alliance_with = ILO } }
+				}
+				NOT = { has_global_flag = ilorin_left_us }
+				ILO = {
+					exists = yes
+					any_neighbor_country = { owns = 1948 has_country_flag = i_became_tou NOT = { relation = { who = ILO value = -190 } } }
+					is_vassal = no
 				}
 			}
-			owner = {
-				ILO = { country_event = 184824988 }
-			}
+			ILO = { country_event = 184824988 }
 		}
-		random_owned = {
-			limit = { owner = {
+		if = {
+			limit = {
 				ILO = {
 					any_neighbor_country = { owns = 1948 has_country_flag = i_am_flc NOT = { alliance_with = ILO }
 					relation = { who = ILO value = -190 } }
 				}
 				ILO = { exists = yes }
 				NOT = { has_global_flag = ilorin_left_us }
-			} }
-			owner = {
-				any_country = { limit = { owns = 1948 has_country_flag = i_am_flc neighbour = ILO } create_alliance = ILO }
-				ILO = { add_country_modifier = {
-				name = puppet_ilorin duration = -1 } }
 			}
+			any_country = { limit = { owns = 1948 has_country_flag = i_am_flc neighbour = ILO } create_alliance = ILO }
+			ILO = { add_country_modifier = {
+			name = puppet_ilorin duration = -1 } }
 		}
-		random_owned = {
-			limit = { owner = {
+		if = {
+			limit = {
 				ILO = {
 					any_neighbor_country = { owns = 1948 has_country_flag = i_am_flc NOT = { alliance_with = ILO } }
 				}
 				NOT = { has_global_flag = ilorin_left_us }
 				ILO = { exists = yes any_neighbor_country = { owns = 1948 has_country_flag = i_am_flc NOT = { relation = { who = ILO value = -190 } } } is_vassal = no }
-			} }
-			owner = {
-				ILO = { country_event = 184824988 }
 			}
+			ILO = { country_event = 184824988 }
 		}
-		random_owned = {
-			limit = { owner = {
+		if = {
+			limit = {
 				has_global_flag = adamawa_starts
 				SOK = { NOT = { alliance_with = ADW } }
 				NOT = { has_global_flag = adamawa_left_us }
@@ -2628,21 +2484,19 @@ country_event = {
 						government = colonial_company
 					}
 				}
-			} }
-			owner = {
-				SOK = {
-					create_alliance = ADW
-				}
-				ADW = {
-					add_country_modifier = {
-						name = puppet_adamawa
-						duration = -1
-					}
+			}
+			SOK = {
+				create_alliance = ADW
+			}
+			ADW = {
+				add_country_modifier = {
+					name = puppet_adamawa
+					duration = -1
 				}
 			}
 		}
-		random_owned = {
-			limit = { owner = {
+		if = {
+			limit = {
 				has_global_flag = adamawa_starts
 				SOK = { NOT = { alliance_with = ADW } }
 				NOT = { has_global_flag = adamawa_left_us }
@@ -2658,13 +2512,11 @@ country_event = {
 						government = colonial_company
 					}
 				}
-			} }
-			owner = {
-				ADW = { country_event = 18482432 }
 			}
+			ADW = { country_event = 18482432 }
 		}
-		random_owned = {
-			limit = { owner = {
+		if = {
+			limit = {
 				has_global_flag = adamawa_starts
 				any_neighbor_country = { owns = 1948 has_country_flag = i_became_tou NOT = { alliance_with = ADW } }
 				NOT = { has_global_flag = adamawa_left_us }
@@ -2677,19 +2529,17 @@ country_event = {
 						government = colonial_company
 					}
 				}
-			} }
-			owner = {
-				any_country = { limit = { owns = 1948 has_country_flag = i_became_tou neighbour = ADW } create_alliance = ADW }
-				ADW = {
-					add_country_modifier = {
-						name = puppet_adamawa
-						duration = -1
-					}
+			}
+			any_country = { limit = { owns = 1948 has_country_flag = i_became_tou neighbour = ADW } create_alliance = ADW }
+			ADW = {
+				add_country_modifier = {
+					name = puppet_adamawa
+					duration = -1
 				}
 			}
 		}
-		random_owned = {
-			limit = { owner = {
+		if = {
+			limit = {
 				has_global_flag = adamawa_starts
 				any_neighbor_country = { owns = 1948 has_country_flag = i_became_tou NOT = { alliance_with = ADW } }
 				NOT = { has_global_flag = adamawa_left_us }
@@ -2706,13 +2556,11 @@ country_event = {
 						government = colonial_company
 					}
 				}
-			} }
-			owner = {
-				ADW = { country_event = 18482432 }
 			}
+			ADW = { country_event = 18482432 }
 		}
-		random_owned = {
-			limit = { owner = {
+		if = {
+			limit = {
 				has_global_flag = adamawa_starts
 				any_neighbor_country = { owns = 1948 has_country_flag = i_am_flc NOT = { alliance_with = ADW } }
 				NOT = { has_global_flag = adamawa_left_us }
@@ -2725,19 +2573,17 @@ country_event = {
 						government = colonial_company
 					}
 				}
-			} }
-			owner = {
-				any_country = { limit = { owns = 1948 has_country_flag = i_am_flc neighbour = ADW } create_alliance = ADW }
-				ADW = {
-					add_country_modifier = {
-						name = puppet_adamawa
-						duration = -1
-					}
+			}
+			any_country = { limit = { owns = 1948 has_country_flag = i_am_flc neighbour = ADW } create_alliance = ADW }
+			ADW = {
+				add_country_modifier = {
+					name = puppet_adamawa
+					duration = -1
 				}
 			}
 		}
-		random_owned = {
-			limit = { owner = {
+		if = {
+			limit = {
 				has_global_flag = adamawa_starts
 				any_neighbor_country = { owns = 1948 has_country_flag = i_am_flc NOT = { alliance_with = ADW } }
 				NOT = { has_global_flag = adamawa_left_us }
@@ -2754,13 +2600,11 @@ country_event = {
 						government = colonial_company
 					}
 				}
-			} }
-			owner = {
-				ADW = { country_event = 18482432 }
 			}
+			ADW = { country_event = 18482432 }
 		}
-		random_owned = {
-			limit = { owner = {
+		if = {
+			limit = {
 				has_global_flag = gwandu_starts
 				SOK = { NOT = { alliance_with = KEB } }
 				SOK = { NOT = { AND = { war_with = OYO NOT = { year = 1837 } NOT = { has_country_flag = joining_war_sokoto } } } }
@@ -2773,17 +2617,15 @@ country_event = {
 						government = colonial_company
 					}
 				}
-			} }
-			owner = {
-				SOK = {
-					create_alliance = KEB
-				}
-				KEB = { add_country_modifier = {
-				name = puppet_gwandu duration = -1 } }
 			}
+			SOK = {
+				create_alliance = KEB
+			}
+			KEB = { add_country_modifier = {
+			name = puppet_gwandu duration = -1 } }
 		}
-		random_owned = {
-			limit = { owner = {
+		if = {
+			limit = {
 				has_global_flag = gwandu_starts
 				SOK = { NOT = { alliance_with = KEB } }
 				NOT = { has_global_flag = gwandu_left_us }
@@ -2798,13 +2640,11 @@ country_event = {
 						government = colonial_company
 					}
 				}
-			} }
-			owner = {
-				KEB = { country_event = 184821328 }
 			}
+			KEB = { country_event = 184821328 }
 		}
-		random_owned = {
-			limit = { owner = {
+		if = {
+			limit = {
 				has_global_flag = gwandu_starts
 				any_neighbor_country = { owns = 1948 has_country_flag = i_became_tou NOT = { alliance_with = KEB } }
 				NOT = { has_global_flag = gwandu_left_us }
@@ -2817,15 +2657,13 @@ country_event = {
 						government = colonial_company
 					}
 				}
-			} }
-			owner = {
-				any_country = { limit = { owns = 1948 has_country_flag = i_became_tou neighbour = KEB } create_alliance = KEB }
-				KEB = { add_country_modifier = {
-				name = puppet_gwandu duration = -1 } }
 			}
+			any_country = { limit = { owns = 1948 has_country_flag = i_became_tou neighbour = KEB } create_alliance = KEB }
+			KEB = { add_country_modifier = {
+			name = puppet_gwandu duration = -1 } }
 		}
-		random_owned = {
-			limit = { owner = {
+		if = {
+			limit = {
 				has_global_flag = gwandu_starts
 				any_neighbor_country = { owns = 1948 has_country_flag = i_became_tou NOT = { alliance_with = KEB } }
 				NOT = { has_global_flag = gwandu_left_us }
@@ -2841,13 +2679,11 @@ country_event = {
 						government = colonial_company
 					}
 				}
-			} }
-			owner = {
-				KEB = { country_event = 184821328 }
 			}
+			KEB = { country_event = 184821328 }
 		}
-		random_owned = {
-			limit = { owner = {
+		if = {
+			limit = {
 				has_global_flag = gwandu_starts
 				any_neighbor_country = { owns = 1948 has_country_flag = i_am_flc NOT = { alliance_with = KEB } }
 				NOT = { has_global_flag = gwandu_left_us }
@@ -2860,15 +2696,13 @@ country_event = {
 						government = colonial_company
 					}
 				}
-			} }
-			owner = {
-				any_country = { limit = { owns = 1948 has_country_flag = i_am_flc neighbour = KEB } create_alliance = KEB }
-				KEB = { add_country_modifier = {
-				name = puppet_gwandu duration = -1 } }
 			}
+			any_country = { limit = { owns = 1948 has_country_flag = i_am_flc neighbour = KEB } create_alliance = KEB }
+			KEB = { add_country_modifier = {
+			name = puppet_gwandu duration = -1 } }
 		}
-		random_owned = {
-			limit = { owner = {
+		if = {
+			limit = {
 				has_global_flag = gwandu_starts
 				any_neighbor_country = { owns = 1948 has_country_flag = i_am_flc NOT = { alliance_with = KEB } }
 				NOT = { has_global_flag = gwandu_left_us }
@@ -2884,70 +2718,52 @@ country_event = {
 						government = colonial_company
 					}
 				}
-			} }
-			owner = {
-				KEB = { country_event = 184821328 }
 			}
+			KEB = { country_event = 184821328 }
 		}
-		random_owned = {
-			limit = { owner = {
+		if = {
+			limit = {
 				KBO = { NOT = { alliance_with = CMR } }
 				NOT = { has_global_flag = mandara_left_us }
 				NOT = { has_global_flag = mandara_changed }
 				CMR = { exists = yes relation = { who = KBO value = -190 } is_vassal = no }
-			} }
-			owner = {
-				KBO = { create_alliance = CMR }
-				CMR = { add_country_modifier = {
-				name = puppet_mandara duration = -1 } }
 			}
+			KBO = { create_alliance = CMR }
+			CMR = { add_country_modifier = {
+			name = puppet_mandara duration = -1 } }
 		}
-		random_owned = {
-			limit = { owner = {
+		if = {
+			limit = {
 				KBO = { NOT = { alliance_with = CMR } }
 				NOT = { has_global_flag = mandara_left_us }
 				NOT = { has_global_flag = mandara_changed }
 				CMR = { exists = yes NOT = { relation = { who = KBO value = -190 } } }
-			} }
-			owner = {
-				CMR = { country_event = 18482435 }
 			}
+			CMR = { country_event = 18482435 }
 		}
-		random_owned = {
+		if = {
 			limit = {
-				owner = {
-					MOR = { alliance_with = RGA ai = yes civilized = no }
-					RGA = { ai = yes }
-					NOT = { has_global_flag = colonial_railroading_disabled }
-				}
+				MOR = { alliance_with = RGA ai = yes civilized = no }
+				RGA = { ai = yes }
+				NOT = { has_global_flag = colonial_railroading_disabled }
 			}
-			owner = {
-				MOR = { leave_alliance = RGA }
-			}
+			MOR = { leave_alliance = RGA }
 		}
-		random_owned = {
+		if = {
 			limit = {
-				owner = {
-					MOR = { alliance_with = LBY ai = yes civilized = no }
-					LBY = { ai = yes }
-					NOT = { has_global_flag = colonial_railroading_disabled }
-				}
+				MOR = { alliance_with = LBY ai = yes civilized = no }
+				LBY = { ai = yes }
+				NOT = { has_global_flag = colonial_railroading_disabled }
 			}
-			owner = {
-				MOR = { leave_alliance = LBY }
-			}
+			MOR = { leave_alliance = LBY }
 		}
-		random_owned = {
+		if = {
 			limit = {
-				owner = {
-					PER = { NOT = { alliance_with = PLS } NOT = { year = 1836 } ai = yes }
-					PLS = { ai = yes is_vassal = no neighbour = PER }
-					NOT = { has_global_flag = colonial_railroading_disabled }
-				}
+				PER = { NOT = { alliance_with = PLS } NOT = { year = 1836 } ai = yes }
+				PLS = { ai = yes is_vassal = no neighbour = PER }
+				NOT = { has_global_flag = colonial_railroading_disabled }
 			}
-			owner = {
-				PER = { create_alliance = PLS }
-			}
+			PER = { create_alliance = PLS }
 		}
 		any_country = {
 			limit = {
@@ -3198,31 +3014,43 @@ country_event = {
 				leave_alliance = ETH
 			}
 		}
-		random_owned = {
+		if = {
 			limit = {
-				owner = {
-					EQG = { exists = no }
-					1973 = { NOT = { is_core = EQG } }
-					year = 1860
-				}
+				EQG = { exists = no }
+				1973 = { NOT = { is_core = EQG } }
+				year = 1860
 			}
-			owner = {
-				EQG = {
-					primary_culture = fang
-					add_accepted_culture = ibo
-					add_accepted_culture = tiv
-					add_accepted_culture = kru
-					remove_accepted_culture = wolof
-					remove_accepted_culture = fulbe
-					government = absolute_monarchy
-					all_core = { remove_core = EQG }
-				}
-				1973 = { add_core = EQG remove_core = TRZ }
-				3936 = { add_core = EQG remove_core = TRZ }
-				1955 = { add_core = EQG remove_core = TRZ }
+			EQG = {
+				primary_culture = fang
+				add_accepted_culture = ibo
+				add_accepted_culture = tiv
+				add_accepted_culture = kru
+				remove_accepted_culture = wolof
+				remove_accepted_culture = fulbe
+				government = absolute_monarchy
+				all_core = { remove_core = EQG }
+			}
+			1973 = { add_core = EQG remove_core = TRZ }
+			3936 = { add_core = EQG remove_core = TRZ }
+			1955 = { add_core = EQG remove_core = TRZ }
+		}
+		if = {
+			limit = {
+				year = 1839
+				NOT = { year = 1851 }
+				STP = { exists = no }
+				NOT = { 1954 = { is_core = STP } }
+			}
+			STP = { government = colonial_company_4 }
+			1954 = { add_core = STP remove_core = STP }
+			capital = 1954
+			STP = {
+				primary_culture = tiv
+				remove_accepted_culture = sotho
+				remove_accepted_culture = tswana
+				remove_accepted_culture = luvale
 			}
 		}
-		random_owned = { limit = { owner = { year = 1839 NOT = { year = 1851 } STP = { exists = no } NOT = { 1954 = { is_core = STP } } } } owner = { STP = { government = colonial_company_4 } 1954 = { add_core = STP remove_core = STP } capital = 1954 STP = { primary_culture = tiv remove_accepted_culture = sotho remove_accepted_culture = tswana remove_accepted_culture = luvale } } }
 		any_country = {
 			limit = {
 				tag = ENG
@@ -3307,35 +3135,27 @@ country_event = {
 				exists = yes
 				ai = yes
 			}
-			random_owned = {
+			if = {
 				limit = {
-					owner = {
-						NOT = { trade_policy = protectionism  }
-						OR = {
-							has_country_modifier = mercantilism
-							has_country_modifier = economic_nationalism
-						}
+					NOT = { trade_policy = protectionism  }
+					OR = {
+						has_country_modifier = mercantilism
+						has_country_modifier = economic_nationalism
 					}
 				}
-				owner = {
-					remove_country_modifier = mercantilism
-					remove_country_modifier = economic_nationalism
-				}
+				remove_country_modifier = mercantilism
+				remove_country_modifier = economic_nationalism
 			}
-			random_owned = {
+			if = {
 				limit = {
-					owner = {
-						NOT = { trade_policy = free_trade }
-						OR = {
-							has_country_modifier = french_liberal_school
-							has_country_modifier = smithian_school
-						}
+					NOT = { trade_policy = free_trade }
+					OR = {
+						has_country_modifier = french_liberal_school
+						has_country_modifier = smithian_school
 					}
 				}
-				owner = {
-					remove_country_modifier = french_liberal_school
-					remove_country_modifier = smithian_school
-				}
+				remove_country_modifier = french_liberal_school
+				remove_country_modifier = smithian_school
 			}
 			any_neighbor_country = {
 				limit = {
@@ -3362,70 +3182,67 @@ country_event = {
 				remove_country_modifier = smithian_school
 			}
 		}
-		random_owned = {
+		if = {
 			limit = {
-				owner = {
-					year = 1845
-					139 = { owned_by = USA }
-					USA = {
-						state_n_government = 1
-						NOT = {
-							any_owned_province = {
-								any_core = {
-									any_owned_province = {
-										country_units_in_province = REB
-									}
+				year = 1845
+				139 = { owned_by = USA }
+				USA = {
+					state_n_government = 1
+					NOT = {
+						any_owned_province = {
+							any_core = {
+								any_owned_province = {
+									country_units_in_province = REB
 								}
 							}
 						}
-						exists = yes
-						war = no
-						government = democracy
-						NOT = { num_of_revolts = 1 }
-						NOT = { average_militancy = 5 badboy = 0.7 }
 					}
+					exists = yes
+					war = no
+					government = democracy
+					NOT = { num_of_revolts = 1 }
+					NOT = { average_militancy = 5 badboy = 0.7 }
 				}
 			}
-			owner = {
-				any_country = {
-					limit = {
-						OR = {
-							tag = TEX
-							tag = CAL
-							tag = LSK
-							tag = SON
-							tag = YUC
-						}
-						relation = {
-							who = USA
-							value = 175
-						}
-						OR = {
-							is_vassal = no
-							vassal_of = USA
-						}
-						OR = {
-							part_of_sphere = no
-							in_sphere = USA
-						}
-						government = democracy
-						NOT = { has_country_flag = usstatehood_we_have_applied }
-						NOT = { has_country_flag = LSK_form }
-						NOT = {
-							AND = {
-								tag = TEX
-								CSA = { exists = yes }
-								NOT = { year = 1873 }
-							}
-						}
-						NOT = { has_global_flag = sw_set }
-						war = no
-						exists = yes
-						ai = yes
+
+			any_country = {
+				limit = {
+					OR = {
+						tag = TEX
+						tag = CAL
+						tag = LSK
+						tag = SON
+						tag = YUC
 					}
-					set_country_flag = usstatehood_we_have_applied
-					country_event = 18482422
+					relation = {
+						who = USA
+						value = 175
+					}
+					OR = {
+						is_vassal = no
+						vassal_of = USA
+					}
+					OR = {
+						part_of_sphere = no
+						in_sphere = USA
+					}
+					government = democracy
+					NOT = { has_country_flag = usstatehood_we_have_applied }
+					NOT = { has_country_flag = LSK_form }
+					NOT = {
+						AND = {
+							tag = TEX
+							CSA = { exists = yes }
+							NOT = { year = 1873 }
+						}
+					}
+					NOT = { has_global_flag = sw_set }
+					war = no
+					exists = yes
+					ai = yes
 				}
+				set_country_flag = usstatehood_we_have_applied
+				country_event = 18482422
 			}
 		}
 		any_country = {
@@ -3447,25 +3264,21 @@ country_event = {
 				}
 				ai = yes
 			}
-            any_pop = {
-                militancy = -1
-            }
+			any_pop = {
+				militancy = -1
+			}
 			annex_to = ITA
-            set_country_flag = roman_republic_joins
+			set_country_flag = roman_republic_joins
 		}
-		random_owned = {
+		if = {
 			limit = {
-				owner = {
-					ANT = { war = no is_vassal = no exists = yes }
-					GRE = { exists = yes }
-					month = 4
-					NOT = { has_global_flag = sw_set }
-					NOT = { CLN = { has_country_flag = sw_set } }
-				}
+				ANT = { war = no is_vassal = no exists = yes }
+				GRE = { exists = yes }
+				month = 4
+				NOT = { has_global_flag = sw_set }
+				NOT = { CLN = { has_country_flag = sw_set } }
 			}
-			owner = {
-				ANT = { all_core = { add_core = GRE remove_core = ANT } annex_to = GRE }
-			}
+			ANT = { all_core = { add_core = GRE remove_core = ANT } annex_to = GRE }
 		}
 		any_country = {
 			limit = {
@@ -3793,194 +3606,170 @@ country_event = {
 			}
 			release_vassal = EQG inherit = EQG
 		}
-		random_owned = {
+		if = {
 			limit = {
-				owner = {
-					TUR = {
-						NOT = { has_global_flag = sw_set }
-						NOT = { has_global_flag = colonial_railroading_disabled }
-						exists = yes
-						war = no
-						ai = yes
-						rank = 8
-					}
-					MOR = { exists = yes ai = yes in_sphere = TUR }
-					year = 1875
-				}
-			}
-			owner = {
 				TUR = {
-					diplomatic_influence = {
-						who = MOR
-						value = -300
-					}
+					NOT = { has_global_flag = sw_set }
+					NOT = { has_global_flag = colonial_railroading_disabled }
+					exists = yes
+					war = no
+					ai = yes
+					rank = 8
+				}
+				MOR = { exists = yes ai = yes in_sphere = TUR }
+				year = 1875
+			}
+			TUR = {
+				diplomatic_influence = {
+					who = MOR
+					value = -300
 				}
 			}
 		}
-		random_owned = {
+		if = {
 			limit = {
-				owner = {
-					ENG = {
-						NOT = { has_global_flag = sw_set has_global_flag = eng_retreat_india }
-						exists = yes
-						war = no
-						owns = 1251
-					}
-					MUG = { exists = yes ai = yes }
-					NOT = {
-						exists = EIC
-						truce_with = MUG
-						has_country_flag = end_mughals
-					}
+				ENG = {
+					NOT = { has_global_flag = sw_set has_global_flag = eng_retreat_india }
+					exists = yes
+					war = no
+					owns = 1251
+				}
+				MUG = { exists = yes ai = yes }
+				NOT = {
+					exists = EIC
+					truce_with = MUG
+					has_country_flag = end_mughals
 				}
 			}
-			owner = {
-				ENG = {
-					diplomatic_influence = {
-						who = MUG
-						value = -400
-					}
-					war = {
-						target = MUG
-						attacker_goal = { casus_belli = conquest_any }
-					}
-					set_country_flag = end_mughals
+			ENG = {
+				diplomatic_influence = {
+					who = MUG
+					value = -400
 				}
+				war = {
+					target = MUG
+					attacker_goal = { casus_belli = conquest_any }
+				}
+				set_country_flag = end_mughals
 			}
 		}
-		random_owned = {
+		if = {
 			limit = {
-				owner = {
-					ENG = {
-						exists = yes
-						NOT = { has_country_flag = ai_get_british_wyoming }
-						war = no
-					}
-					OR = { AND = { owns = 93 owns = 114 owns = 83 owns = 78 } RPL = { vassal_of = ENG owns = 93 owns = 114 owns = 83 owns = 78 } }
-					USA = { ai = yes }
-				}
-			}
-			owner = {
 				ENG = {
-					set_country_flag = ai_get_british_wyoming
+					exists = yes
+					NOT = { has_country_flag = ai_get_british_wyoming }
+					war = no
+				}
+				OR = { AND = { owns = 93 owns = 114 owns = 83 owns = 78 } RPL = { vassal_of = ENG owns = 93 owns = 114 owns = 83 owns = 78 } }
+				USA = { ai = yes }
+			}
+			ENG = {
+				set_country_flag = ai_get_british_wyoming
+				# Audax Validator "." Ignore_NEXT
+				111 = { secede_province = THIS secede_province = ENG }
+				COL = { all_core = { remove_core = ENG } }
+				RPL = {
 					# Audax Validator "." Ignore_NEXT
-					111 = { secede_province = THIS secede_province = ENG }
-					COL = { all_core = { remove_core = ENG } }
-					RPL = {
+					any_owned = { limit = { is_core = COL }
 						# Audax Validator "." Ignore_NEXT
-						any_owned = { limit = { is_core = COL }
-							# Audax Validator "." Ignore_NEXT
-							secede_province = THIS secede_province = ENG
-						}
+						secede_province = THIS secede_province = ENG
 					}
 				}
 			}
 		}
-		random_owned = {
+		if = {
 			limit = {
-				owner = {
-					ENG = {
-						owns = 2076
-						owns = 2087
-						exists = yes
-						has_global_flag = berlin_conference
-						is_greater_power = yes
-						NOT = { has_global_flag = colonial_railroading_disabled }
-						war = no
-					}
-					NOT = { government = proletarian_dictatorship has_country_flag = british_matabale }
-					MAT = {
-						ai = yes
-						civilized = no
-						exists = yes
-						is_vassal = no
-						neighbour = ENG
-					}
-				}
-			}
-			owner = {
 				ENG = {
-					war = {
-						target = MAT
-						attacker_goal = {
-							casus_belli = annex_africa_full
-						}
-						call_ally = no
-					}
-					set_country_flag = british_matabale
+					owns = 2076
+					owns = 2087
+					exists = yes
+					has_global_flag = berlin_conference
+					is_greater_power = yes
+					NOT = { has_global_flag = colonial_railroading_disabled }
+					war = no
 				}
+				NOT = { government = proletarian_dictatorship has_country_flag = british_matabale }
+				MAT = {
+					ai = yes
+					civilized = no
+					exists = yes
+					is_vassal = no
+					neighbour = ENG
+				}
+			}
+			ENG = {
+				war = {
+					target = MAT
+					attacker_goal = {
+						casus_belli = annex_africa_full
+					}
+					call_ally = no
+				}
+				set_country_flag = british_matabale
 			}
 		}
-		random_owned = {
+		if = {
 			limit = {
-				owner = {
-					ENG = {
-						owns = 2076
-						owns = 2087
-						exists = yes
-						has_global_flag = berlin_conference
-						is_greater_power = yes
-						NOT = { has_global_flag = colonial_railroading_disabled }
-						war = no
-					}
-					NOT = { government = proletarian_dictatorship has_country_flag = british_matabale }
-					MAT = {
-						ai = yes
-						civilized = no
-						exists = yes
-						vassal_of = ENG
-						neighbour = ENG
-					}
-				}
-			}
-			owner = {
 				ENG = {
-					release_vassal = MAT
-					war = {
-						target = MAT
-						attacker_goal = {
-							casus_belli = annex_africa_full
-						}
-						call_ally = no
-					}
-					set_country_flag = british_matabale
+					owns = 2076
+					owns = 2087
+					exists = yes
+					has_global_flag = berlin_conference
+					is_greater_power = yes
+					NOT = { has_global_flag = colonial_railroading_disabled }
+					war = no
 				}
+				NOT = { government = proletarian_dictatorship has_country_flag = british_matabale }
+				MAT = {
+					ai = yes
+					civilized = no
+					exists = yes
+					vassal_of = ENG
+					neighbour = ENG
+				}
+			}
+			ENG = {
+				release_vassal = MAT
+				war = {
+					target = MAT
+					attacker_goal = {
+						casus_belli = annex_africa_full
+					}
+					call_ally = no
+				}
+				set_country_flag = british_matabale
 			}
 		}
-		random_owned = {
+		if = {
 			limit = {
-				owner = {
-					ENG = {
-						war = no
-						is_greater_power = yes
-						any_owned_province = { is_core = HND }
+				ENG = {
+					war = no
+					is_greater_power = yes
+					any_owned_province = { is_core = HND }
+				}
+				1251 = {
+					OR = {
+						owned_by = ENG
+						owner = { vassal_of = ENG }
 					}
-					1251 = {
-						OR = {
-							owned_by = ENG
-							owner = { vassal_of = ENG }
-						}
-					}
-					any_neighbor_country = {
-						ai = yes
-						war = no
-						NOT = { tag = PNJ }
-						capital_scope = { is_core = HND }
-						vassal_of = ENG
-						NOT = { alliance_with = ENG }
-					}
+				}
+				any_neighbor_country = {
+					ai = yes
+					war = no
+					NOT = { tag = PNJ }
+					capital_scope = { is_core = HND }
+					vassal_of = ENG
+					NOT = { alliance_with = ENG }
 				}
 			}
-			owner = {
-				any_country = {
-					limit = {
-						capital_scope = { is_core = HND }
-						vassal_of = ENG
-						NOT = { alliance_with = ENG }
-					}
-					create_alliance = ENG
-					military_access = ENG
+			any_country = {
+				limit = {
+					capital_scope = { is_core = HND }
+					vassal_of = ENG
+					NOT = { alliance_with = ENG }
 				}
+				create_alliance = ENG
+				military_access = ENG
 			}
 		}
 		any_country = {
@@ -5274,70 +5063,72 @@ country_event = {
 				release_vassal = MOZ
 			}
 		}
-		random_owned = {
-			limit = { owner = {
+		if = {
+			limit = {
 				NCT = { exists = yes government = prov_gov_conservative }
 				SWI = { has_country_flag = sonderbund war = no }
 				has_global_flag = sonderbund_war
-			} }
-			owner = {
+			}
 			NCT = { country_event = 18482414 }
-		} }
-		random_owned = { limit = { owner = { NCT = { exists = no government = prov_gov_conservative } SWI = { has_country_flag = sonderbund war = no } has_global_flag = global_mc_setup_complete } } owner = { CLN = { country_event = 78568543 } } }
-		random_owned = {
-			limit = { owner = {
-				NCT = { exists = no government = prov_gov_conservative } SWI = { has_country_flag = sonderbund war = no }
-			} }
-			owner = {
-				# Audax Validator "." Ignore_NEXT
-				608 = { secede_province = THIS secede_province = NCT }
-				PRU = {
-					diplomatic_influence = {
-						who = NCT
-						value = 400
-					}
-				}
-				SWI = { create_vassal = NCT }
-				NCT = {
-					government = absolute_monarchy
-					primary_culture = north_german
-					remove_accepted_culture = south_german
-					remove_accepted_culture = french
-					remove_accepted_culture = north_italian
-					remove_accepted_culture = romansh
-				}
-		} }
-		#Section 0: Colonial vassals are made westernized if after 1860, tested
-		random_owned = {
+		}
+		if = {
 			limit = {
-				owner = {
-					year = 1860
+				NCT = { exists = no government = prov_gov_conservative }
+				SWI = { has_country_flag = sonderbund war = no }
+				has_global_flag = global_mc_setup_complete
+			}
+			owner = { CLN = { country_event = 78568543 } }
+		}
+		if = {
+			limit = {
+				NCT = { exists = no government = prov_gov_conservative }
+				SWI = { has_country_flag = sonderbund war = no }
+			}
+
+			608 = { secede_province = THIS secede_province = NCT }
+			PRU = {
+				diplomatic_influence = {
+					who = NCT
+					value = 400
 				}
 			}
-			owner = {
-				any_country = {
-					limit = {
-						OR = {
-							has_country_flag = british_accepted
-							has_country_flag = french_accepted
-							has_country_flag = german_accepted
-							has_country_flag = spanish_accepted
-							has_country_flag = swedish_accepted
-							has_country_flag = danish_accepted
-							has_country_flag = portuguese_accepted
-							has_country_flag = italian_accepted
-							has_country_flag = japanese_accepted
-							has_country_flag = dutch_accepted
-							has_country_flag = russian_accepted
-							has_country_flag = belgian_accepted
-						}
-						NOT = { tag = KAS tag = BNG tag = SRI tag = ASM } #You go the normal route
-						civilized = no
-						exists = yes
+			SWI = { create_vassal = NCT }
+			NCT = {
+				government = absolute_monarchy
+				primary_culture = north_german
+				remove_accepted_culture = south_german
+				remove_accepted_culture = french
+				remove_accepted_culture = north_italian
+				remove_accepted_culture = romansh
+			}
+		}
+		#Section 0: Colonial vassals are made westernized if after 1860, tested
+		if = {
+			limit = {
+				year = 1860
+			}
+			any_country = {
+				limit = {
+					OR = {
+						has_country_flag = british_accepted
+						has_country_flag = french_accepted
+						has_country_flag = german_accepted
+						has_country_flag = spanish_accepted
+						has_country_flag = swedish_accepted
+						has_country_flag = danish_accepted
+						has_country_flag = portuguese_accepted
+						has_country_flag = italian_accepted
+						has_country_flag = japanese_accepted
+						has_country_flag = dutch_accepted
+						has_country_flag = russian_accepted
+						has_country_flag = belgian_accepted
 					}
-					civilized = yes
-					country_event = 39573
+					NOT = { tag = KAS tag = BNG tag = SRI tag = ASM } #You go the normal route
+					civilized = no
+					exists = yes
 				}
+				civilized = yes
+				country_event = 39573
 			}
 		}
 		#Section 1: Countries with colonial accepted cultures that are no longer colonies or switch overlords lose their former colonial accepted cultures, tested
@@ -20297,187 +20088,177 @@ country_event = {
 			}
 			add_province_modifier = { name = coffee_plantation duration = -1 }
 		}
-		random_owned = {
+		if = {
 			limit = {
-				owner = {
-					OR = {
-						1071 = {
-							trade_goods = pearls
-							NOT = { has_province_modifier = pearl_season }
-						}
-						1162 = {
-							trade_goods = pearls
-							NOT = { has_province_modifier = pearl_season }
-						}
-						1165 = {
-							trade_goods = pearls
-							NOT = { has_province_modifier = pearl_season }
-						}
-						1167 = {
-							trade_goods = pearls
-							NOT = { has_province_modifier = pearl_season }
-						}
-						3691 = {
-							trade_goods = pearls
-							NOT = { has_province_modifier = pearl_season }
-						}
-						2664 = {
-							trade_goods = pearls
-							NOT = { has_province_modifier = pearl_season }
-						}
-						1849 = {
-							trade_goods = pearls
-							NOT = { has_province_modifier = pearl_season }
-						}
+				OR = {
+					1071 = {
+						trade_goods = pearls
+						NOT = { has_province_modifier = pearl_season }
 					}
-				}
-			}
-			owner = {
-				any_country = {
-					limit = { owns = 1071 1071 = { trade_goods = pearls NOT = { has_province_modifier = pearl_season } } }
-					1071 = { trade_goods = fish }
-				}
-				any_country = {
-					limit = { owns = 1849 1849 = { trade_goods = pearls NOT = { has_province_modifier = pearl_season } } }
-					1849 = { trade_goods = fish }
-				}
-				any_country = {
-					limit = { owns = 1162 1162 = { trade_goods = pearls NOT = { has_province_modifier = pearl_season } } }
-					1162 = { trade_goods = fruit }
-				}
-				any_country = {
-					limit = { owns = 1165 1165 = { trade_goods = pearls NOT = { has_province_modifier = pearl_season } } }
-					1165 = { trade_goods = fish }
-				}
-				any_country = {
-					limit = { owns = 1167 1167 = { trade_goods = pearls NOT = { has_province_modifier = pearl_season } } }
-					1167 = { trade_goods = fish }
-				}
-				any_country = {
-					limit = { owns = 3691 3691 = { trade_goods = pearls NOT = { has_province_modifier = pearl_season } } }
-					3691 = { trade_goods = fish }
-				}
-				any_country = {
-					limit = { owns = 2664 2664 = { trade_goods = pearls NOT = { has_province_modifier = pearl_season } } }
-					2664 = { trade_goods = fish }
-				}
-			}
-		}
-
-		random_owned = {
-			limit = {
-				owner = {
-					OR = {
-						1849 = { #Massawa
-							NOT = { trade_goods = pearls }
-							NOT = { has_province_modifier = pearl_season }
-						}
-						1162 = { #Bahrain
-							NOT = { trade_goods = pearls }
-							NOT = { has_province_modifier = pearl_season }
-						}
-						1167 = { #Abu Dhabi
-							NOT = { trade_goods = pearls }
-							NOT = { has_province_modifier = pearl_season }
-						}
-						1165 = { #Doha
-							NOT = { trade_goods = pearls }
-							NOT = { has_province_modifier = pearl_season }
-						}
-
-						2664 = { #Khasab
-							NOT = { trade_goods = pearls }
-							NOT = { has_province_modifier = pearl_season }
-						}
+					1162 = {
+						trade_goods = pearls
+						NOT = { has_province_modifier = pearl_season }
 					}
-					month = 4
-					NOT = { month = 6 }
-					NOT = { year = 1909 }
-				}
-			}
-			owner = {
-				1849 = {
-					random_list = {
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 93 } }
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 124 } }
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 155 } }
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 186 } }
+					1165 = {
+						trade_goods = pearls
+						NOT = { has_province_modifier = pearl_season }
 					}
-				}
-				1162 = {
-					random_list = {
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 93 } }
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 124 } }
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 155 } }
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 186 } }
+					1167 = {
+						trade_goods = pearls
+						NOT = { has_province_modifier = pearl_season }
 					}
-				}
-				1165 = {
-					random_list = {
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 93 } }
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 124 } }
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 155 } }
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 186 } }
+					3691 = {
+						trade_goods = pearls
+						NOT = { has_province_modifier = pearl_season }
 					}
-				}
-				1167 = {
-					random_list = {
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 93 } }
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 124 } }
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 155 } }
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 186 } }
+					2664 = {
+						trade_goods = pearls
+						NOT = { has_province_modifier = pearl_season }
 					}
-				}
-				3691 = {
-					random_list = {
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 93 } }
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 124 } }
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 155 } }
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 186 } }
-					}
-				}
-				2664 = {
-					random_list = {
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 93 } }
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 124 } }
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 155 } }
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 186 } }
-					}
-				}
-			}
-		}
-		random_owned = { #separate clause due to also having to check for precious goods
-			limit = {
-				owner = {
-					1071 = { #Qeshm
-						NOT = { trade_goods = pearls trade_goods = precious_goods }
+					1849 = {
+						trade_goods = pearls
 						NOT = { has_province_modifier = pearl_season }
 					}
 				}
 			}
-			owner = {
-				1071 = {
-					random_list = {
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 93 } }
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 124 } }
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 155 } }
-						25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 186 } }
+			any_country = {
+				limit = { owns = 1071 1071 = { trade_goods = pearls NOT = { has_province_modifier = pearl_season } } }
+				1071 = { trade_goods = fish }
+			}
+			any_country = {
+				limit = { owns = 1849 1849 = { trade_goods = pearls NOT = { has_province_modifier = pearl_season } } }
+				1849 = { trade_goods = fish }
+			}
+			any_country = {
+				limit = { owns = 1162 1162 = { trade_goods = pearls NOT = { has_province_modifier = pearl_season } } }
+				1162 = { trade_goods = fruit }
+			}
+			any_country = {
+				limit = { owns = 1165 1165 = { trade_goods = pearls NOT = { has_province_modifier = pearl_season } } }
+				1165 = { trade_goods = fish }
+			}
+			any_country = {
+				limit = { owns = 1167 1167 = { trade_goods = pearls NOT = { has_province_modifier = pearl_season } } }
+				1167 = { trade_goods = fish }
+			}
+			any_country = {
+				limit = { owns = 3691 3691 = { trade_goods = pearls NOT = { has_province_modifier = pearl_season } } }
+				3691 = { trade_goods = fish }
+			}
+			any_country = {
+				limit = { owns = 2664 2664 = { trade_goods = pearls NOT = { has_province_modifier = pearl_season } } }
+				2664 = { trade_goods = fish }
+			}
+		}
+
+		if = {
+			limit = {
+				OR = {
+					1849 = { #Massawa
+						NOT = { trade_goods = pearls }
+						NOT = { has_province_modifier = pearl_season }
 					}
+					1162 = { #Bahrain
+						NOT = { trade_goods = pearls }
+						NOT = { has_province_modifier = pearl_season }
+					}
+					1167 = { #Abu Dhabi
+						NOT = { trade_goods = pearls }
+						NOT = { has_province_modifier = pearl_season }
+					}
+					1165 = { #Doha
+						NOT = { trade_goods = pearls }
+						NOT = { has_province_modifier = pearl_season }
+					}
+
+					2664 = { #Khasab
+						NOT = { trade_goods = pearls }
+						NOT = { has_province_modifier = pearl_season }
+					}
+				}
+				month = 4
+				NOT = { month = 6 }
+				NOT = { year = 1909 }
+			}
+
+			1849 = {
+				random_list = {
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 93 } }
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 124 } }
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 155 } }
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 186 } }
+				}
+			}
+			1162 = {
+				random_list = {
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 93 } }
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 124 } }
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 155 } }
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 186 } }
+				}
+			}
+			1165 = {
+				random_list = {
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 93 } }
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 124 } }
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 155 } }
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 186 } }
+				}
+			}
+			1167 = {
+				random_list = {
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 93 } }
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 124 } }
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 155 } }
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 186 } }
+				}
+			}
+			3691 = {
+				random_list = {
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 93 } }
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 124 } }
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 155 } }
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 186 } }
+				}
+			}
+			2664 = {
+				random_list = {
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 93 } }
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 124 } }
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 155 } }
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 186 } }
+				}
+			}
+
+		}
+		if = { #separate clause due to also having to check for precious goods
+			limit = {
+				1071 = { #Qeshm
+					NOT = { trade_goods = pearls trade_goods = precious_goods }
+					NOT = { has_province_modifier = pearl_season }
+				}
+			}
+			1071 = {
+				random_list = {
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 93 } }
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 124 } }
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 155 } }
+					25 = { trade_goods = pearls add_province_modifier = { name = pearl_season duration = 186 } }
 				}
 			}
 		}
 
 		#clean up crisis tension
 		any_country = {
-            limit = {
+			limit = {
 				exists = yes
-                OR = {
-                    NOT = { has_global_flag = revolution_n_counter_researched }
-                    is_vassal = yes
-                }
-            }
-            any_state = { flashpoint_tension = -100 }
-        }
+				OR = {
+					NOT = { has_global_flag = revolution_n_counter_researched }
+					is_vassal = yes
+				}
+			}
+			any_state = { flashpoint_tension = -100 }
+		}
 		#make CLN unable to be interacted with by ai
 		any_country = {
 			limit = {
